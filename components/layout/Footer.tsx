@@ -63,24 +63,24 @@ const Footer = () => {
           {/*  */}
           {/* Contact Column */}
           <div>
-            <h3 className="text-2xl  mb-8 text-secondary">{CONTACT_HEADING}</h3>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4 text-secondary">
-                <MapPin className="w-6 h-6 text-secondary mt-1 " />
-                <div>
-                  <div className="text-secondary ">{CONTACT_ADDRESS}</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-secondary" />
-                <div className="text-secondary ">{CONTACT_PHONE}</div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-secondary" />
-                <div className="text-secondary ">{CONTACT_EMAIL}</div>
-              </div>
-            </div>
-          </div>
+    <h3 className="text-2xl mb-8 text-secondary">{CONTACT_HEADING}</h3>
+    <div className="space-y-6">
+      <div className="flex items-baseline space-x-4 text-secondary"> {/* Changed to items-baseline */}
+        <MapPin className="w-6 h-6 text-secondary" /> {/* Removed mt-1 as baseline handles it */}
+        <div>
+          <div className="text-secondary ">{CONTACT_ADDRESS}</div>
+        </div>
+      </div>
+      <div className="flex items-center space-x-4">
+        <Phone className="w-6 h-6 text-secondary" />
+        <div className="text-secondary ">{CONTACT_PHONE}</div>
+      </div>
+      <div className="flex items-center space-x-4">
+        <Mail className="w-6 h-6 text-secondary" />
+        <div className="text-secondary ">{CONTACT_EMAIL}</div>
+      </div>
+    </div>
+  </div>
         </div>
 
         {/* Bottom section */}

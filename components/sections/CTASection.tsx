@@ -21,9 +21,10 @@ const CTASection = () => {
           <div className='relative w-full h-84 lg:h-96'>
             <Image
               className='w-full h-full object-contain'
-              src={'/about.png'}
+              src={'/cta.png'}
               fill
               alt='CTA'
+              sizes='100%'
             />
           </div>
         </div>
@@ -60,7 +61,7 @@ const CTASection = () => {
 
         {/* Working Hours */}
         <div className='text-left'>
-          <h3 className='text-xl font-semibold mb-4 text-center'>Working Hours</h3>
+          <h3 className='text-xl  mb-4 text-center'>Working Hours</h3>
           <div className='bg-white/5 rounded-lg p-6 backdrop-blur-sm border border-white/10'>
             <div className='space-y-2 text-sm'>
               <div className='flex justify-between items-center py-1'>

@@ -21,7 +21,7 @@ const Hero = () => {
                         <span className="text-white/90 ml-2 text-sm">4.1 (600+ reviews)</span>
                     </div>
                 </div>
-                <span className="text-4xl md:text-8xl lg:text-8xl max-w-xl bg-gradient-to-r from-orange-600 to-brand-primary font-heading bg-clip-text text-transparent leading-[0.9] tracking-tight font-bold mb-2">
+                <span className="text-4xl md:text-8xl lg:text-8xl max-w-xl bg-gradient-to-r from-red-600 to-brand-primary font-heading bg-clip-text text-transparent leading-[0.9] tracking-tight font-bold mb-2">
                     {HERO_HEADING}
                 </span>
                 <p className="lg:text-3xl mb-6 max-w-xl text-primary-foreground/90">
