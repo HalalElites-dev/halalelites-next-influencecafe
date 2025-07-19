@@ -1,8 +1,17 @@
+'use client';
 import Link from "next/link"
 import { FOOTER_TEXT, SITE_TITLE, SOCIAL_LINKS, NAV_LINKS, CONTACT_ADDRESS, CONTACT_HEADING, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants"
 import Image from "next/image"
 import { Mail, MapPin, Phone } from "lucide-react"
+import { cn, scrollToSection } from "@/lib/utils"
 const Footer = () => {
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      scrollToSection(href.substring(1));
+    }
+  };
   return (
     <footer className="border-t py-12 px-6 bg-gradient-to-br from-brand-secondary to-brand-primary md:footer-diagonal">
       <div className="max-w-7xl mx-auto">
@@ -36,14 +45,22 @@ const Footer = () => {
             <ul className="space-y-3 text-secondary ">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className=" transition-colors text-xl  hover:text-brand-primary">
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={cn(
+                      "transition-colors text-xl  hover:text-brand-primary",
+
+                    )}
+                    onClick={(e) => handleClick(e, link.href)}
+                  >
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
+          {/*  */}
           {/* Contact Column */}
           <div>
             <h3 className="text-2xl  mb-8 text-secondary">{CONTACT_HEADING}</h3>

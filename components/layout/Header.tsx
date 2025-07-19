@@ -36,7 +36,7 @@ export function Header() {
                         <div className="hidden md:flex items-center space-x-2 h-16">
 
                             <Button  size="lg" className='bg-brand-primary text-primary-foreground h-full font-heading '>
-                                <Link className='text-xl' href={'/'}>ORDER NOW</Link>
+                                <Link className='text-xl' href={'tel:+4194075670'}>ORDER NOW</Link>
 
                             </Button>
                         </div>

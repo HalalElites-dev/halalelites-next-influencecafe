@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const BestSelling = () => {
   return (
-    <section id="menu" className='py-24 px-6 bg-background'>
+    <section id="menu" className='py-30 px-6 bg-background'>
         <div className='max-w-7xl mx-auto'>
             <div className='text-center mb-20'>
                 <h1 className='text-5xl md:text-6xl font-bold text-foreground mb-4 leading-tight tracking-tight'>{Best_Selling}</h1>

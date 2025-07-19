@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 const CTASection = () => {
   return (
-   <section id='contact' className='py-20 px-6 bg-background '>
+   <section id='contact' className='py-26 px-6 bg-background '>
       <div className='max-w-7xl mx-auto text-center'>
         <div className='text-center mb-16'>
           <div className="text-sm text-brand-primary font-semibold tracking-wide uppercase">

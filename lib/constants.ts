@@ -28,22 +28,22 @@ export const Best_Selling = 'Popular Items';
 export const BESTSELLING = [
   {
     title: "Chicken Wings & Catfish Nuggets",
-    description: "chimken n fesh",
+    description: "Fried Chicken wings and catfish nuggets",
     Image: "/chickencatfish.png"
   },
   {
     title: "Fried Okra",
-    description: "phried okra in batter",
+    description: "Deepfried okra nuggets.",
     Image: "/okra.png"
   },
   {
     title: "Six Piece Whole Wings and Fries",
-    description: "the big back special",
+    description: "Six piece whole wings an fries combo meal",
     Image: "/sixpiece.png"
   },
    {
     title: "Six Piece Whole Wings and Fries",
-    description: "the big back special, im out of image generation for today so i reused this one",
+    description: "Six piece whole wings an fries combo meal ",
     Image: "/sixpiece.png"
   },
 ]
