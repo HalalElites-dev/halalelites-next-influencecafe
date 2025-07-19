@@ -3,39 +3,44 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../ui/button";
 import { Navigation } from "./Navigation";
-import { SITE_TITLE } from "@/lib/constants";
-
+import Image from 'next/image'
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => setIsOpen(!isOpen)}
-        className="md:hidden bg-primary-foreground"
-      >
-        {isOpen ? <X className="h-10 w-10" /> : <Menu className="h-5 w-5" />}
-      </Button>
+      {/* Mobile Menu Toggle Button - Only show when menu is closed */}
+      {!isOpen && (
+        <Button
+          variant="default"
+          size="sm"
+          onClick={() => setIsOpen(true)}
+          className="md:hidden rounded-full bg-brand-secondary fixed right-5"
+        >
+          <Menu className="h-10 w-10" />
+        </Button>
+      )}
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-foreground backdrop-blur-sm md:hidden max-w-2xl">
-          <div className="fixed right-0 w-full bg-foreground animate-in slide-in-from-right duration-300 rounded-2xl">
-
-             {/* Header */}
-            <div className="flex items-center justify-between  bg-foreground px-6 py-4 rounded-sm">
-              <div className="flex items-center space-x-2">
-                <span className="text-lg font-semibold text-background">{SITE_TITLE}</span>
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm md:hidden">
+          <div className="fixed right-0 top-0  w-full max-w-5xl bg-background animate-in slide-in-from-right duration-300 rounded-l-2xl border-l shadow-2xl border-brand-secondary">
+            {/* Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-brand-secondary">
+              {/* Logo */}
+              <div className="flex items-center">
+                <Image alt='logo' src='/snappers-logo.png' width={120} height={100} />
               </div>
+              
+              {/* Close Button */}
               <Button
-                variant="ghost"
+                variant="default"
                 size="icon"
                 onClick={() => setIsOpen(false)}
-                className="rounded-full hover:bg-secondary text-background "
+                className="rounded-full bg-brand-secondary"
               >
-                <X className="h-10 w-10" />
+                <X className="h-6 w-6" />
               </Button>
             </div>
 
@@ -44,12 +49,10 @@ export function MobileMenu() {
               <div className="flex-1 px-6 py-6">
                 <Navigation />
               </div>
-
-
             </div>
           </div>
         </div>
       )}
     </>
-  )
+  );
 }

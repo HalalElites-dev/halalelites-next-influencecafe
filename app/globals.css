@@ -43,11 +43,11 @@
   --color-brand-primary: var(--brand-primary);
   --color-brand-secondary: var(--brand-secondary);
   --color-brand-accent: var(--brand-accent);
+  
 
   /* Typography - Fixed font fallbacks */
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
-  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", "DejaVu Sans Mono", monospace;
-  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "Open Sans", sans-serif;
 
   /* Border Radius */
   --radius-sm: calc(var(--radius) - 4px);
@@ -74,7 +74,7 @@
   /* ===== LIGHT MODE COLORS ===== */
 
   /* Main Page Colors */
-  --background: #FFFFFF; /* Clean white background */
+  --background: #F5F5F5; /* Clean white background */
   --foreground: #0F3057; /* Navy for strong text contrast */
 
   /* Card & Modal Colors */
@@ -230,4 +230,12 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+.hero-diagonal {
+ clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 95%, 50% 100%, 25% 95%, 0 85%);
+
+}
+
+.footer-diagonal {
+  clip-path: polygon(0 10%, 25% 3%, 50% 0%, 75% 3%, 100% 10%, 100% 100%, 0 100%);
 }

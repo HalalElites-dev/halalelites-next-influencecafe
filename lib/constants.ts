@@ -1,48 +1,50 @@
 import { Facebook, Instagram, LucideIcon, Youtube } from "lucide-react";
 
 // Site Metadata
-export const SITE_TITLE = 'TwoSpoons';
-export const SITE_TAGLINE = 'Authentic Halal Restaurant In Ohio';
+export const SITE_TITLE = 'Snappers';
+export const SITE_TAGLINE = 'Best Chicken n Fish in Toledo';
 export const SITE_URL = 'https://Twospoons.com';
 
 // Navigation Links
 export const NAV_LINKS = [
   { label: 'Home', href: '/#' },
-  { label: 'Menu', href: '/menu' },
-  { label: 'Reservation', href: '/reserve' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Gallery', href: '/gallery' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '#about' },
+  { label: 'Menu', href: '#menu' },
+  { label: 'Contact', href: '#contact' },
 
 ];
 
 // Hero Section
-export const HERO_HEADING = 'Experience Authentic Halal Cuisine.';
-export const HERO_SUBTEXT = 'Savor the flavors of our carefully crafted dishes in  warm welcoming atmopshere.';
-export const HERO_CTA_TEXT = 'Reserve Your Table';
-export const HERO_CTA_LINK = '/reserve';
+export const HERO_HEADING = 'Fresh, Crispy & Made to Order';
+export const HERO_SUBTEXT = 'Satisfy your cravings with Toledo’s favorite fried chicken and seafood — hot, delicious, and ready when you are';
+export const HERO_CTA_TEXT = 'Order Now';
+
 
 
 //Best selling section
-export const Best_Selling = 'Our Best Selling Dishes';
-export const Best_Selling_subtext = 'Discover our most popular dishes that keep customers coming back.';
+export const Best_Selling = 'Popular Items';
+// export const Best_Selling_subtext = 'Discover our most popular dishes that keep customers coming back.';
 
 export const BESTSELLING = [
   {
-    title: "Chicken Biryani",
-    description: "Fragrant basmati rice layered with tender spiced chicken, saffron, and aromatic herbs, slow-cooked to perfection in traditional style",
-    Image: "/chicken-biryani.png"
+    title: "Chicken Wings & Catfish Nuggets",
+    description: "chimken n fesh",
+    Image: "/chickencatfish.png"
   },
   {
-    title: "Grill Kebab",
-    description: "Fragrant basmati rice layered with tender spiced chicken, saffron, and aromatic herbs, slow-cooked to perfection in traditional style",
-    Image: "/grill-kebab.png"
+    title: "Fried Okra",
+    description: "phried okra in batter",
+    Image: "/okra.png"
   },
   {
-    title: "Butter Chicken",
-    description: "Fragrant basmati rice layered with tender spiced chicken, saffron, and aromatic herbs, slow-cooked to perfection in traditional style",
-    Image: "/butter-chicken.png"
+    title: "Six Piece Whole Wings and Fries",
+    description: "the big back special",
+    Image: "/sixpiece.png"
+  },
+   {
+    title: "Six Piece Whole Wings and Fries",
+    description: "the big back special, im out of image generation for today so i reused this one",
+    Image: "/sixpiece.png"
   },
 ]
 
@@ -50,7 +52,7 @@ export const BESTSELLING = [
 
 
 // About Section
-export const ABOUT_HEADING = 'A Journey of Authentic Flavors';
+export const ABOUT_HEADING = 'Making Fast Food IsA Tradition For Your Family';
 export const ABOUT_SUBTEXT = 'From humble beginnings to becoming Toledo\'s premier halal dining destination, our story is one of passion, tradition, and unwavering commitment to authentic Middle Eastern cuisine';
 export const ABOUT_CONTENT = `Two Spoons was born from a simple dream: to bring the authentic flavors of the Middle East to Toledo, while honoring the rich culinary traditions passed down through generations. Our founder, Chef Ahmad, immigrated from Damascus with nothing but family recipes and an unwavering passion for halal cuisine.
 
@@ -84,12 +86,12 @@ export const CONTACT_ADDRESS = '123 HalalElites St, Suite 100, City';
 
 export const TESTIMONIALS = [
   {
-    quote: "The best halal food in Toledo! The biryani is absolutely authentic and the service is exceptional. This place feels like home.",
+    quote: "The best fried chicken and fish In Toledo.",
     author: "Sarah M.",
     role: "Regular Customer"
   },
   {
-    quote: "Finally, a restaurant that serves genuine halal cuisine. The mixed grill platter is a must-try! Outstanding quality.",
+    quote: "Finally, a restaurant that serves genuine chicken gizzards It is a must-try! Outstanding quality.",
     author: "Ahmed K.",
     role: "Food Blogger"
   },
@@ -103,7 +105,7 @@ export const TESTIMONIALS = [
 
 
 // Footer Info
-export const FOOTER_TEXT = '© 2025 Two Spoons Restaurant. All Rights Reserved.';
+export const FOOTER_TEXT = '© 2025 Snappers, serving the best Fried Chicken & Fish In Toledo.';
 
 export const SOCIAL_LINKS: { name: string; url: string; icon: LucideIcon }[] = [
   {

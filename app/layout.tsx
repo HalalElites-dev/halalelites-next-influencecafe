@@ -1,13 +1,14 @@
 import Footer from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import type { Metadata } from "next";
-import { Nunito, Open_Sans } from "next/font/google";
+import { Bebas_Neue, Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
-const nunito = Nunito({
-  variable: "--font-nunito-sans",
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
   subsets: ["latin"],
+  weight: "400"
 });
 
 const openSans = Open_Sans({
@@ -16,8 +17,8 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TwoSpoons",
-  description: "Authentic Halal Restaurant",
+  title: "Snapper’s Fried Chicken & Seafood is Toledo’s go-to spot for hot, crispy chicken and fresh seafood platters. Order now or call 419-407-5670!",
+  description: "Toledo fried chicken, seafood restaurant, chicken wings, fish combos, carryout seafood Toledo, Snapper's menu",
 };
 
 export default function RootLayout({
@@ -28,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${nunito.variable} ${openSans.variable} antialiased`}
+        className={`${bebasNeue.variable} ${openSans.variable} antialiased`}
       >
         <ThemeProvider
             attribute="class"
