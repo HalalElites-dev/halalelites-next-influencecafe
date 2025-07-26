@@ -46,7 +46,7 @@
   
 
   /* Typography - Fixed font fallbacks */
-  --font-heading: "Bebas Neue", sans-serif;
+  --font-heading: "Tajawal", sans-serif;
   --font-body: "Open Sans", sans-serif;
 
   /* Border Radius */
@@ -65,67 +65,48 @@
   --duration-slow: 500ms;
 }
 
+
+
 /* ===== ROOT VARIABLES ===== */
-
 :root {
-
   --radius: 0.625rem;
 
-  /* ===== LIGHT MODE COLORS ===== */
-
-  /* Main Page Colors */
-  --background: #F5F5F5; /* Clean white background */
-  --foreground: #0F3057; /* Navy for strong text contrast */
+  /* ===== DARK MODE COLORS (Default) ===== */
+  --background: oklch(0.08 0.01 0); /* #141414 - very dark background */
+  --foreground: oklch(0.95 0.01 60); /* #F5F5DC - warm cream text */
 
   /* Card & Modal Colors */
-  --card: #FFFFFF; /* White cards */
-  --card-foreground: #0F3057; /* Navy text on cards */
-  --popover: #FFFFFF;
-  --popover-foreground: #0F3057;
+  --card: oklch(0.12 0.01 0); /* #1F1F1F - dark cards */
+  --card-foreground: oklch(0.95 0.01 60); /* cream text on cards */
+  --popover: oklch(0.12 0.01 0); /* dark popover */
+  --popover-foreground: oklch(0.95 0.01 60); /* cream text */
 
-  --primary: #D82C20; /* Snapper's red */
-  --primary-foreground: #FFFFFF; /* White text on red */
+  --primary: oklch(0.75 0.12 85); /* #E6A623 - proper gold primary */
+  --primary-foreground: oklch(0.08 0.01 0); /* dark text on gold */
+  --secondary: oklch(0.15 0.01 0); /* #262626 - dark secondary */
+  --secondary-foreground: oklch(0.95 0.01 60); /* cream text on dark */
 
-  --secondary: #F5F5F5; /* Light gray secondary */
-  --secondary-foreground: #0F3057; /* Navy text on light background */
+  --muted: oklch(0.18 0.01 0); /* #2D2D2D - muted dark */
+  --muted-foreground: oklch(0.65 0.01 60); /* muted cream text */
+  --accent: oklch(0.75 0.12 85); /* #E6A623 - gold accent */
+  --accent-foreground: oklch(0.08 0.01 0); /* dark text on gold */
 
-  --muted: #F5F5F5; /* Light gray for muted areas */
-  --muted-foreground: #5D5D5D; /* Neutral muted text */
+  --destructive: oklch(0.577 0.245 27.325); /* red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* white text on red */
 
-  --accent: #5DA9E9; /* Light blue accent */
-  --accent-foreground: #FFFFFF; /* White text on blue */
-
-  --destructive: #D82C20; /* Reuse Snapper's red */
-  --destructive-foreground: #FFFFFF;
-
-  --border: #E0E0E0; /* Subtle light gray border */
-  --input: #E0E0E0;
-  --ring: #5DA9E9; /* Light blue focus ring */
-
-  /* Chart Colors */ 
-  --chart-1: #D82C20; /* Red primary */
-  --chart-2: #5DA9E9; /* Complementary blue */
-  --chart-3: #0F3057; /* Dark blue */
-  --chart-4: #B4E197; /* Soft yellow-green */
-  --chart-5: #F6D860; /* Warm yellow */
+  --border: oklch(0.25 0.01 0); /* #404040 - subtle border */
+  --input: oklch(0.25 0.01 0); /* input border */
+  --ring: oklch(0.75 0.12 85); /* gold focus ring */
 
   /* Brand Colors */
-  --brand-primary: #D82C20; /* Red */
-  --brand-secondary: #0F3057; /* Navy */
-  --brand-accent: #5DA9E9; /* Blue */
-  --brand-white: #FFFFFF;
-
-  /* Restaurant Specific Colors */
-  --restaurant-cream: #F5F5F5;
-  --restaurant-brown: #0F3057;
-  --restaurant-orange: #D82C20; /* Using red as dominant accent */
-  --restaurant-brown-light: #345B7E; /* Lighter navy for hover */
-  --restaurant-orange-light: #EF4D3B; /* Lighter red for hover */
+  --brand-primary: oklch(0.75 0.12 85); /* #141414 - dark background */
+  --brand-secondary: oklch(0.95 0.01 60); /* #F5F5DC - cream */
+  --brand-accent: oklch(0.08 0.01 0); /* #E6A623 - gold */
+  
 
   /* Typography */
-  --font-heading: "Bebas Neue", sans-serif;
+  --font-heading: "Tajawal", sans-serif;
   --font-body: "Open Sans", sans-serif;
-
 }
 
 
@@ -230,12 +211,4 @@
     transform: translateY(0);
     opacity: 1;
   }
-}
-.hero-diagonal {
- clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 95%, 50% 100%, 25% 95%, 0 85%);
-
-}
-
-.footer-diagonal {
-  clip-path: polygon(0 10%, 25% 3%, 50% 0%, 75% 3%, 100% 10%, 100% 100%, 0 100%);
 }

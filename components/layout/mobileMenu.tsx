@@ -16,7 +16,7 @@ export function MobileMenu() {
           variant="default"
           size="sm"
           onClick={() => setIsOpen(true)}
-          className="md:hidden rounded-full bg-brand-secondary fixed right-5"
+          className="md:hidden rounded-full bg-brand-secondary fixed right-5 top-6"
         >
           <Menu className="h-10 w-10" />
         </Button>
@@ -30,7 +30,7 @@ export function MobileMenu() {
             <div className="flex items-center justify-between px-6 py-4 border-b border-brand-secondary">
               {/* Logo */}
               <div className="flex items-center">
-                <Image alt='logo' src='/snappers-logo.png' width={120} height={100} />
+                <Image alt='logo' src='/logo.png' width={120} height={100} />
               </div>
               
               {/* Close Button */}

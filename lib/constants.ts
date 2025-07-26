@@ -1,13 +1,13 @@
 import { Facebook, Instagram, LucideIcon, Youtube } from "lucide-react";
 
 // Site Metadata
-export const SITE_TITLE = 'Snappers';
+export const SITE_TITLE = 'Hadramout';
 export const SITE_TAGLINE = 'Best Chicken n Fish in Toledo';
 export const SITE_URL = 'https://Twospoons.com';
 
 // Navigation Links
 export const NAV_LINKS = [
-  { label: 'Home', href: '/#' },
+  { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Menu', href: '#menu' },
   { label: 'Contact', href: '#contact' },
@@ -27,24 +27,24 @@ export const Best_Selling = 'Popular Items';
 
 export const BESTSELLING = [
   {
-    title: "Chicken Wings & Catfish Nuggets",
-    description: "Fried Chicken wings and catfish nuggets",
-    Image: "/chickencatfish.png"
+    title: "Chicken Mandi",
+    description: "Chicken cooked in a Tandoor with spiced rice.",
+    Image: "/placeholder.svg"
   },
   {
-    title: "Fried Okra",
-    description: "Deepfried okra nuggets.",
-    Image: "/okra.png"
+    title: "Haneeth",
+    description: "Slow-cooked Lamb with spiced rice.",
+    Image: "/placeholder.svg"
   },
   {
-    title: "Six Piece Whole Wings and Fries",
-    description: "Six piece whole wings an fries combo meal",
-    Image: "/sixpiece.png"
+    title: "Fahsah",
+    description: "most notably made with shredded lamb and served bubbling hot in a traditional stone pot",
+    Image: "/placeholder.svg"
   },
    {
-    title: "Six Piece Whole Wings and Fries",
-    description: "Six piece whole wings an fries combo meal ",
-    Image: "/sixpiece.png"
+    title: "Mixed Meat Special",
+    description: "Your choice of lamb, meat, or fish. Serves 3-5 People ",
+    Image: "/placeholder.svg"
   },
 ]
 
@@ -52,11 +52,11 @@ export const BESTSELLING = [
 
 
 // About Section
-export const ABOUT_HEADING = 'Making Fast Food IsA Tradition For Your Family';
+export const ABOUT_HEADING = 'Authentic Yemeni Cuisine Since 1985';
 export const ABOUT_SUBTEXT = 'From humble beginnings to becoming Toledo\'s premier halal dining destination, our story is one of passion, tradition, and unwavering commitment to authentic Middle Eastern cuisine';
-export const ABOUT_CONTENT = `Two Spoons was born from a simple dream: to bring the authentic flavors of the Middle East to Toledo, while honoring the rich culinary traditions passed down through generations. Our founder, Chef Ahmad, immigrated from Damascus with nothing but family recipes and an unwavering passion for halal cuisine.
+export const ABOUT_CONTENT = `Founded by the Al-Hadhrami family, our restaurant brings the rich culinary traditions of Yemen's Hadramout region to life. Every dish tells a story of ancient spice routes, family recipes, and the warm hospitality that defines Yemeni culture.
 
-Today, we continue to serve dishes that tell stories of heritage, family, and the beautiful diversity of Middle Eastern culture, all while maintaining the highest standards of halal certification.`;
+From our signature Mandi and Zurbian to traditional Fahsah and fresh Yemeni bread, we use only the finest ingredients and time-honored cooking methods to ensure an authentic dining experience.`;
 export const ABOUT = [
   {
     title: '5000+',
@@ -86,12 +86,12 @@ export const CONTACT_ADDRESS = '123 HalalElites St, Suite 100, City';
 
 export const TESTIMONIALS = [
   {
-    quote: "The best fried chicken and fish In Toledo.",
+    quote: "The best Mandi in Toledo.",
     author: "Sarah M.",
     role: "Regular Customer"
   },
   {
-    quote: "Finally, a restaurant that serves genuine chicken gizzards It is a must-try! Outstanding quality.",
+    quote: "Finally, a restaurant that serves genuine Haneeth It is a must-try! Outstanding quality.",
     author: "Ahmed K.",
     role: "Food Blogger"
   },
@@ -105,7 +105,7 @@ export const TESTIMONIALS = [
 
 
 // Footer Info
-export const FOOTER_TEXT = '© 2025 Snappers, serving the best Fried Chicken & Fish In Toledo.';
+export const FOOTER_TEXT = '© 2025 Hadramout, serving the best Yemeni food  In Toledo.';
 
 export const SOCIAL_LINKS: { name: string; url: string; icon: LucideIcon }[] = [
   {

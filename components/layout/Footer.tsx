@@ -13,14 +13,14 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="border-t py-12 px-6 bg-gradient-to-br from-brand-secondary to-brand-primary md:footer-diagonal">
+    <footer className="border-t py-8 px-6 bg-brand-primary">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
 
           {/* Left section - Brand and description */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4 gap-2">
-              <Image src="/snappers-logo.png" alt="Two Spoons" width={100} height={100} className="brightness-0 invert" />
+              <Image src="/logo.png" alt="Two Spoons" width={100} height={100} className="brightness-0 " />
             </div>
             <p className="text-secondary text-sm leading-relaxed mb-6 max-w-xs">{FOOTER_TEXT}</p>
             <div className="flex items-center gap-4 text-white">
@@ -30,10 +30,12 @@ const Footer = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors"
+                  className="transition-colors group relative"
                 >
                   <span className="sr-only">{link.name}</span>
-                  <link.icon className="h-5 w-5 text-secondary hover:text-brand-primary" />
+                  <link.icon className="h-5 w-5 text-secondary" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+
                 </Link>
               ))}
             </div>
@@ -41,7 +43,7 @@ const Footer = () => {
 
           {/* Quick Links Column */}
           <div>
-            <h3 className=" text-2xl text-secondary mb-4">Quick Links</h3>
+            <h3 className=" text-2xl text-secondary mb-4 font-heading font-bold">Quick Links</h3>
             <ul className="space-y-3 text-secondary ">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -49,12 +51,14 @@ const Footer = () => {
                     key={link.href}
                     href={link.href}
                     className={cn(
-                      "transition-colors text-xl  hover:text-brand-primary",
+                      "transition-colors text-xl relative group ",
 
                     )}
                     onClick={(e) => handleClick(e, link.href)}
                   >
                     {link.label}
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+
                   </Link>
                 </li>
               ))}
@@ -63,24 +67,24 @@ const Footer = () => {
           {/*  */}
           {/* Contact Column */}
           <div>
-    <h3 className="text-2xl mb-8 text-secondary">{CONTACT_HEADING}</h3>
-    <div className="space-y-6">
-      <div className="flex items-baseline space-x-4 text-secondary"> {/* Changed to items-baseline */}
-        <MapPin className="w-6 h-6 text-secondary" /> {/* Removed mt-1 as baseline handles it */}
-        <div>
-          <div className="text-secondary ">{CONTACT_ADDRESS}</div>
-        </div>
-      </div>
-      <div className="flex items-center space-x-4">
-        <Phone className="w-6 h-6 text-secondary" />
-        <div className="text-secondary ">{CONTACT_PHONE}</div>
-      </div>
-      <div className="flex items-center space-x-4">
-        <Mail className="w-6 h-6 text-secondary" />
-        <div className="text-secondary ">{CONTACT_EMAIL}</div>
-      </div>
-    </div>
-  </div>
+            <h3 className="text-2xl mb-8 text-secondary font-heading font-bold">{CONTACT_HEADING}</h3>
+            <div className="space-y-6">
+              <div className="flex items-baseline space-x-4 text-secondary">
+                <MapPin className="w-6 h-6 text-secondary" />
+                <div>
+                  <div className="text-secondary ">{CONTACT_ADDRESS}</div>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <Phone className="w-6 h-6 text-secondary" />
+                <div className="text-secondary ">{CONTACT_PHONE}</div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <Mail className="w-6 h-6 text-secondary" />
+                <div className="text-secondary ">{CONTACT_EMAIL}</div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom section */}

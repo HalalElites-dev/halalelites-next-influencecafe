@@ -9,9 +9,10 @@ const About = () => {
           <div className='relative'>
             <div className="w-full h-[300px] lg:h-[600px]  rounded-lg flex items-center justify-center">
               <Image
-              src={'/about.png'}
-              alt='about chimken'
+              src={'/placeholder.svg'}
+              alt=''
               fill
+              className='invert'
               />
             </div>
           </div>
@@ -23,20 +24,16 @@ const About = () => {
             </div>
             
             <div>
-              <h2 className='text-5xl font-bold text-brand-secondary mb-8 leading-tight'>
-                A Local Tradition of Flavor
-                <br />
-                <span className="text-brand-primary">A Tradition</span> For Your
-                <br />
-                Family
+              <h2 className='text-5xl  text-brand-secondary mb-8 leading-tight upper'>
+                Serving Traditional <span className='text-brand-primary'>Yemini & Mediterranean Cuisine to Toledo</span> 
               </h2>
               
               <div className="space-y-6 text-lg text-foreground leading-relaxed">
                 <p>
-                  At Snapper’s, we’re more than just fast food — we’re a Toledo staple. For years, our mission has been simple: serve mouthwatering fried chicken, golden seafood, and hearty sides made with love and seasoned just right. 
+                  Founded by the  family, our restaurant brings the rich culinary traditions of Yemen&apos;s Hadramout region to life. Every dish tells a story of ancient spice routes, family recipes, and the warm hospitality that defines Yemeni culture.
                 </p>
                 <p>
-                 Whether you&apos;re a first-timer or a loyal regular, you’ll always feel at home here.
+                 From our signature Mandi and Zurbian to traditional Fahsah and fresh Yemeni bread, we use only the finest ingredients and time-honored cooking methods to ensure an authentic dining experience.
                 </p>
               </div>
             </div>
