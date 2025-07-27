@@ -3,11 +3,17 @@ import Link from "next/link";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn, scrollToSection} from "@/lib/utils";
 
+interface NavigationProps {
+  onNavigate?: () => void;
+}
 
-export function Navigation() {
+export function Navigation({ onNavigate }: NavigationProps) {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
-   if (href.startsWith('#')) {
+    // Close the mobile menu when any navigation item is clicked
+    onNavigate?.();
+    
+    if (href.startsWith('#')) {
       e.preventDefault();
       scrollToSection(href.substring(1));
     }

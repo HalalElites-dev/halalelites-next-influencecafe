@@ -47,7 +47,7 @@ export function MobileMenu() {
             {/* Navigation Content */}
             <div className="flex flex-col h-full">
               <div className="flex-1 px-6 py-6">
-                <Navigation />
+                <Navigation onNavigate={() => setIsOpen(false)} />
               </div>
             </div>
           </div>
