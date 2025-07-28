@@ -1,24 +1,23 @@
 import Footer from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import type { Metadata } from "next";
-import { Tajawal, Open_Sans } from "next/font/google";
+import { Playfair_Display, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
-const tajawal = Tajawal({
-  variable: "--font-tajawal", // It's good practice to name the variable after the font
-  subsets: ["latin", "arabic"], // Tajawal supports Arabic, so include it
-  weight: ['200', '300', '400', '500', '700', '800', '900'] // Specify weights as an array of strings
+const playfair = Playfair_Display({
+  variable: "--font-heading", 
+  subsets: ["latin"], 
+  weight: ['400', '500', '600', '700', '800', '900'] 
 });
-
-const openSans = Open_Sans({
-  variable: "--font-open-sans",
+const inter = Inter({
+  variable: "--font-body",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Hadramout Restaurant: Toledo's Authentic Yemeni & Middle Eastern Cuisine. Experience Mandi, Haneeth, and more!",
-  description: "Toledo Yemeni food, Middle Eastern restaurant, Mandi, Haneeth, Fahsah, Zurbian, Halal food Toledo, Hadramout menu",
+  title: "Maryam's Halal Taste of New York : Come and try our delicious Halal food Chicken & Lamb Tikka Platter comes with our signature sauce !",
+  description: "Columbus Halal Chicken over rice, Maryam's halal menu",
 };
 
 export default function RootLayout({
@@ -29,19 +28,19 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${tajawal.variable} ${openSans.variable} antialiased`}
+        className={`${playfair.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-             <Header />
-             {children}
-             <Footer />
-  
-          </ThemeProvider>
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer />
+
+        </ThemeProvider>
       </body>
     </html>
   );

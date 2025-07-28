@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button'
 import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 const CTASection = () => {
   return (
-    <section id='contact' className='py-26 px-6 bg-background '>
+    <section id='contact' className='py-26 px-6 bg-white '>
       <div className='max-w-7xl mx-auto text-center'>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -17,7 +17,7 @@ const CTASection = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl  text-brand-secondary mb-6 text-left">Hadramout  is conveniently located on XYZ High Street in Toledo, Ohio, offering a central and accessible location for our guests to enjoy their dining experience.
+                <h3 className="text-xl  text-brand-secondary mb-6 text-left"><span className='text-3xl font-heading'>Maryam&apos;s</span>  is conveniently located on XYZ High Street in Columbus, Ohio, offering a central and accessible location for our guests to enjoy their dining experience.
                   <br />Have any questions or inquiries? Feel free to reach out to us. We would love to hear from you.</h3>
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -53,8 +53,8 @@ const CTASection = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-brand-secondary mb-1 text-left">Email</h4>
-                      <p className="text-brand-secondary/80 text-left">info@hadramoutrestaurant.com</p>
-                      <p className="text-brand-secondary/80 text-left">reservations@hadramoutrestaurant.com</p>
+                      <p className="text-brand-secondary/80 text-left">info@Maryamrestaurant.com</p>
+                      <p className="text-brand-secondary/80 text-left">reservations@Maryamrestaurant.com</p>
                     </div>
                   </div>
 
@@ -78,7 +78,7 @@ const CTASection = () => {
               <div className="space-y-4">
                 <Button
                   size="lg"
-                  className="w-full bg-brand-primary  text-brand-accent font-bold"
+                  className="w-full bg-brand-primary  text-restaurant-cream font-bold"
                 >
                   Order Now
                 </Button>
@@ -89,14 +89,14 @@ const CTASection = () => {
             {/* Google Maps */}
             <div className="h-full rounded-lg overflow-hidden border border-brand-primary/20">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4037!2d-74.0059!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuMiJX!5e0!3m2!1sen!2us!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3054.952515065971!2d-82.9703598!3d40.0318396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388bcb4d73ac11%3A0xa5cc1be035101265!2sMaryam&#39;s%20Halal%20%22Taste%20of%20New%20York%22!5e0!3m2!1sen!2sae!4v1753661413723!5m2!1sen!2sae"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Hadramout Restaurant Location"
+                title="Maryam's Halal Taste of Newyork"
               ></iframe>
             </div>
           </div>

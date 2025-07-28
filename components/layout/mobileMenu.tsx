@@ -30,7 +30,7 @@ export function MobileMenu() {
             <div className="flex items-center justify-between px-6 py-4 border-b border-brand-secondary">
               {/* Logo */}
               <div className="flex items-center">
-                <Image alt='logo' src='/logo.png' width={120} height={100} />
+                <Image alt='logo' src='/logo.jpg' width={120} height={100} />
               </div>
               
               {/* Close Button */}

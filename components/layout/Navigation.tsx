@@ -26,7 +26,7 @@ export function Navigation({ onNavigate }: NavigationProps) {
           key={link.href}
           href={link.href}
           className={cn(
-            "uppercase  transition-colors relative py-1  text-brand-primary hover:text-brand-secondary text-xl font-heading group",
+            "transition-colors relative py-1  text-black hover:text-brand-primary text-lg font-heading group",
             
           )}
           onClick={(e) => handleClick(e, link.href)}

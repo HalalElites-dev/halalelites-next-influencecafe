@@ -12,7 +12,7 @@ const About = () => {
               src={'/placeholder.svg'}
               alt=''
               fill
-              className='invert'
+              className='rounded-2xl shadow-2xl'
               />
             </div>
           </div>
@@ -25,15 +25,15 @@ const About = () => {
             
             <div>
               <h2 className='text-5xl  text-brand-secondary mb-8 leading-tight upper'>
-                Serving Traditional <span className='text-brand-primary'>Yemini & Mediterranean Cuisine to Toledo</span> 
+                Serving New York Style <span className='text-brand-primary'>Halal Food</span> 
               </h2>
               
               <div className="space-y-6 text-lg text-foreground leading-relaxed">
                 <p>
-                  Founded by the  family, our restaurant brings the rich culinary traditions of Yemen&apos;s Hadramout region to life. Every dish tells a story of ancient spice routes, family recipes, and the warm hospitality that defines Yemeni culture.
+                  Founded by the  family,  every dish tells a story of ancient spice routes, family recipes, and the warm hospitality that defines our  culture.
                 </p>
                 <p>
-                 From our signature Mandi and Zurbian to traditional Fahsah and fresh Yemeni bread, we use only the finest ingredients and time-honored cooking methods to ensure an authentic dining experience.
+                 From our signature Chicken rice and Lamb rice, we use only the finest ingredients and time-honored cooking methods to ensure an authentic dining experience.
                 </p>
               </div>
             </div>

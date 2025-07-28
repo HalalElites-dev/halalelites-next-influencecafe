@@ -1,7 +1,7 @@
 import { Facebook, Instagram, LucideIcon, Youtube } from "lucide-react";
 
 // Site Metadata
-export const SITE_TITLE = 'Hadramout';
+export const SITE_TITLE = 'Maryams Halal ';
 export const SITE_TAGLINE = 'Best Chicken n Fish in Toledo';
 export const SITE_URL = 'https://Twospoons.com';
 
@@ -27,24 +27,53 @@ export const Best_Selling = 'Popular Items';
 
 export const BESTSELLING = [
   {
-    title: "Chicken Mandi",
-    description: "Chicken cooked in a Tandoor with spiced rice.",
-    Image: "/placeholder.svg"
+    name: "Chicken & Lamb Over Rice",
+    description:
+      "Comes with chicken & lamb, rice, cooked onion, cooked green pepper, small portion of fresh salad and white & hot sauce!",
+    price: "$10.99",
+    rating: "100% (8)",
+    orders: "70+ recent orders",
+    image: "/placeholder.svg?height=300&width=400&text=Chicken & Lamb Over Rice",
   },
   {
-    title: "Haneeth",
-    description: "Slow-cooked Lamb with spiced rice.",
-    Image: "/placeholder.svg"
+    name: "Chicken Over Rice",
+    description: "Comes with chicken, rice, small portion of fresh salad and white & hot sauce!",
+    price: "$9.99",
+    rating: "75% (8)",
+    orders: "70+ recent orders",
+    image: "/placeholder.svg?height=300&width=400&text=Chicken Over Rice",
   },
   {
-    title: "Fahsah",
-    description: "most notably made with shredded lamb and served bubbling hot in a traditional stone pot",
-    Image: "/placeholder.svg"
+    name: "Chicken & Lamb Tikka",
+    description:
+      "Comes with chicken Tikka with your choice of over rice or fries or salad, and (small portion of salad comes with white & hot sauce!",
+    price: "$14.99",
+    orders: "50+ recent orders",
+    image: "/placeholder.svg?height=300&width=400&text=Chicken & Lamb Tikka",
   },
-   {
-    title: "Mixed Meat Special",
-    description: "Your choice of lamb, meat, or fish. Serves 3-5 People ",
-    Image: "/placeholder.svg"
+  {
+    name: "Lamb Over Rice",
+    description:
+      "Comes with lamb, rice, cooked onion, cooked green pepper, small portion of fresh salad and white & hot sauce!",
+    price: "$10.99",
+    orders: "10+ recent orders",
+    image: "/placeholder.svg?height=300&width=400&text=Lamb Over Rice",
+  },
+  {
+    name: "Chicken Tikka",
+    description:
+      "Comes with chicken Tikka with your choice of over rice or fries or salad, and (small portion of salad comes with white & hot sauce!",
+    price: "$13.99",
+    orders: "40+ recent orders",
+    image: "/placeholder.svg?height=300&width=400&text=Chicken Tikka",
+  },
+  {
+    name: "Lamb Gyro",
+    description: "Comes with pita bread wrap, lamb, veggies and white & hot sauce!",
+    price: "$9.99",
+    rating: "100% (8)",
+    orders: "20+ recent orders",
+    image: "/placeholder.svg?height=300&width=400&text=Lamb Gyro",
   },
 ]
 
@@ -75,9 +104,9 @@ export const ABOUT = [
   },
 ]
 // Contact Section
-export const CONTACT_HEADING = 'Get in Touch';
+export const CONTACT_HEADING = 'Contact';
 export const CONTACT_SUBTEXT = 'We would love to hear from you! Reach out with any questions or feedback.';
-export const CONTACT_EMAIL = 'support@halalelites.com';
+export const CONTACT_EMAIL = 'info@Maryamrestaurant.com';
 export const CONTACT_PHONE = '+1 (555) 123-4567';
 export const CONTACT_ADDRESS = '123 HalalElites St, Suite 100, City';
 
@@ -86,17 +115,17 @@ export const CONTACT_ADDRESS = '123 HalalElites St, Suite 100, City';
 
 export const TESTIMONIALS = [
   {
-    quote: "The best Mandi in Toledo.",
+    quote: "The best halal food in Columbus! Reminds me of authentic New York street food. The lamb over rice is incredible!",
     author: "Sarah M.",
     role: "Regular Customer"
   },
   {
-    quote: "Finally, a restaurant that serves genuine Haneeth It is a must-try! Outstanding quality.",
+    quote: "Amazing flavors and generous portions. The chicken tikka is my go-to order. Always fresh and delicious!",
     author: "Ahmed K.",
     role: "Food Blogger"
   },
   {
-    quote: "Great place for family dinners. The staff is friendly and the menu has something for everyone. Highly recommended!",
+    quote: "The quality is outstanding and the staff is so friendly. The lamb gyro is perfectly seasoned",
     author: "Jamal R.",
     role: "Local Resident"
   }
@@ -105,7 +134,7 @@ export const TESTIMONIALS = [
 
 
 // Footer Info
-export const FOOTER_TEXT = '© 2025 Hadramout, serving the best Yemeni food  In Toledo.';
+export const FOOTER_TEXT = 'Bringing authentic New York halal flavors to Columbus, Ohio. Every dish crafted with love and tradition.';
 
 export const SOCIAL_LINKS: { name: string; url: string; icon: LucideIcon }[] = [
   {
