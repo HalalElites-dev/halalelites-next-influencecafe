@@ -1,51 +1,125 @@
-import React from 'react'
-import Image from 'next/image'
+"use client"
+import React from "react"
+import Image from "next/image"
+import { Button } from "../ui/button"
+
 const About = () => {
   return (
-    <section id='about' className="py-30 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className='grid lg:grid-cols-2 gap-16 items-start '>
-           {/* Left side - Image placeholder */}
-          <div className='relative'>
-            <div className="w-full h-[300px] lg:h-[600px]  rounded-lg flex items-center justify-center">
-              <Image
-              src={'/placeholder.svg'}
-              alt=''
+    <section className="relative py-20 px-6 bg-background">
+     
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        {/* Left: Custom Image Group */}
+        <div className="relative w-full max-w-[650px] aspect-square mx-auto">
+          {/* Picture 1 */}
+          <div className="absolute top-0 left-0 w-1/2 h-1/2 sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/breakfast.jpg"
+              alt="Breakfast"
               fill
-              className='rounded-2xl shadow-2xl'
-              />
-            </div>
+              sizes="(max-width: 768px) 50vw, 360px"
+              className="object-cover"
+              priority={false}
+            />
           </div>
-          
-          {/* Right side - Content */}
-          <div className='space-y-8'>
-            <div className="text-sm text-brand-primary font-semibold tracking-wide uppercase">
-              Since 1990
-            </div>
-            
-            <div>
-              <h2 className='text-5xl  text-brand-secondary mb-8 leading-tight upper'>
-                Serving New York Style <span className='text-brand-primary'>Halal Food</span> 
-              </h2>
-              
-              <div className="space-y-6 text-lg text-foreground leading-relaxed">
-                <p>
-                  Founded by the  family,  every dish tells a story of ancient spice routes, family recipes, and the warm hospitality that defines our  culture.
-                </p>
-                <p>
-                 From our signature Chicken rice and Lamb rice, we use only the finest ingredients and time-honored cooking methods to ensure an authentic dining experience.
+
+          {/* Picture 2 */}
+          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/images/about1.jpg"
+              alt="About"
+              fill
+              sizes="(max-width: 768px) 50vw, 388px"
+              className="object-cover"
+            />
+          </div>
+
+       
+
+          {/* Croissant graphic */}
+          <div className="absolute top-4 right-4 w-16 h-16 sm:w-[140px] sm:h-[140px]">
+            <Image
+              src="/images/croissant.png"
+              alt="food item"
+              fill
+              className="object-contain"
+              aria-hidden="true"
+            />
+          </div>
+
+          {/* Seal graphic */}
+          <div className="absolute bottom-4 left-4 w-16 h-16 sm:w-[140px] sm:h-[140px]">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              fill
+              className="object-contain"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
+
+        {/* Right: Info */}
+        <div>
+          <span className="uppercase tracking-wide text-sm text-primary font-medium">
+            About Us
+          </span>
+          <h2 className="text-5xl font-bold font-body mb-4 text-primary">
+            Toledo’s First Specialty Coffee Hub
+          </h2>
+          <p className="text-lg mb-6 text-muted-foreground">
+            At Influence Café, we’re more than just a coffee shop—we’re a community space
+            where science, flavor, and wellness meet. From carefully roasted beans to
+            modern desserts, every detail is crafted to inspire connection and creativity.
+          </p>
+
+          <ul className="space-y-5">
+            <li className="flex items-start gap-4">
+              <Image src="/icons/beans.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Ethically Sourced Coffee</h3>
+                <p className="text-muted-foreground">
+                  Our beans are roasted locally and sourced with care for quality and sustainability.
                 </p>
               </div>
-            </div>
-           
+            </li>
+            <li className="flex items-start gap-4">
+              <Image src="/icons/dessert.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Modern Desserts</h3>
+                <p className="text-muted-foreground">
+                  A selection of sweet treats and healthy snacks designed to pair perfectly with your coffee.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <Image src="/icons/workshop.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Workshops & Events</h3>
+                <p className="text-muted-foreground">
+                  From wellness talks to coffee science sessions, we host experiences that spark curiosity.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <Image src="/icons/community.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">A Place for Community</h3>
+                <p className="text-muted-foreground">
+                  Whether you’re studying, collaborating, or relaxing, our café is built for connection.
+                </p>
+              </div>
+            </li>
+          </ul>
+
+          <div className="mt-6">
+            <Button className="bg-primary text-white px-6 py-3 rounded-xl shadow-md hover:bg-primary/90 transition" size="lg">
+              Explore Our Menu
+            </Button>
+          </div>
         </div>
-        </div>
-       
       </div>
     </section>
   )
 }
 
 export default About
-
-

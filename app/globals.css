@@ -27,19 +27,6 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
-  /* Restaurant Brand Colors */
-  --color-restaurant-plum: var(--restaurant-plum);
-  --color-restaurant-orange: var(--restaurant-orange);
-  --color-restaurant-yellow: var(--restaurant-yellow);
-  --color-restaurant-cream: var(--restaurant-cream);
-  --color-restaurant-gray: var(--restaurant-gray);
-
-  /* Chart Colors */
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
 
   /* Brand Colors */
   --color-brand-primary: var(--brand-primary);
@@ -71,49 +58,43 @@
   --radius: 0.75rem;
 
   /* ===== LIGHT MODE COLORS (Default) ===== */
-  --background: #f9f4ed; /* Off-white background */
-  --foreground: #2b2b2b; /* Slate Gray text */
+  --background: #EDEFF1; /* Pure white background */
+  --foreground: #2b2b2b; /* Dark gray text (almost black) */
 
   /* Card & Modal Colors */
-  --card: #ffffff; /* White cards */
-  --card-foreground: #2b2b2b; /* Slate Gray text on cards */
+  --card: #f9f9f9; /* Very light gray card background */
+  --card-foreground: #2b2b2b; /* Dark gray text on cards */
   --popover: #ffffff; /* White popover */
-  --popover-foreground: #2b2b2b; /* Slate Gray text */
+  --popover-foreground: #2b2b2b; /* Dark gray text */
 
-  --primary: #f48c06; /* Flame Orange primary */
-  --primary-foreground: #ffffff; /* White text on orange */
+  --primary: #000000; /* Black as primary (buttons, headings) */
+  --primary-foreground: #ffffff; /* White text on black */
 
-  --secondary: #4c1d1d; /* Dark Plum secondary */
-  --secondary-foreground: #ffffff; /* White text on plum */
+  --secondary: #ffffff; /* Fresh green secondary accent */
+  --secondary-foreground: #000000; /* Black text on green */
 
-  --muted: #f9f4ed; /* Off-white muted */
-  --muted-foreground: #2b2b2b; /* Slate Gray muted text */
+  --muted: #f5f5f5; /* Light muted gray */
+  --muted-foreground: #6b7280; /* Muted medium gray text */
 
-  --accent: #ffd369; /* Golden Yellow accent */
-  --accent-foreground: #4c1d1d; /* Dark Plum text on yellow */
+  --accent: #c5a46d; /* Gold accent (stars, highlights) */
+  --accent-foreground: #000000; /* Black text on gold */
 
   --destructive: #dc2626; /* Red for destructive actions */
   --destructive-foreground: #ffffff; /* White text on red */
 
-  --border: #e5e7eb; /* Light border */
+  --border: #e5e7eb; /* Light border gray */
   --input: #e5e7eb; /* Input border */
-  --ring: #f48c06; /* Orange focus ring */
-
-  /* Restaurant Brand Colors */
-  --restaurant-plum: #4c1d1d; /* Dark Plum */
-  --restaurant-orange: #f48c06; /* Flame Orange */
-  --restaurant-yellow: #ffd369; /* Golden Yellow */
-  --restaurant-cream: #f9f4ed; /* Off-white */
-  --restaurant-gray: #2b2b2b; /* Slate Gray */
+  --ring: #000000; /* Black focus ring */
 
   /* Brand Colors */
-  --brand-primary: #f48c06; /* Flame Orange */
-  --brand-secondary: #4c1d1d; /* Dark Plum */
-  --brand-accent: #ffd369; /* Golden Yellow */
+  --brand-primary: #000000; /* Black */
+  --brand-secondary: #7ac142; /* Fresh green */
+  --brand-accent: #c5a46d; /* Gold */
 
   /* Typography */
   --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
+
 }
 
 /* ===== BASE STYLES ===== */

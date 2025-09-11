@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link"
-import { FOOTER_TEXT, SITE_TITLE, SOCIAL_LINKS, NAV_LINKS, CONTACT_ADDRESS, CONTACT_HEADING, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants"
+import {SITE_TITLE, NAV_LINKS, CONTACT_ADDRESS, CONTACT_HEADING, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants"
 import Image from "next/image"
 import { Mail, MapPin, Phone } from "lucide-react"
 import { cn, scrollToSection } from "@/lib/utils"
@@ -22,8 +22,8 @@ const Footer = () => {
             <div className="flex items-center mb-4 gap-2">
               <Image src="/logo.jpg" alt="Two Spoons" width={100} height={100} className=" " />
             </div>
-            <p className="text-brand-secondary text-sm leading-relaxed mb-6 max-w-xs">{FOOTER_TEXT}</p>
-            <div className="flex items-center gap-4 text-brand-secondary">
+            {/* <p className="text-brand-secondary text-sm leading-relaxed mb-6 max-w-xs">{FOOTER_TEXT}</p> */}
+            {/* <div className="flex items-center gap-4 text-brand-secondary">
               {SOCIAL_LINKS.map((link) => (
                 <Link
                   key={link.name}
@@ -38,7 +38,7 @@ const Footer = () => {
 
                 </Link>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links Column */}

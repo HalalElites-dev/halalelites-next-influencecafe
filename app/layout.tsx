@@ -5,20 +5,26 @@ import { Playfair_Display, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
+
 const playfair = Playfair_Display({
   variable: "--font-heading", 
   subsets: ["latin"], 
   weight: ['400', '500', '600', '700', '800', '900'] 
 });
+
 const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
-  title: "Maryam's Halal Taste of New York : Come and try our delicious Halal food Chicken & Lamb Tikka Platter comes with our signature sauce !",
-  description: "Columbus Halal Chicken over rice, Maryam's halal menu",
+  title:
+    "Influence Café | Specialty Coffee, Modern Desserts & Wellness Hub in Toledo",
+  description:
+    "Discover Influence Café at Central & Secor in Toledo, OH — premium coffee, sugar-free desserts, and science-backed wellness insights. Every sip and bite comes with knowledge and flavor.",
 };
+
 
 export default function RootLayout({
   children,
