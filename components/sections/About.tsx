@@ -77,16 +77,16 @@ const About = () => {
             <li className="flex items-start gap-4">
               <Truck className="text-primary" size={62} />
               <div>
-                <h3 className="text-xl font-semibold text-foreground">Ethically Sourced Coffee</h3>
+                <h3 className="text-xl font-semibold text-foreground font-body">Ethically Sourced Coffee</h3>
                 <p className="text-muted-foreground">
-                  Our beans are roasted locally and sourced with care for quality and sustainability.
+                  Our beans and leaves are roasted locally and sourced with care for quality and sustainability.
                 </p>
               </div>
             </li>
             <li className="flex items-start gap-4">
               <Dessert className="text-primary" size={62} />
               <div>
-                <h3 className="text-xl font-semibold text-foreground">Modern Desserts</h3>
+                <h3 className="text-xl font-semibold text-foreground font-body">Modern Desserts</h3>
                 <p className="text-muted-foreground">
                   A selection of sweet treats and healthy snacks designed to pair perfectly with your coffee.
                 </p>
@@ -95,7 +95,7 @@ const About = () => {
             <li className="flex items-start gap-4">
               <Coffee className="text-primary" size={62} />
               <div>
-                <h3 className="text-xl font-semibold text-foreground">Workshops & Events</h3>
+                <h3 className="text-xl font-semibold text-foreground font-body">Workshops & Events</h3>
                 <p className="text-muted-foreground">
                   From wellness talks to coffee science sessions, we host experiences that spark curiosity.
                 </p>
@@ -104,7 +104,7 @@ const About = () => {
             <li className="flex items-start gap-4">
               <CupSoda className="text-primary" size={62} />
               <div>
-                <h3 className="text-xl font-semibold text-foreground">A Place for Community</h3>
+                <h3 className="text-xl font-semibold text-foreground font-body">A Place for Community</h3>
                 <p className="text-muted-foreground">
                   Whether you’re studying, collaborating, or relaxing, our café is built for connection.
                 </p>
