@@ -1,99 +1,92 @@
 'use client';
-import Link from "next/link"
-import {SITE_TITLE, NAV_LINKS, CONTACT_ADDRESS, CONTACT_HEADING, CONTACT_PHONE, CONTACT_EMAIL } from "@/lib/constants"
-import Image from "next/image"
-import { Mail, MapPin, Phone } from "lucide-react"
-import { cn, scrollToSection } from "@/lib/utils"
-const Footer = () => {
+import Link from "next/link";
+import { SITE_TITLE, NAV_LINKS } from "@/lib/constants";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { cn, scrollToSection } from "@/lib/utils";
 
+const Footer = () => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
     if (href.startsWith('#')) {
       e.preventDefault();
       scrollToSection(href.substring(1));
     }
   };
+
   return (
-    <footer className="border-t py-8 px-6 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+    <footer className="bg-black text-white py-24 px-4">
+      <div className="container mx-auto max-w-7xl">
 
-          {/* Left section - Brand and description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-4 gap-2">
-              <Image src="/logo.jpg" alt="Two Spoons" width={100} height={100} className=" " />
-            </div>
-            {/* <p className="text-brand-secondary text-sm leading-relaxed mb-6 max-w-xs">{FOOTER_TEXT}</p> */}
-            {/* <div className="flex items-center gap-4 text-brand-secondary">
-              {SOCIAL_LINKS.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors group relative"
-                >
-                  <span className="sr-only">{link.name}</span>
-                  <link.icon className="h-5 w-5 text-brand-secondary" />
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
+        {/* Call-to-Action Section */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <h3 className="text-3xl font-bold mb-4 font-body">Stay Connected Over a cup of coffee</h3>
+          <p className="max-w-xl mb-8">Lorem ipsum dolor sit amet consectetur. At porttitor pharetra id dignissim enim mauris malesuada iaculis. In.</p>
+          <a href="/contact" className="inline-block">
+            <button className="bg-white text-[#07281e] font-semibold py-4 px-8 rounded-lg shadow-lg hover:scale-105 transition-transform">
+              Visit Us
+            </button>
+          </a>
+        </div>
 
-                </Link>
-              ))}
-            </div> */}
+        {/* Main Footer Content - Integrated your existing lists */}
+        <div className="flex flex-col lg:flex-row items-center justify-between mt-16 border-t border-gray-700 pt-8">
+          {/* Left section - Brand (from your original) */}
+          <div className="mb-8 lg:mb-0">
+            <Link href="/">
+              <Image src="/logo.webp" alt="Two Spoons" width={126} height={60} className="w-full h-full invert" /> 
+            </Link>
           </div>
 
-          {/* Quick Links Column */}
-          <div>
-            <h3 className=" text-lg text-brand-secondary mb-4 font-body font-bold">Quick Links</h3>
-            <ul className="space-y-3 text-brand-secondary ">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      "transition-colors text-md relative group hover:text-brand-accent",
-
-                    )}
-                    onClick={(e) => handleClick(e, link.href)}
-                  >
-                    {link.label}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-accent transition-all group-hover:w-full"></span>
-
-                  </Link>
-                </li>
-              ))}
-            </ul>
+          {/* Quick Links Column (from your original) */}
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 text-center mb-8 lg:mb-0 font-bold uppercase">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={cn(
+                  " transition-colors relative group",
+                )}
+                onClick={(e) => handleClick(e, link.href)}
+              >
+                {link.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-secondary transition-all group-hover:w-full"></span>
+              </Link>
+            ))}
           </div>
-          {/*  */}
-          {/* Contact Column */}
-          <div>
-            <h3 className="text-lg mb-8 text-brand-secondary font-body font-bold">{CONTACT_HEADING}</h3>
-            <div className="space-y-6 items-start">
-              <div className="flex items-center space-x-4 text-brand-secondary">
-                <MapPin className="w-6 h-6 text-brand-secondary" />
-                <div>
-                  <div className="text-brand-secondary text-md">{CONTACT_ADDRESS}</div>
-                </div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Phone className="w-6 h-6 text-brand-secondary" />
-                <div className="text-brand-secondary text-md">{CONTACT_PHONE}</div>
-              </div>
-              <div className="flex items-center space-x-4">
-                <Mail className="w-6 h-6 text-brand-secondary" />
-                <div className="text-brand-secondary text-md ">{CONTACT_EMAIL}</div>
-              </div>
-            </div>
+
+          {/* Social Media Icons (new section) */}
+          <div className="flex space-x-4">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors">
+              <Mail className="w-4 h-4 " width={16} height={16}  />
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors">
+              <MapPin className="w-4 h-4  " width={16} height={16} />
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors">
+              <Phone className="w-4 h-4  " width={16} height={16}  />
+            </a>
           </div>
         </div>
 
-        {/* Bottom section */}
-        <div className="flex flex-col sm:flex-row justify-center items-center pt-8 mt-8 border-t border-brand-secondary">
-          <p className="text-md mb-4 sm:mb-0 text-brand-secondary">© 2025 {SITE_TITLE}. All rights reserved.</p>
+        {/* Bottom Section - Integrated new design */}
+        <div className=" text-sm mt-8 pt-4 border-t border-gray-700">
+          {/* Copyright/Credits */}
+          <div className="mb-4 lg:mb-0 text-center ">
+            Developed By <a href="https://halalelites.dev/" className="hover:text-brand-secondary">Halal-Elites</a> | © {new Date().getFullYear()} {SITE_TITLE}
+          </div>
+
+          {/* Additional Links (from original example) */}
+          {/* <div className="flex space-x-4">
+            <a href="/style-guide" className="hover:text-amber-400">Style Guide</a>
+            <span className="text-gray-500">|</span>
+            <a href="/license" className="hover:text-amber-400">Licence</a>
+            <span className="text-gray-500">|</span>
+            <a href="/change-log" className="hover:text-amber-400">Changelog</a>
+          </div> */}
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

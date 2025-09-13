@@ -2,6 +2,7 @@
 import React from "react"
 import Image from "next/image"
 import { Button } from "../ui/button"
+import { Coffee, Dessert, CupSoda, Truck } from "lucide-react"
 
 const About = () => {
   return (
@@ -13,7 +14,7 @@ const About = () => {
           {/* Picture 1 */}
           <div className="absolute top-0 left-0 w-1/2 h-1/2 sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/breakfast.jpg"
+              src="/coffeee.webp"
               alt="Breakfast"
               fill
               sizes="(max-width: 768px) 50vw, 360px"
@@ -25,7 +26,7 @@ const About = () => {
           {/* Picture 2 */}
           <div className="absolute bottom-0 right-0 w-1/2 h-1/2 sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/images/about1.jpg"
+              src="/about2.webp"
               alt="About"
               fill
               sizes="(max-width: 768px) 50vw, 388px"
@@ -38,7 +39,7 @@ const About = () => {
           {/* Croissant graphic */}
           <div className="absolute top-4 right-4 w-16 h-16 sm:w-[140px] sm:h-[140px]">
             <Image
-              src="/images/croissant.png"
+              src="/dubaichocolate.jpg"
               alt="food item"
               fill
               className="object-contain"
@@ -49,7 +50,7 @@ const About = () => {
           {/* Seal graphic */}
           <div className="absolute bottom-4 left-4 w-16 h-16 sm:w-[140px] sm:h-[140px]">
             <Image
-              src="/logo.png"
+              src="/logo.webp"
               alt="logo"
               fill
               className="object-contain"
@@ -74,7 +75,7 @@ const About = () => {
 
           <ul className="space-y-5">
             <li className="flex items-start gap-4">
-              <Image src="/icons/beans.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <Truck className="text-primary" size={62} />
               <div>
                 <h3 className="text-xl font-semibold text-foreground">Ethically Sourced Coffee</h3>
                 <p className="text-muted-foreground">
@@ -83,7 +84,7 @@ const About = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <Image src="/icons/dessert.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <Dessert className="text-primary" size={62} />
               <div>
                 <h3 className="text-xl font-semibold text-foreground">Modern Desserts</h3>
                 <p className="text-muted-foreground">
@@ -92,7 +93,7 @@ const About = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <Image src="/icons/workshop.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <Coffee className="text-primary" size={62} />
               <div>
                 <h3 className="text-xl font-semibold text-foreground">Workshops & Events</h3>
                 <p className="text-muted-foreground">
@@ -101,7 +102,7 @@ const About = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <Image src="/icons/community.svg" alt="" width={40} height={40} aria-hidden="true" />
+              <CupSoda className="text-primary" size={62} />
               <div>
                 <h3 className="text-xl font-semibold text-foreground">A Place for Community</h3>
                 <p className="text-muted-foreground">

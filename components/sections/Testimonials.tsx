@@ -18,7 +18,7 @@ const Testimonials = () => {
   }, [])
 
   return (
-    <section id="testimonials" className="py-20 px-6">
+    <section id="testimonials" className="py-20 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section heading */}
         <div className="text-center mb-12">
@@ -33,7 +33,7 @@ const Testimonials = () => {
           {/* Left image */}
           <div className="w-full">
             <Image
-              src="/prepare drink.png" // replace with your image
+              src="/scene.webp" // replace with your image
               alt="Coffee"
               width={600}
               height={400}

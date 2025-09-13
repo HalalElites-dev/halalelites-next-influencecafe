@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Hero = () => {
     return (
-        <section id="home" className=''>
+        <section id="home" className='bg-background'>
             {/* hero section */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-20 mx-auto max-w-7xl xl:max-w-[1800px] py-32 md:py-30 xl:py-38'>
                 {/* left section */}
