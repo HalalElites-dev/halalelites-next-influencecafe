@@ -5,7 +5,7 @@ import Image from 'next/image'
 const BestSelling = () => {
     return (
         <section id="menu" className='relative overflow-y-visible overflow-x-hidden bg-white'>
-             <div className="hidden xl:block absolute top-65 -left-95 transform -translate-y-1/2 rotate-45 z-50">
+             <div className="hidden xl:block absolute top-65 -left-95 transform -translate-y-1/2 rotate-45 z-40">
                     <Image
                       src="/hero.webp"
                       alt="Cup"
@@ -14,7 +14,7 @@ const BestSelling = () => {
                       className="object-contain"
                     />
                   </div>
-                  <div className="hidden xl:block absolute top-65 -right-95 transform -translate-y-1/2 -rotate-360 z-50">
+                  <div className="hidden xl:block absolute top-65 -right-95 transform -translate-y-1/2 -rotate-360 z-40">
                     <Image
                       src="/hero.webp"
                       alt="Cup"

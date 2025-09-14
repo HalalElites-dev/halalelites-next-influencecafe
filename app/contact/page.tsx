@@ -21,6 +21,15 @@ const page = () => {
         </div>
       </div>
 
+      <div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-6">Get in Touch</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            We&apos;d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.
+          </p>
+          </div>
+      </div>
+
     </section>
   )
 }
