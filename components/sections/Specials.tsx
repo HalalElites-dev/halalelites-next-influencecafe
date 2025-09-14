@@ -1,5 +1,5 @@
 "use client"
-import { Coffee, Sandwich, Dessert, CupSoda } from "lucide-react"
+import { Coffee, Dessert, CupSoda } from "lucide-react"
 import { Button } from "../ui/button"
 import Link from "next/link"
 
@@ -23,7 +23,7 @@ export const Specials = () => {
         </p>
 
         {/* Specials Grid */}
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Coffee */}
           <div className="flex items-start gap-4 p-6 border rounded-2xl transition hover:shadow-lg">
             <div className="flex items-center justify-center w-20 h-20 rounded-full bg-muted">
@@ -51,7 +51,7 @@ export const Specials = () => {
           </div>
 
           {/* Sandwiches */}
-          <div className="flex items-start gap-4 p-6 border rounded-2xl transition hover:shadow-lg">
+          {/* <div className="flex items-start gap-4 p-6 border rounded-2xl transition hover:shadow-lg">
             <div className="flex items-center justify-center w-20 h-20 rounded-full bg-muted">
               <Sandwich className="w-10 h-10 text-muted-foreground" />
             </div>
@@ -61,7 +61,7 @@ export const Specials = () => {
                 Crafted with house-baked bread and farm-fresh ingredients.
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Pastries */}
           <div className="flex items-start gap-4 p-6 border rounded-2xl transition hover:shadow-lg">
