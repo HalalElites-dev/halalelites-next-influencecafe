@@ -88,7 +88,7 @@ export function Header() {
                   asChild
                   className="rounded-full px-6 py-6 bg-brand-primary text-white text-lg  font-bold hover:bg-brand-primary/90"
                 >
-                  <Link href="https://orders.cake.net/11572482" target="_blank">
+                  <Link href="/" target="_blank">
                     Order Now
                   </Link>
                 </Button>
@@ -119,11 +119,11 @@ export function Header() {
 
         {/* Mobile Dropdown */}
         <div
-          className={`lg:hidden fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden  fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
         >
           <div
-            className="w-full bg-background backdrop-blur-lg rounded-b-lg border-t border-brand-primary"
+            className="w-full bg-white backdrop-blur-lg rounded-b-lg border-t border-brand-primary"
           >
             <div className="px-6 py-6 space-y-4">
               <div className="space-y-3 text-center">
