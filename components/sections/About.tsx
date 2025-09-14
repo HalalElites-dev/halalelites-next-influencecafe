@@ -11,53 +11,52 @@ const About = () => {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         {/* Left: Custom Image Group */}
         <div className="relative w-full max-w-[650px] aspect-square mx-auto">
-          {/* Picture 1 */}
-          <div className="absolute top-0 left-0 w-1/2 h-1/2 sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src="/coffeee.webp"
-              alt="Breakfast"
-              fill
-              sizes="(max-width: 768px) 50vw, 360px"
-              className="object-cover"
-              priority={false}
-            />
-          </div>
+  {/* Picture 1 */}
+  <div className="absolute top-0 left-0 w-[70%] h-[70%] sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
+    <Image
+      src="/coffeee.webp"
+      alt="Breakfast"
+      fill
+      sizes="(max-width: 768px) 70vw, 360px"
+      className="object-cover"
+      priority={false}
+    />
+  </div>
 
-          {/* Picture 2 */}
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src="/about2.webp"
-              alt="About"
-              fill
-              sizes="(max-width: 768px) 50vw, 388px"
-              className="object-cover"
-            />
-          </div>
+  {/* Picture 2 */}
+  <div className="absolute bottom-0 right-0 w-[70%] h-[70%] sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
+    <Image
+      src="/about2.webp"
+      alt="About"
+      fill
+      sizes="(max-width: 768px) 70vw, 388px"
+      className="object-cover"
+    />
+  </div>
 
-       
+  {/* Croissant graphic */}
+  <div className="absolute top-4 right-4 w-12 h-12 sm:w-[140px] sm:h-[140px]">
+    <Image
+      src="/dubaichocolate.jpg"
+      alt="food item"
+      fill
+      className="object-contain"
+      aria-hidden="true"
+    />
+  </div>
 
-          {/* Croissant graphic */}
-          <div className="absolute top-4 right-4 w-16 h-16 sm:w-[140px] sm:h-[140px]">
-            <Image
-              src="/dubaichocolate.jpg"
-              alt="food item"
-              fill
-              className="object-contain"
-              aria-hidden="true"
-            />
-          </div>
+  {/* Seal graphic */}
+  <div className="absolute bottom-4 left-4 w-12 h-12 sm:w-[140px] sm:h-[140px]">
+    <Image
+      src="/logo.webp"
+      alt="logo"
+      fill
+      className="object-contain"
+      aria-hidden="true"
+    />
+  </div>
+</div>
 
-          {/* Seal graphic */}
-          <div className="absolute bottom-4 left-4 w-16 h-16 sm:w-[140px] sm:h-[140px]">
-            <Image
-              src="/logo.webp"
-              alt="logo"
-              fill
-              className="object-contain"
-              aria-hidden="true"
-            />
-          </div>
-        </div>
 
         {/* Right: Info */}
         <div>
