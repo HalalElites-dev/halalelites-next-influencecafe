@@ -88,8 +88,8 @@ export function Header() {
                   asChild
                   className="rounded-full px-6 py-6 bg-brand-primary text-white text-lg  font-bold hover:bg-brand-primary/90"
                 >
-                  <Link href="/" target="_blank">
-                    Order Now
+                  <Link href="/contact" target="_blank">
+                    Visit Us
                   </Link>
                 </Button>
             </div>
