@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Hero = () => {
     return (
@@ -21,14 +22,18 @@ const Hero = () => {
                                 size="lg"
                                 className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform "
                             >
-                                Visit Us
+                                <Link href="/contact">
+                                    Visit Us
+                                </Link>
                             </Button>
                             <Button
                                 size="lg"
                                 variant={'link'}
                                 className=" text-black px-8 py-4 text-lg font-semibold  "
                             >
-                                Explore Our Menu
+                                <Link href="/menu">
+                                    Explore Our Menu
+                                </Link>
                             </Button>
                         </div>
                     </div>
