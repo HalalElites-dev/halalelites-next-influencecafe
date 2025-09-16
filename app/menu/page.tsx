@@ -1,5 +1,5 @@
-import { ChevronRight } from "lucide-react"
-import React from "react"
+import { ChevronRight } from "lucide-react";
+import React from "react";
 const menuData = {
   "Signature Espresso Drinks": [
     {
@@ -117,16 +117,34 @@ const menuData = {
       image: "/placeholder.svg?height=120&width=120",
     },
   ],
-}
+};
 
-const MenuSection = ({ title, items }: { title: string; items: any[] }) => (
+type MenuItem = {
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+};
+
+const MenuSection = ({
+  title,
+  items,
+}: {
+  title: string;
+  items: MenuItem[];
+}) => (
   <div className="mb-16">
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 text-brand-primary font-body">{title}</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 text-brand-primary font-body">
+      {title}
+    </h2>
 
     {/* 1 column mobile, 2 columns desktop */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
       {items.map((item, index) => (
-        <div key={index} className="flex items-center border-b border-gray-200 pb-6">
+        <div
+          key={index}
+          className="flex items-center border-b border-gray-200 pb-6"
+        >
           {/* Image */}
           <div className="w-20 h-20 rounded overflow-hidden flex-shrink-0 mr-4">
             <img
@@ -143,19 +161,23 @@ const MenuSection = ({ title, items }: { title: string; items: any[] }) => (
           </div>
 
           {/* Price */}
-          <div className="text-lg font-bold text-gray-800 ml-4">{item.price}</div>
+          <div className="text-lg font-bold text-gray-800 ml-4">
+            {item.price}
+          </div>
         </div>
       ))}
     </div>
   </div>
-)
-
+);
 
 const page = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-80 bg-cover bg-center" style={{ backgroundImage: "url(/banner.webp)" }}>
+      <section
+        className="relative h-80 bg-cover bg-center"
+        style={{ backgroundImage: "url(/banner.webp)" }}
+      >
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 flex flex-col items-left justify-center h-full text-white px-5 md:px-26">
           <h1 className="text-5xl font-bold mb-4 font-body">Menu</h1>
@@ -169,14 +191,12 @@ const page = () => {
 
       {/* Menu Content */}
       <div className="max-w-6xl mx-auto px-4 py-16">
-        
-
         {Object.entries(menuData).map(([sectionTitle, items]) => (
           <MenuSection key={sectionTitle} title={sectionTitle} items={items} />
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default page;
