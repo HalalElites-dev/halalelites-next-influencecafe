@@ -1,5 +1,6 @@
 import { Heart, BookOpen, Lightbulb, ChevronRight } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 const AboutPage = () => {
   return (
@@ -8,15 +9,15 @@ const AboutPage = () => {
         className="relative h-80 bg-cover bg-center "
         style={{ backgroundImage: "url(/banner.webp)" }}
       >
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10 flex flex-col items-left justify-center h-full text-white px-5 md:px-26">
+        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left">
           <h1 className="text-5xl font-bold mb-4 font-body">
             About Us
           </h1>
-          <div className="flex items-center text-sm text-white">
-            <span>Home</span>
-            <ChevronRight className="w-4 h-4 mx-2 " />
-            <span className="text-white">About Us</span>
+          <div className="flex items-center text-sm text-white justify-center xl:justify-start">
+            <span><Link className="hover:underline" href="/">Home</Link></span>
+            <ChevronRight className="w-4 h-4 mx-2" />
+            <span className="text-gray-200">About Us</span>
           </div>
         </div>
       </div>

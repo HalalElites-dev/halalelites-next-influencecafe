@@ -27,8 +27,8 @@ const Navigation = ({ scrollY, onNavigate }: { scrollY: number; onNavigate?: () 
           ${isActive 
           ? 'lg:!text-black' // Active link - always black
           : scrollY > 50 
-            ? 'lg:!text-gray-500 hover:!text-brand-primary' 
-            : 'lg:!text-gray-500 hover:!text-brand-primary'
+            ? 'lg:!text-gray-950 hover:!text-brand-primary' 
+            : 'lg:!text-gray-600 hover:!text-brand-primary'
           }
         `}
             >
@@ -86,7 +86,7 @@ export function Header() {
               <Navigation scrollY={scrollY} />
               <Button
                   asChild
-                  className="rounded-full px-6 py-6 bg-brand-primary text-white text-lg  font-bold hover:bg-brand-primary/90"
+                  className="rounded-lg px-6 py-6 bg-brand-primary text-white text-lg  font-semibold hover:bg-brand-primary/90"
                 >
                   <Link href="/contact" target="_blank">
                     Visit Us

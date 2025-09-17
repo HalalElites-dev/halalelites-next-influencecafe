@@ -9,6 +9,7 @@ export const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Menu', href: '/menu' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Pharmacology', href: '/pharmacology' },
 ];
 
 // Hero Section
@@ -57,3 +58,122 @@ export const TESTIMONIALS = [
     role: 'Graduate Student',
   },
 ];
+
+export const menuData = {
+  "Signature Espresso Drinks": [
+    {
+      name: "Influence Latte",
+      description: "Classic latte with a twist of creativity",
+      price: "$5.25",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Shot of Genius",
+      description: "Bold, rich espresso to ignite your day",
+      price: "$4.25",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Cappuccino",
+      description: "Creamy foam layered perfectly with espresso",
+      price: "$4.75",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Mocha",
+      description: "Chocolate meets espresso for a dreamy fusion",
+      price: "$5.50",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Desert Coffee",
+      description: "Premium Arabian-style coffee brewed with aromatic spices",
+      price: "$6.00",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Affogato",
+      description: "Vanilla ice cream with espresso shot",
+      price: "$5.75",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+  ],
+  "Specialty Teas": [
+    {
+      name: "Adeni Gold Chai",
+      description: "Traditional spiced milk tea",
+      price: "$4.50",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Hibiscus",
+      description: "A vibrant, antioxidant-rich herbal refresher",
+      price: "$3.75",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Royal Black",
+      description: "Smooth, bold, and timeless black tea",
+      price: "$3.50",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Matcha Latte",
+      description: "Premium matcha powder with steamed milk",
+      price: "$5.25",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+  ],
+  "Brewed Coffee": [
+    {
+      name: "Just Black",
+      description: "Deep, rich hot coffee with a bold finish",
+      price: "$3.25",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Cold Influence",
+      description: "Refreshingly smooth cold brew with less acidity",
+      price: "$4.00",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Arabica Essence",
+      description: "100% authentic Arabica beans for smooth, luxurious flavor",
+      price: "$4.50",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+  ],
+  "Modern Desserts": [
+    {
+      name: "Dream Cake",
+      description: "Soft cake with rich cream and choice of topping",
+      price: "$6.50",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Dubai Strawberry Cup",
+      description: "Chocolate sauce layered with Kunafa and strawberry",
+      price: "$7.25",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Dubai Chocolate Bar",
+      description: "Premium chocolate filled with kunafa and pistachio cream",
+      price: "$8.00",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Berry Bliss Fusion",
+      description: "Fresh strawberries with choice of chocolate sauce",
+      price: "$5.75",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+    {
+      name: "Flat Croissant",
+      description: "Toasted croissant topped with your choice of sauce",
+      price: "$4.25",
+      image: "/placeholder.svg?height=120&width=120",
+    },
+  ],
+}

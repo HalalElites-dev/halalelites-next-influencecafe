@@ -1,4 +1,5 @@
 import { ChevronRight, Phone, Mail, MapPin } from "lucide-react"
+import Link from "next/link"
 import React from "react"
 
 const ContactPage = () => {
@@ -11,13 +12,13 @@ const ContactPage = () => {
       >
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="relative z-10 flex flex-col justify-center h-full text-white px-5 md:px-26">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 font-body">
+          <h1 className="text-5xl md:text-5xl font-bold mb-4 font-body">
             Contact Us
           </h1>
           <div className="flex items-center text-sm md:text-base text-white">
-            <span>Home</span>
+            <span><Link className="hover:underline" href="/">Home</Link></span>
             <ChevronRight className="w-4 h-4 mx-2" />
-            <span className="text-white">Contact Us</span>
+            <span className="text-gray-200">Contact Us</span>
           </div>
         </div>
       </div>
