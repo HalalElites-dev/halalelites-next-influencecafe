@@ -20,7 +20,7 @@ const Hero = () => {
                         <div className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-0 justify-center lg:justify-start">
                             <Button
                                 size="lg"
-                                className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform "
+                                className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform "
                             >
                                 <Link href="/contact">
                                     Visit Us
