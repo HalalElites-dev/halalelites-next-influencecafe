@@ -27,7 +27,7 @@ const Navigation = ({ scrollY, onNavigate }: { scrollY: number; onNavigate?: () 
           ${isActive 
           ? 'lg:!text-black' // Active link - always black
           : scrollY > 50 
-            ? 'lg:!text-gray-950 hover:!text-brand-primary' 
+            ? 'lg:!text-gray-600 hover:!text-brand-primary' 
             : 'lg:!text-gray-600 hover:!text-brand-primary'
           }
         `}

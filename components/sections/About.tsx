@@ -60,11 +60,11 @@ const About = () => {
 
         {/* Right: Info */}
         <div>
-          <span className="uppercase tracking-wide text-sm text-primary font-medium">
+          <span className="uppercase tracking-wide text-sm text-brand-primary font-medium">
             About Us
           </span>
           <h2 className="text-5xl font-bold font-body mb-4 text-primary">
-            Toledo’s First Specialty Coffee Hub
+            Toledo’s First Specialty Coffee and Educational Hub
           </h2>
           <p className="text-lg mb-6 text-muted-foreground">
             At Influence Café, we’re more than just a coffee shop—we’re a community space

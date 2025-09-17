@@ -17,7 +17,7 @@ const Philosophy = () => {
       {/* Text Overlay */}
       <div className="absolute inset-0 flex items-end p-8 md:p-16">
         <h2 className="text-white text-2xl md:text-4xl font-bold leading-snug font-body">
-          BLENDING TRADITION, WELLNESS IN EVERY CUP
+          BLENDING TRADITION, WELLNESS, AND SCIENCE IN EVERY CUP
         </h2>
       </div>
     </section>
