@@ -62,7 +62,7 @@ const page = () => {
         className="relative h-80 bg-cover bg-center"
         style={{ backgroundImage: "url(/banner.webp)" }}
       >
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-left justify-center h-full text-white px-5 md:px-26">
           <h1 className="text-5xl font-bold mb-4 font-body">Menu</h1>
           <div className="flex items-center text-sm text-white">
