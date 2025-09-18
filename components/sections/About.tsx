@@ -3,6 +3,7 @@ import React from "react"
 import Image from "next/image"
 import { Button } from "../ui/button"
 import { Coffee, Dessert, CupSoda, Truck } from "lucide-react"
+import Link from "next/link"
 
 const About = () => {
   return (
@@ -35,9 +36,9 @@ const About = () => {
   </div>
 
   {/* Croissant graphic */}
-  <div className="absolute top-4 right-4 w-12 h-12 sm:w-[140px] sm:h-[140px]">
+  <div className="absolute top-5 md:top-15 right-5 xl:top-5 xl:-right-3 w-24 h-24 md:h-50 md:w-70  z-40 ">
     <Image
-      src="/dubaichocolate.jpg"
+      src="/croissant.webp"
       alt="food item"
       fill
       className="object-contain"
@@ -46,7 +47,7 @@ const About = () => {
   </div>
 
   {/* Seal graphic */}
-  <div className="absolute bottom-4 left-4 w-12 h-12 sm:w-[140px] sm:h-[140px]">
+  <div className="absolute bottom-4 left-4  md:left-1 xl:-left-10 w-24 h-24 md:h-50 md:w-70  z-40">
     <Image
       src="/logo.webp"
       alt="logo"
@@ -112,9 +113,14 @@ const About = () => {
           </ul>
 
           <div className="mt-6">
-            <Button className="bg-primary text-white px-6 py-3 rounded-xl shadow-md hover:bg-primary/90 transition" size="lg">
-              Explore Our Menu
-            </Button>
+            <Button
+                            size="lg"
+                            className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
+                        >
+                            <Link href="/contact" className="flex items-center gap-2">
+                                View Our Location
+                            </Link>
+                        </Button>
           </div>
         </div>
       </div>

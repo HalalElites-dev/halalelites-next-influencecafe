@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const BestSelling = () => {
     return (
@@ -40,9 +41,11 @@ const BestSelling = () => {
                             </h2>
                             <Button
                                                            size="lg"
-                                                           className="px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform "
+                                                           className="px-6 py-6 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform "
                                                        >
-                                                           Visit Us
+                                                           <Link href="/contact">
+                                                               Visit Us
+                                                           </Link>
                                                        </Button>
                         </div>
 
