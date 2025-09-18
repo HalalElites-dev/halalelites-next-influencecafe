@@ -1,12 +1,12 @@
 import Footer from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
 
-const playfair = Playfair_Display({
+const roboto = Roboto({
   variable: "--font-heading", 
   subsets: ["latin"], 
   weight: ['400', '500', '600', '700', '800', '900'] 
@@ -34,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${playfair.variable} ${inter.variable} antialiased`}
+        className={`${roboto.variable} ${inter.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
