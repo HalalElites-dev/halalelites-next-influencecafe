@@ -177,3 +177,62 @@ export const menuData = {
     },
   ],
 }
+
+
+// Pharmacology / Mechanism of Action Page
+
+export const PHARMA_HEADING = "Pharmacology Made Simple";
+export const PHARMA_SUBTEXT =
+  "Big words don’t have to be confusing. Here’s a quick guide to help you understand common science and health terms you’ll see in our menu.";
+
+// Glossary Terms
+export const PHARMA_TERMS = [
+  {
+    term: "Receptor",
+    simple: "A lock on your cells that molecules (like caffeine) fit into.",
+    explanation:
+      "Receptors are proteins on the surface of your cells. When a molecule like caffeine binds to them, it triggers changes in how your body feels or reacts.",
+    learnMore:
+      "https://www.ncbi.nlm.nih.gov/books/NBK507791/", // PubMed or NIH link
+  },
+  {
+    term: "G-Protein Coupled Receptor (GPCR)",
+    simple: "A messenger system inside your body’s cells.",
+    explanation:
+      "GPCRs are a family of receptors that act like switches. They pass signals from the outside of the cell (like caffeine binding) to the inside, influencing how your cells respond.",
+    learnMore:
+      "https://www.nature.com/scitable/topicpage/g-protein-coupled-receptors-13991971/",
+  },
+  {
+    term: "Antioxidant",
+    simple: "Your body’s shield against damage.",
+    explanation:
+      "Antioxidants protect your cells from free radicals, which are unstable molecules that can cause stress and damage over time. Hibiscus tea, for example, is rich in antioxidants.",
+    learnMore:
+      "https://www.hsph.harvard.edu/nutritionsource/antioxidants/",
+  },
+  {
+    term: "Intracellular",
+    simple: "Inside the cell.",
+    explanation:
+      "When scientists say something is intracellular, they just mean it happens inside your cells, not outside in your bloodstream.",
+    learnMore:
+      "https://www.ncbi.nlm.nih.gov/books/NBK541027/",
+  },
+  {
+    term: "Adenosine",
+    simple: "A natural chemical that makes you feel sleepy.",
+    explanation:
+      "Adenosine builds up in your brain throughout the day, making you tired. Caffeine works by blocking adenosine receptors, helping you feel more awake.",
+    learnMore:
+      "https://www.sleepfoundation.org/nutrition/caffeine-and-sleep",
+  },
+  {
+    term: "Metabolism",
+    simple: "How your body turns food and drink into energy.",
+    explanation:
+      "Metabolism is the process of breaking down nutrients like sugar, fats, and proteins into usable energy. Caffeine can slightly boost your metabolism.",
+    learnMore:
+      "https://www.medicalnewstoday.com/articles/what-is-metabolism",
+  },
+];
