@@ -49,7 +49,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="md:max-w-[95vw] w-[90%] md:max-h-[95vh] h-[80%] lg:max-w-[90vw] lg:h-[90vh] overflow-y-auto p-0">
+      <DialogContent className="md:max-w-[95vw] w-[90%] md:max-h-[95vh] h-[80%] lg:max-w-[80vw] lg:h-[90vh] overflow-y-auto p-0">
         <div className="sticky top-0 bg-white/95 backdrop-blur-sm border-b px-6 lg:px-12 py-6 z-10">
           <DialogHeader>
             <DialogTitle className="text-3xl lg:text-4xl font-bold text-gray-800">{item.name}</DialogTitle>
