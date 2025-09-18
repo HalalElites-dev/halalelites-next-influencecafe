@@ -4,6 +4,7 @@ import { SITE_TITLE, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { cn, scrollToSection } from "@/lib/utils";
+import { Button } from "../ui/button";
 
 const Footer = () => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -22,9 +23,9 @@ const Footer = () => {
           <h3 className="text-3xl font-bold mb-4 font-body">Stay Connected Over a cup of coffee</h3>
           <p className="max-w-xl mb-8">Lorem ipsum dolor sit amet consectetur. At porttitor pharetra id dignissim enim mauris malesuada iaculis. In.</p>
           <a href="/contact" className="inline-block">
-            <button className="bg-white text-[#07281e] font-semibold py-4 px-8 rounded-lg shadow-lg hover:scale-105 transition-transform">
+            <Button className="bg-white text-black font-semibold py-6 px-8 rounded-lg hover:bg-white/90 transition cursor-pointer" >
               Visit Us
-            </button>
+            </Button>
           </a>
         </div>
 

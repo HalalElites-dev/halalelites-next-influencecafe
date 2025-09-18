@@ -25,7 +25,7 @@ const AboutPage = () => {
       <div className="max-w-7xl mx-auto py-16 px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
           {/* Image Gallery */}
-          <div className="relative w-full h-[32rem]">
+          <div className="relative w-[80%] md:w-full h-[20rem] md:h-[32rem]">
             {/* Main Image */}
             <div className="absolute inset-0 rounded-lg overflow-hidden shadow-lg">
               <Image
@@ -37,7 +37,7 @@ const AboutPage = () => {
             </div>
 
             {/* Smaller Overlay Image (bottom-right) */}
-            <div className="absolute -bottom-20 -right-1 w-1/2 md:w-[calc(70%-4rem)] h-1/2 rounded-lg overflow-hidden shadow-lg border-4 border-white">
+            <div className="absolute -bottom-15 md:-bottom-20 -right-20 md:-right-1 w-[calc(90%-1rem)] md:w-[calc(70%-4rem)] h-[75%] md:h-1/2 rounded-lg overflow-hidden shadow-lg border-4 border-white">
               <Image
                 src="/cafe.webp"
                 alt="Overlay café counter"
