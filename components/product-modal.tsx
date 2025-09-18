@@ -47,7 +47,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
               <div className="text-3xl font-bold text-gray-800">{item.price}</div>
                <Button
                             size="lg"
-                            className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
+                            className="px-6 py-4 text-md font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
                         >
                             <Link href="/pharmacology" className="flex items-center gap-2">
                                 Learn More
