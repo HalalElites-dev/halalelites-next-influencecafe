@@ -59,19 +59,19 @@ const Hero = () => {
                     <div className="absolute bottom-0 md:bottom-25 lg:bottom-0 xl:bottom-55 right-0 lg:-right-20 xl:right-15 space-y-8 opacity-50 md:opacity-100">
                         <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg ">
                             <div className="w-10 h-10 flex items-center justify-center">
-                                <Image src="/svg 1.svg" alt="Rich Flavor" width={42} height={45} />
+                                <Image src="/svg1.webp" alt="Rich Flavor" width={42} height={45} />
                             </div>
                             <span className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Rich Flavor</span>
                         </div>
                         <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
                             <div className="w-10 h-10 flex items-center justify-center">
-                                <Image src="/svg 2.svg" alt="100% Premium" width={42} height={45} />
+                                <Image src="/svg2.webp" alt="100% Premium" width={35} height={45} />
                             </div>
                             <span className="text-sm font-semibold text-gray-800 uppercase tracking-wide">100% Premium</span>
                         </div>
                         <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
                             <div className="w-10 h-10 flex items-center justify-center">
-                                <Image src="/svg 3.svg" alt="Sugar Free" width={42} height={45} />
+                                <Image src="/svg3.webp" alt="Sugar Free" width={42} height={45} />
                             </div>
                             <span className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Sugar Free</span>
                         </div>
