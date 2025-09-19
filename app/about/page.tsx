@@ -28,9 +28,11 @@ const AboutPage = () => {
           <div className="relative w-[80%] md:w-full h-[20rem] md:h-[32rem]">
             {/* Main Image */}
             <div className="absolute inset-0 rounded-lg overflow-hidden shadow-lg">
+              {/* dark overlay */}
+              <div className="absolute inset-0 bg-black/20 z-10"></div>
               <Image
-                src="/cafe-interior-1.jpg"
-                alt="Main café interior"
+                src="/about-page-section.webp"
+                alt="about us "
                 fill
                 className="object-cover"
               />
