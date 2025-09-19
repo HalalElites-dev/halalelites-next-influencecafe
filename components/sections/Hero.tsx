@@ -57,24 +57,37 @@ const Hero = () => {
                 >
                     <Image src="/text.png" alt="hero image" width={600} height={400} className="xl:ml-20 mx-auto" />
                     <div className="absolute bottom-0 md:bottom-25 lg:bottom-0 xl:bottom-55 right-0 lg:-right-20 xl:right-15 space-y-8 opacity-50 md:opacity-100">
-                        <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg ">
-                            <div className="w-10 h-10 flex items-center justify-center">
-                                <Image src="/svg 1.svg" alt="Rich Flavor" width={42} height={45} />
-                            </div>
-                            <span className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Rich Flavor</span>
-                        </div>
-                        <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
-                            <div className="w-10 h-10 flex items-center justify-center">
-                                <Image src="/svg 2.svg" alt="100% Premium" width={35} height={45} />
-                            </div>
-                            <span className="text-sm font-semibold text-gray-800 uppercase tracking-wide">100% Premium</span>
-                        </div>
-                        <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-3 shadow-lg">
-                            <div className="w-10 h-10 flex items-center justify-center">
-                                <Image src="/svg3.webp" alt="Sugar Free" width={42} height={45} />
-                            </div>
-                            <span className="text-sm font-semibold text-gray-800 uppercase tracking-wide">Sugar Free</span>
-                        </div>
+                        <div className="flex flex-col items-start gap-6">
+  {/* Rich Flavor */}
+  <div className="flex items-center gap-4">
+    <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
+      <img src="/flavors.svg" alt="Natural Flavors" className="w-10 h-10" />
+    </div>
+    <span className="text-lg font-medium text-gray-800 tracking-wide">
+      RICH FLAVOR
+    </span>
+  </div>
+
+  {/* 100% Premium */}
+  <div className="flex items-center gap-4">
+    <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
+      <img src="/svg1.webp" alt="100% Premium" className="w-8 h-10" />
+    </div>
+    <span className="text-lg font-medium text-gray-800 tracking-wide">
+      100% PREMIUM
+    </span>
+  </div>
+
+  {/* Sugar Free */}
+  <div className="flex items-center gap-4">
+    <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
+      <img src="/svg3.webp" alt="Sugar Free" className="w-10 h-10" />
+    </div>
+    <span className="text-lg font-medium text-gray-800 tracking-wide">
+      SUGAR FREE
+    </span>
+  </div>
+</div>
                     </div>
                 </motion.div>
             </div>
