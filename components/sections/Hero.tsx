@@ -61,7 +61,7 @@ const Hero = () => {
   {/* Rich Flavor */}
   <div className="flex items-center gap-4">
     <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
-      <img src="/flavors.svg" alt="Natural Flavors" className="w-10 h-10" />
+      <Image src="/flavors.svg" alt="Natural Flavors" className="w-10 h-10" width={40} height={40} />
     </div>
     <span className="text-lg font-medium text-gray-800 tracking-wide">
       RICH FLAVOR
@@ -71,7 +71,7 @@ const Hero = () => {
   {/* 100% Premium */}
   <div className="flex items-center gap-4">
     <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
-      <img src="/svg1.webp" alt="100% Premium" className="w-8 h-10" />
+      <Image src="/svg1.webp" alt="100% Premium" className="w-8 h-10" width={40} height={40}  />
     </div>
     <span className="text-lg font-medium text-gray-800 tracking-wide">
       100% PREMIUM
@@ -81,7 +81,7 @@ const Hero = () => {
   {/* Sugar Free */}
   <div className="flex items-center gap-4">
     <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
-      <img src="/svg3.webp" alt="Sugar Free" className="w-10 h-10" />
+      <Image src="/svg3.webp" alt="Sugar Free" className="w-10 h-10" width={40} height={40} />
     </div>
     <span className="text-lg font-medium text-gray-800 tracking-wide">
       SUGAR FREE
