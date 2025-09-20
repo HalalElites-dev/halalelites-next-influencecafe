@@ -20,7 +20,7 @@ const iconContainerVariants = {
     opacity: 1,
     transition: {
       delayChildren: 1.2, // Start icons animation after right section
-      staggerChildren: 0.01, // Stagger each icon's animation
+      staggerChildren: 0.5, // Stagger each icon's animation
     },
   },
 };
@@ -86,7 +86,7 @@ const Hero = () => {
             >
               {/* Top Right */}
               <motion.div
-                className="absolute top-[15%] right-[10%] md:top-[20%] md:right-[15%] flex items-center gap-4"
+                className="absolute top-[15%] right-[10%]  lg:-right-[5%] md:top-[20%] md:right-[15%] flex items-center gap-4"
                 variants={iconItemVariants}
               >
                 <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
@@ -99,7 +99,7 @@ const Hero = () => {
 
               {/* Left Middle */}
               <motion.div
-                className="absolute top-[60%] left-[5%] md:top-[45%] md:left-[10%] flex items-center gap-4"
+                className="absolute top-[35%] lg:top-[40%] left-[5%] md:top-[45%] md:left-[10%] flex items-center gap-4"
                 variants={iconItemVariants}
               >
                 <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
@@ -112,7 +112,7 @@ const Hero = () => {
 
               {/* Bottom Right */}
               <motion.div
-                className="absolute bottom-[15%] right-[0%] md:bottom-[10%] md:right-[20%] flex items-center gap-4"
+                className="absolute bottom-[25%] right-[0%] lg:bottom-[20%] lg:right-[5%] md:bottom-[10%] md:right-[20%] flex items-center gap-4"
                 variants={iconItemVariants}
               >
                 <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
