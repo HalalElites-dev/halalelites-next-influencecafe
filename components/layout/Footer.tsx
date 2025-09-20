@@ -20,8 +20,8 @@ const Footer = () => {
 
         {/* Call-to-Action Section */}
         <div className="flex flex-col items-center text-center mb-16">
-          <h3 className="text-3xl font-bold mb-4 font-body">Stay Connected Over a cup of coffee</h3>
-          <p className="max-w-xl mb-8">Lorem ipsum dolor sit amet consectetur. At porttitor pharetra id dignissim enim mauris malesuada iaculis. In.</p>
+          <h3 className="text-3xl font-bold mb-4 font-body">The Good Stuff, Backed by Science</h3>
+          <p className="max-w-xl mb-8">We’re all about the science behind what you eat and drink. From the caffeine that boosts your focus to the antioxidants in our desserts, everything on our menu is here to help you thrive</p>
           <a href="/contact" className="inline-block">
             <Button className="bg-white text-black font-semibold py-6 px-8 rounded-lg hover:bg-white/90 transition cursor-pointer" >
               Visit Us

@@ -53,7 +53,7 @@ const Testimonials = () => {
                 className="relative bg-[#f8f5ef] rounded-2xl shadow-lg p-8 lg:p-12 -mt-12 lg:-ml-16"
               >
                 {/* Quote icon */}
-                <div className="absolute -top-6 right-6 bg-brand-secondary text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold">
+                <div className="absolute -top-6 right-6 bg-brand-primary text-white w-12 h-12 rounded-full flex items-center justify-center text-2xl font-bold">
                   “
                 </div>
 
