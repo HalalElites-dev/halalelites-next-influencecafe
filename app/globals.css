@@ -6,6 +6,8 @@
 
 /* ===== THEME CONFIGURATION ===== */
 @theme inline {
+  --breakpoint-2k: 1921px;
+
   /* Colors - Fixed mapping */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -88,7 +90,7 @@
 
   /* Brand Colors */
   --brand-primary: #000000; /* Black */
-  --brand-secondary: #7ac142; /* Fresh green */
+  --brand-secondary: #da8910; /* Fresh green */
   --brand-accent: #c5a46d; /* Gold */
 
   /* Typography */

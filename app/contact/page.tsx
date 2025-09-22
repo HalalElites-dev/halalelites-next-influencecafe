@@ -8,14 +8,14 @@ const ContactPage = () => {
       {/* Banner */}
       <div
         className="relative h-80 bg-cover bg-center"
-        style={{ backgroundImage: "url(/banner.webp)" }}
+        style={{ backgroundImage: "url(/bannerz.webp)" }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 flex flex-col justify-center h-full text-white px-5 md:px-26">
-          <h1 className="text-5xl md:text-5xl font-bold mb-4 font-body">
+         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-20">
+          <h1 className="text-5xl font-bold mb-4 font-body">
             Contact Us
           </h1>
-          <div className="flex items-center text-sm md:text-base text-white">
+          <div className="flex items-center text-sm text-white justify-center xl:justify-start">
             <span><Link className="hover:underline" href="/">Home</Link></span>
             <ChevronRight className="w-4 h-4 mx-2" />
             <span className="text-gray-200">Contact Us</span>

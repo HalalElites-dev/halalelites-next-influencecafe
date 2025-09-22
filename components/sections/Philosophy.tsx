@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Philosophy = () => {
   return (
-    <section className="relative w-96 md:w-full h-96 md:h-130 overflow-hidden max-w-7xl xl:max-w-[1700px] justify-center self-center mx-auto rounded-md mb-20 bg-white">
+    <section className="relative w-92 md:w-full h-96 md:h-130 overflow-hidden max-w-7xl xl:max-w-[1700px] justify-center self-center mx-auto rounded-md mb-20 bg-white">
       {/* Background Image */}
       <Image
         src="/philo.jpg" // Change this to your image path

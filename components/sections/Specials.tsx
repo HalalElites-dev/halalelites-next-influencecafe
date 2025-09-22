@@ -1,7 +1,9 @@
-"use client"
+"use client";
+
 import { useState } from "react"
 import { Button } from "../ui/button"
 import Link from "next/link"
+import Image from "next/image"
 
 export const Specials = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
@@ -93,9 +95,11 @@ export const Specials = () => {
                   }`}
                 >
                   <div className="w-40 h-48 rounded-2xl overflow-hidden shadow-2xl bg-white border border-border">
-                    <img
-                      src={item.image || "/placeholder.svg"}
+                    <Image
+                      src={item.image}
                       alt={item.title}
+                      width={160}
+                      height={192}
                       className="w-full h-full object-cover"
                     />
                   </div>

@@ -34,7 +34,7 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
         >
           {/* Image */}
           <div className="w-20 h-20 rounded overflow-hidden flex-shrink-0 mr-4">
-            <img src={item.image || "/placeholder.svg"} alt={item.name} className="w-full h-full object-cover" />
+            <img src={item.image || "/scene.webp"} alt={item.name} className="w-full h-full object-cover" />
           </div>
 
           {/* Text */}
@@ -68,16 +68,14 @@ const Page = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-80 bg-cover bg-center" style={{ backgroundImage: "url(/banner.webp)" }}>
+      <section className="relative h-80 bg-cover bg-center" style={{ backgroundImage: "url(/bannerz.webp)" }}>
         <div className="absolute inset-0 bg-black/30"></div>
-        <div className="relative z-10 flex flex-col items-left justify-center h-full text-white px-5 md:px-26">
-          <h1 className="text-5xl font-bold mb-4 font-body">Menu</h1>
-          <div className="flex items-center text-sm text-white">
-            <span>
-              <Link className="hover:underline" href="/">
-                Home
-              </Link>
-            </span>
+         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-20">
+          <h1 className="text-5xl font-bold mb-4 font-body">
+            Menu
+          </h1>
+          <div className="flex items-center text-sm text-white justify-center xl:justify-start">
+            <span><Link className="hover:underline" href="/">Home</Link></span>
             <ChevronRight className="w-4 h-4 mx-2" />
             <span className="text-gray-200">Menu</span>
           </div>

@@ -73,7 +73,7 @@ export function Header() {
         <div suppressHydrationWarning className={'max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10 transition-all duration-300'}>
           <nav className="flex items-center  justify-between lg:justify-evenly h-20">
             {/* Logo Section */}
-            <div className="flex items-center">
+            <div className="flex items-center 2k:-ml-50">
               <Link href={"/#home"}>
                 <div className="flex items-center">
                   <Image src="/logo.webp" alt="Flipperzz Logo" width={220} height={100} />
@@ -108,9 +108,9 @@ export function Header() {
                   variant="default"
                   size="sm"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="rounded-full bg-brand-primary"
+                  className="rounded-full bg-brand-primary md:h-12 md:w-12"
                 >
-                  {isMobileMenuOpen ? <X className="h-6 w-6 text-white" /> : <Menu className="h-6 w-6 text-white" />}
+                  {isMobileMenuOpen ? <X className="h-6 w-6 md:h-24 md:w-24 text-white" /> : <Menu className="h-6 w-6 md:h-12 md:w-12 text-white" />}
                 </Button>
               </div>
             </div>

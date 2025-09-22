@@ -6,24 +6,24 @@ import Link from 'next/link'
 const BestSelling = () => {
     return (
         <section id="menu" className='relative overflow-y-visible overflow-x-hidden bg-white'>
-             <div className="hidden xl:block absolute top-65 -left-95 transform -translate-y-1/2 rotate-45 z-40">
-                    <Image
-                      src="/hero.webp"
-                      alt="Cup"
-                      width={600}
-                      height={200}
-                      className="object-contain"
-                    />
-                  </div>
-                  <div className="hidden xl:block absolute top-65 -right-95 transform -translate-y-1/2 -rotate-360 z-40">
-                    <Image
-                      src="/hero.webp"
-                      alt="Cup"
-                      width={600}
-                      height={200}
-                      className="object-contain"
-                    />
-                  </div>
+            <div className="hidden xl:block absolute top-65 -left-95 transform -translate-y-1/2 rotate-45 z-40">
+                <Image
+                    src="/hero.webp"
+                    alt="Cup"
+                    width={600}
+                    height={200}
+                    className="object-contain"
+                />
+            </div>
+            <div className="hidden xl:block absolute top-65 -right-95 transform -translate-y-1/2 -rotate-360 z-40">
+                <Image
+                    src="/hero.webp"
+                    alt="Cup"
+                    width={600}
+                    height={200}
+                    className="object-contain"
+                />
+            </div>
             {/* Colored background section - only covers the top part */}
             <div className=' bg-[#f8f5ef] relative -pb-30'>
                 <div className='max-w-7xl mx-auto py-20 px-6'>
@@ -34,19 +34,19 @@ const BestSelling = () => {
                                 <span className='text-muted-foreground uppercase tracking-wider text-sm font-medium'>
                                     What Makes Us Unique
                                 </span>
-                               
+
                             </div>
                             <h2 className='text-4xl lg:text-6xl font-bold text-black leading-tight uppercase font-body'>
                                 A Cut Above the Rest
                             </h2>
                             <Button
-                                                           size="lg"
-                                                           className="px-6 py-6 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform "
-                                                       >
-                                                           <Link href="/contact">
-                                                               Visit Us
-                                                           </Link>
-                                                       </Button>
+                                size="lg"
+                                className="px-6 py-6 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform "
+                            >
+                                <Link href="/contact">
+                                    Visit Us
+                                </Link>
+                            </Button>
                         </div>
 
                         {/* Right Column - Features Only */}
@@ -89,13 +89,13 @@ const BestSelling = () => {
                         {/* Left Column - Image */}
                         <div className='-mt-10 lg:-mt-50'>
                             <div className='relative rounded-2xl overflow-hidden '>
-                                <Image 
-                                    src="/cafe.webp" 
-                                    alt="Barista preparing healthy beverage" 
+                                <Image
+                                    src="/cafe.webp"
+                                    alt="Barista preparing healthy beverage"
                                     className='w-full h-[350px] lg:h-[400px] object-cover shadow-md'
                                     width={600}
                                     height={400}
-                    
+
                                 />
                             </div>
                         </div>
@@ -105,13 +105,13 @@ const BestSelling = () => {
                             <div className='bg-white rounded-2xl p-6  w-full'>
                                 <div className='flex items-start gap-3 mb-4'>
                                     <svg className='w-10 h-10 bg-[#f8f5ef] flex-shrink-0 opacity-40' fill="currentColor" viewBox="0 0 100 93" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z"/>
+                                        <path d="M22.94 84H0L18.305.854H55L22.94 84ZM67.94 84H45L63.305.854H100L67.94 84Z" />
                                     </svg>
                                 </div>
                                 <p className='text-muted-foreground text-lg leading-relaxed mb-4'>
                                     Finally, a place where I can enjoy delicious drinks without worrying about my blood sugar. The educational aspect makes it even better—I love learning about what I&apos;m consuming!
                                 </p>
-                                
+
                             </div>
                         </div>
                     </div>

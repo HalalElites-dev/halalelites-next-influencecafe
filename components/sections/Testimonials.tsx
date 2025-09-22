@@ -61,11 +61,11 @@ const Testimonials = () => {
                 <h3 className="text-2xl md:text-3xl font-extrabold uppercase text-foreground mb-4">
                   {TESTIMONIALS[current].quote}
                 </h3>
-                <p className="text-gray-600 mb-6">
+                {/* <p className="text-gray-600 mb-6">
                   Sed lectus ultricies id id massa tellus. Gravida ullamcorper
                   lectus vitae tristique cursus tempor rutrum. Aenean posuere
                   urna feugiat nunc in nulla.
-                </p>
+                </p> */}
 
                 <hr className="border-t border-gray-300 my-4" />
 

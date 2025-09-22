@@ -64,68 +64,96 @@ const Hero = () => {
             </Button>
           </div>
         </motion.div>
-        {/* right section */}
+        {/* Right Section */}
         <motion.div
           className="relative"
           initial="hidden"
           animate="visible"
           variants={rightVariants}
         >
-          <div className="relative w-full h-[600px] flex items-center justify-center">
-
-            <Image src="/text.png" alt="hero image" width={600} height={400} className="xl:ml-20 mx-auto" />
+          <div className="relative w-full md:h-[600px] flex items-center justify-center">
             {/* Coffee Cup */}
+            <Image
+              src="/text.png"
+              alt="hero image"
+              width={600}
+              height={400}
+              className="xl:ml-20 mx-auto"
+            />
 
-
-            {/* Icons */}
+            {/* --- Desktop / Laptop Floating Icons --- */}
             <motion.div
-              className="absolute inset-0"
+              className="hidden lg:block absolute inset-0"
               initial="hidden"
               animate="visible"
               variants={iconContainerVariants}
             >
               {/* Top Right */}
               <motion.div
-                className="absolute top-[15%] right-[10%]  lg:-right-[5%] md:top-[20%] md:right-[15%] flex items-center gap-4"
+                className="absolute top-[15%] right-[10%] lg:-right-[5%] md:top-[20%] md:right-[15%] xl:right-[10%] flex items-center gap-4"
                 variants={iconItemVariants}
               >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/flavors.svg" alt="Natural Flavors" width={40} height={40} />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
+                  <Image src="/flavors.svg" alt="Natural Flavors" width={34} height={34} />
                 </div>
-                <span className="text-lg font-medium text-gray-800 tracking-wide">
+                <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
                   RICH FLAVOR
                 </span>
               </motion.div>
 
               {/* Left Middle */}
               <motion.div
-                className="absolute top-[35%] lg:top-[40%] left-[5%] md:top-[45%] md:left-[10%] flex items-center gap-4"
+                className="absolute top-[35%] lg:top-[40%] left-[5%] md:top-[45%] md:left-[10%] xl:left-[65%] xl:top-[32%] flex items-center gap-4"
                 variants={iconItemVariants}
               >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg1.webp" alt="100% Premium" width={40} height={40} />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
+                  <Image src="/svg1.webp" alt="100% Premium" width={30} height={34} />
                 </div>
-                <span className="text-lg font-medium text-gray-800 tracking-wide">
+                <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
                   100% PREMIUM
                 </span>
               </motion.div>
 
               {/* Bottom Right */}
               <motion.div
-                className="absolute bottom-[25%] right-[0%] lg:bottom-[20%] lg:right-[5%] md:bottom-[10%] md:right-[20%] flex items-center gap-4"
+                className="absolute bottom-[25%] right-[0%] lg:bottom-[20%] lg:right-[5%] md:bottom-[10%] md:right-[20%] xl:right-[10.5%] xl:top-[19%] flex items-center gap-4"
                 variants={iconItemVariants}
               >
-                <div className="w-16 h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg3.webp" alt="Sugar Free" width={40} height={40} />
+                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
+                  <Image src="/svg3.webp" alt="Sugar Free" width={34} height={34} />
                 </div>
-                <span className="text-lg font-medium text-gray-800 tracking-wide">
+                <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
                   SUGAR FREE
                 </span>
               </motion.div>
             </motion.div>
-          </div>
 
+            {/* --- Mobile Stacked Icons (fallback) --- */}
+            <div className="flex flex-row items-center mt-4 lg:hidden w-full absolute left-0 right-0 bottom-0 gap-2 md:gap-6 translate-y-full justify-center ml-1 m-auto">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
+                  <Image src="/flavors.svg" alt="Natural Flavors" width={28} height={28} />
+                </div>
+                <span className="text-base font-medium text-gray-800">RICH FLAVOR</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
+                  <Image src="/svg1.webp" alt="100% Premium" width={26} height={30} />
+                </div>
+                <span className="text-base font-medium text-gray-800">100% PREMIUM</span>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
+                  <Image src="/svg3.webp" alt="Sugar Free" width={28} height={28} />
+                </div>
+                <span className="text-base font-medium text-gray-800">SUGAR FREE</span>
+              </div>
+            </div>
+          </div>
         </motion.div>
+
       </div>
     </section>
   )
