@@ -51,10 +51,11 @@ const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-0 justify-center lg:justify-start">
             <Button
+              asChild
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
             >
-              <a href="/contact" className="flex items-center gap-2">
+              <a href="/contact" className="flex items-center gap-2 py-6 px-10">
                 Visit Us
                 <ArrowUpRight className="w-4 h-4" />
               </a>
