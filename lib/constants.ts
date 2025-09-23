@@ -725,3 +725,30 @@ export const PHARMA_TERMS = [
       "https://www.medicalnewstoday.com/articles/what-is-metabolism",
   },
 ];
+
+export const specialItems = [
+    {
+      id: "espresso",
+      title: "Signature Espresso Drinks",
+      description: "Rich, bold espresso crafted with premium beans and artisanal techniques for the perfect shot.",
+      image: "/elegant-espresso-drink-with-latte-art-in-glass-cup.jpg",
+    },
+    {
+      id: "tea",
+      title: "Specialty Teas",
+      description: "Carefully curated loose-leaf teas from around the world, brewed to perfection.",
+      image: "/beautiful-specialty-tea-in-elegant-glass-teacup-wi.jpg",
+    },
+    {
+      id: "coffee",
+      title: "Brewed Coffee",
+      description: "Freshly roasted single-origin beans brewed using various methods for unique flavor profiles.",
+      image: "/pour-over-coffee-in-glass-dripper-with-coffee-bean.jpg",
+    },
+    {
+      id: "desserts",
+      title: "Modern Desserts",
+      description: "Contemporary pastries and desserts crafted with innovative techniques and premium ingredients.",
+      image: "/modern-layered-dessert-in-glass-with-artistic-pres.jpg",
+    },
+  ]

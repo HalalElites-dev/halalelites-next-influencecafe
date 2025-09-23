@@ -4,36 +4,10 @@ import { useState } from "react"
 import { Button } from "../ui/button"
 import Link from "next/link"
 import Image from "next/image"
-
+import { specialItems } from "@/lib/constants";
 export const Specials = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
 
-  const specialItems = [
-    {
-      id: "espresso",
-      title: "Signature Espresso Drinks",
-      description: "Rich, bold espresso crafted with premium beans and artisanal techniques for the perfect shot.",
-      image: "/elegant-espresso-drink-with-latte-art-in-glass-cup.jpg",
-    },
-    {
-      id: "tea",
-      title: "Specialty Teas",
-      description: "Carefully curated loose-leaf teas from around the world, brewed to perfection.",
-      image: "/beautiful-specialty-tea-in-elegant-glass-teacup-wi.jpg",
-    },
-    {
-      id: "coffee",
-      title: "Brewed Coffee",
-      description: "Freshly roasted single-origin beans brewed using various methods for unique flavor profiles.",
-      image: "/pour-over-coffee-in-glass-dripper-with-coffee-bean.jpg",
-    },
-    {
-      id: "desserts",
-      title: "Modern Desserts",
-      description: "Contemporary pastries and desserts crafted with innovative techniques and premium ingredients.",
-      image: "/modern-layered-dessert-in-glass-with-artistic-pres.jpg",
-    },
-  ]
 
   return (
     <section className="py-12 md:py-24 px-4 md:px-6 bg-white">

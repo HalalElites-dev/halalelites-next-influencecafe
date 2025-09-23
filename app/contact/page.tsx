@@ -11,7 +11,7 @@ const ContactPage = () => {
         style={{ backgroundImage: "url(/bannerz.webp)" }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
-         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-20">
+         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
           <h1 className="text-5xl font-bold mb-4 font-body">
             Contact Us
           </h1>
