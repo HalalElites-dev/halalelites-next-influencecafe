@@ -1,6 +1,5 @@
 'use client';
 import { Button } from "@/components/ui/button"
-import { ArrowUpRight } from 'lucide-react';
 import { motion } from "framer-motion";
 import Image from "next/image";
 const leftVariants = {
@@ -55,9 +54,9 @@ const Hero = () => {
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
             >
-              <a href="/contact" className="flex items-center gap-2 py-6 px-10">
+              <a href="/contact" className="flex items-center gap-2 py-6 px-8">
                 Visit Us
-                <ArrowUpRight className="w-4 h-4" />
+              
               </a>
             </Button>
             <Button size="lg" variant={"link"} className="text-black px-8 py-4 text-lg font-semibold">
