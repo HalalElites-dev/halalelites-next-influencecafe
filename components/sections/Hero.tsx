@@ -132,21 +132,21 @@ const Hero = () => {
             <div className="flex flex-row items-center mt-4 lg:hidden w-full absolute left-0 right-0 bottom-0 gap-2 md:gap-6 translate-y-full justify-center ml-1 m-auto">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/flavors.svg" alt="Natural Flavors" width={28} height={28} />
+                  <Image src="/flavors.svg" alt="Natural Flavors" width={36} height={28} />
                 </div>
                 <span className="text-base font-medium text-gray-800">RICH FLAVOR</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg1.webp" alt="100% Premium" width={26} height={30} />
+                  <Image src="/svg1.webp" alt="100% Premium" width={28} height={30} />
                 </div>
                 <span className="text-base font-medium text-gray-800">100% PREMIUM</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg3.webp" alt="Sugar Free" width={28} height={28} />
+                  <Image src="/svg3.webp" alt="Sugar Free" width={36} height={28} />
                 </div>
                 <span className="text-base font-medium text-gray-800">SUGAR FREE</span>
               </div>
