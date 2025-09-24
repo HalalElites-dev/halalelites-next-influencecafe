@@ -5,6 +5,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { menuData } from "@/lib/constants"
 import { ProductModal } from "@/components/product-modal"
+import Image from "next/image"
 
 // Define proper types for menu items
 interface MenuItem {
@@ -34,7 +35,7 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
         >
           {/* Image */}
           <div className="w-20 h-20 rounded overflow-hidden flex-shrink-0 mr-4">
-            <img src={item.image || "/scene.webp"} alt={item.name} className="w-full h-full object-cover" />
+            <Image src={item.image || "/scene.webp"} alt={item.name} className="w-full h-full object-cover" width={1000} height={800} />
           </div>
 
           {/* Text */}

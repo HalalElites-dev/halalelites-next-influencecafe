@@ -65,7 +65,7 @@ export const menuData = {
       name: "Influence Latte",
       description: "Classic latte with a twist of creativity",
       price: "$5.25",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 150,
         sugar: "12g",
@@ -98,7 +98,7 @@ export const menuData = {
       name: "Shot of Genius",
       description: "Bold, rich espresso to ignite your day",
       price: "$4.25",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 5,
         sugar: "0g",
@@ -131,7 +131,7 @@ export const menuData = {
       name: "Cappuccino",
       description: "Creamy foam layered perfectly with espresso",
       price: "$4.75",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 120,
         sugar: "10g",
@@ -164,7 +164,7 @@ export const menuData = {
       name: "Mocha",
       description: "Chocolate meets espresso for a dreamy fusion",
       price: "$5.50",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 220,
         sugar: "18g",
@@ -197,7 +197,7 @@ export const menuData = {
       name: "Desert Coffee",
       description: "Premium Arabian-style coffee brewed with aromatic spices",
       price: "$6.00",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 60,
         sugar: "0g",
@@ -230,7 +230,7 @@ export const menuData = {
       name: "Affogato",
       description: "Vanilla ice cream with espresso shot",
       price: "$5.75",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 250,
         sugar: "20g",
@@ -266,7 +266,7 @@ export const menuData = {
       name: "Adeni Gold Chai",
       description: "Traditional spiced milk tea",
       price: "$4.50",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 160,
         sugar: "15g",
@@ -299,7 +299,7 @@ export const menuData = {
       name: "Hibiscus",
       description: "A vibrant, antioxidant-rich herbal refresher",
       price: "$3.75",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 5,
         sugar: "0g",
@@ -332,7 +332,7 @@ export const menuData = {
       name: "Royal Black",
       description: "Smooth, bold, and timeless black tea",
       price: "$3.50",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 2,
         sugar: "0g",
@@ -365,7 +365,7 @@ export const menuData = {
       name: "Matcha Latte",
       description: "Premium matcha powder with steamed milk",
       price: "$5.25",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 120,
         sugar: "8g",
@@ -401,7 +401,7 @@ export const menuData = {
       name: "Just Black",
       description: "Deep, rich hot coffee with a bold finish",
       price: "$3.25",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 2,
         sugar: "0g",
@@ -434,7 +434,7 @@ export const menuData = {
       name: "Cold Influence",
       description: "Refreshingly smooth cold brew with less acidity",
       price: "$4.00",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 5,
         sugar: "0g",
@@ -467,7 +467,7 @@ export const menuData = {
       name: "Arabica Essence",
       description: "100% authentic Arabica beans for smooth, luxurious flavor",
       price: "$4.50",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 2,
         sugar: "0g",
@@ -503,7 +503,7 @@ export const menuData = {
       name: "Dream Cake",
       description: "Soft cake with rich cream and choice of topping",
       price: "$6.50",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 320,
         sugar: "28g",
@@ -536,7 +536,7 @@ export const menuData = {
       name: "Dubai Strawberry Cup",
       description: "Chocolate sauce layered with Kunafa and strawberry",
       price: "$7.25",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 280,
         sugar: "24g",
@@ -569,7 +569,7 @@ export const menuData = {
       name: "Dubai Chocolate Bar",
       description: "Premium chocolate filled with kunafa and pistachio cream",
       price: "$8.00",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 350,
         sugar: "26g",
@@ -602,7 +602,7 @@ export const menuData = {
       name: "Berry Bliss Fusion",
       description: "Fresh strawberries with choice of chocolate sauce",
       price: "$5.75",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 180,
         sugar: "18g",
@@ -635,7 +635,7 @@ export const menuData = {
       name: "Flat Croissant",
       description: "Toasted croissant topped with your choice of sauce",
       price: "$4.25",
-      image: "/placeholder.svg?height=120&width=120",
+      image: "",
       nutritionFacts: {
         calories: 210,
         sugar: "10g",
@@ -665,8 +665,7 @@ export const menuData = {
       },
     },
   ],
-}
-
+};
 
 // Pharmacology / Mechanism of Action Page
 

@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface NutritionFacts {
   calories: number
@@ -60,10 +61,13 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
             {/* Left side - Product Image */}
             <div className="space-y-3">
               <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden bg-gray-100">
-                <img
-                  src={item.image || "/placeholder.svg?height=320&width=480&query=delicious cafe food"}
+                <Image
+                  src={item.image || "/scene.webp"}
                   alt={item.name}
                   className="w-full h-full object-cover"
+                  width={1080}
+                  height={1020}
+                  quality={40}
                 />
               </div>
 
