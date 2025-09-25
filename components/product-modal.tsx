@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
-import { useState } from "react"
+// import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
+// import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -43,7 +43,7 @@ interface ProductModalProps {
 }
 
 export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
-  const [isLearnMoreExpanded, setIsLearnMoreExpanded] = useState(false)
+  // const [isLearnMoreExpanded, setIsLearnMoreExpanded] = useState(false)
 
   if (!item) return null
 
@@ -97,7 +97,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
             </div>
 
             {/* Right side - Product Details */}
-            <div className="space-y-4">
+            <div className="space-y-4 h-full flex flex-col">
               <div>
                 <div className="text-2xl font-bold text-brand-primary mb-2">{item.price}</div>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
@@ -119,50 +119,31 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                     <h5 className="font-medium text-gray-800 text-xs">Key Terms:</h5>
                     <div className="flex flex-wrap gap-1">
                       {item.mechanismOfAction.glossaryTerms.map((term, index) => (
-                        <Badge
-                          key={index}
-                          variant="secondary"
-                          className="cursor-pointer hover:bg-blue-100 transition-colors text-xs py-0.5 px-2"
-                          title={term.definition}
-                        >
-                          {term.term}
-                        </Badge>
+                        <a href={`/pharmacology#${term.term}`} key={index}>
+                          <Badge
+                            key={index}
+                            variant="secondary"
+                            className="cursor-pointer hover:bg-blue-100 transition-colors text-xs py-0.5 px-2"
+                            title={term.definition}
+                          >
+                            {term.term}
+                          </Badge>
+                        </a>
                       ))}
                     </div>
                   </div>
                 </div>
               )}
 
-              {item.learnMore && (
-                <div>
-                  <Button
-                    variant="outline"
-                    onClick={() => setIsLearnMoreExpanded(!isLearnMoreExpanded)}
-                    className="w-full justify-between text-brand-primary py-2 text-sm"
-                  >
-                    Learn the Science
-                    {isLearnMoreExpanded ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
-                  </Button>
+              <div className="flex-1" /> {/* Spacer to push button to bottom */}
 
-                  {isLearnMoreExpanded && (
-                    <div className="mt-2 bg-blue-50 border border-blue-200 rounded-lg p-3">
-                      <h4 className="font-semibold text-blue-800 mb-1 text-sm">{item.learnMore.title}</h4>
-                      <p className="text-blue-700 mb-2 text-xs">{item.learnMore.source}</p>
-                      <Button
-                        variant="link"
-                        className="p-0 h-auto text-blue-600 hover:text-blue-800 text-xs"
-                        onClick={() => window.open(item.learnMore?.url, "_blank")}
-                      >
-                        Read Study <ExternalLink className="w-3 h-3 ml-1" />
-                      </Button>
-                    </div>
-                  )}
-                </div>
+              {item.learnMore?.url && (
+                <Button asChild className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-2 mt-2">
+                  <Link href={item.learnMore.url} target="_blank" rel="noopener noreferrer">
+                    Read Studies
+                  </Link>
+                </Button>
               )}
-
-              <Button asChild className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-2">
-                <Link href={"/pharmacology"}>Learn More</Link>
-              </Button>
             </div>
           </div>
         </div>
