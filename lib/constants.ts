@@ -91,7 +91,7 @@ export const menuData = {
       learnMore: {
         title: "Caffeine Research",
         source: "PubMed study on caffeine and cognitive performance",
-        url: "https://pubmed.ncbi.nlm.nih.gov/20801960/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=milk+and+coffee&sort=date",
       },
     },
     {
@@ -124,7 +124,7 @@ export const menuData = {
       learnMore: {
         title: "Espresso Studies",
         source: "Caffeine pharmacology overview",
-        url: "https://pubmed.ncbi.nlm.nih.gov/15712575/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=milk+and+coffee&sort=date",
       },
     },
     {
@@ -157,7 +157,7 @@ export const menuData = {
       learnMore: {
         title: "Coffee & Satiety Research",
         source: "Effects of coffee with milk on satiety",
-        url: "https://pubmed.ncbi.nlm.nih.gov/19943985/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=milk+and+coffee&sort=date",
       },
     },
     {
@@ -190,7 +190,7 @@ export const menuData = {
       learnMore: {
         title: "Cocoa & Brain Function",
         source: "Effects of cocoa flavonoids on cognition",
-        url: "https://pubmed.ncbi.nlm.nih.gov/19094300/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=milk+and+coffee&sort=date",
       },
     },
     {
@@ -223,7 +223,7 @@ export const menuData = {
       learnMore: {
         title: "Spiced Coffee Research",
         source: "Cardamom health properties",
-        url: "https://pubmed.ncbi.nlm.nih.gov/28930274/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=cardamom&sort=date",
       },
     },
     {
@@ -256,7 +256,7 @@ export const menuData = {
       learnMore: {
         title: "Sugar and Caffeine Interaction",
         source: "Combined effects of glucose and caffeine",
-        url: "https://pubmed.ncbi.nlm.nih.gov/15047677/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=milk+and+coffee&sort=date",
       },
     },
   ],
@@ -292,7 +292,7 @@ export const menuData = {
       learnMore: {
         title: "Chai & Heart Health",
         source: "Tea polyphenols and vascular function",
-        url: "https://pubmed.ncbi.nlm.nih.gov/23644595/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=cloves",
       },
     },
     {
@@ -325,7 +325,7 @@ export const menuData = {
       learnMore: {
         title: "Hibiscus & Hypertension",
         source: "Study on hibiscus tea and blood pressure",
-        url: "https://pubmed.ncbi.nlm.nih.gov/18287346/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=hibiscus+tea&sort=date",
       },
     },
     {
@@ -358,7 +358,7 @@ export const menuData = {
       learnMore: {
         title: "Black Tea & Gut Health",
         source: "Effects of tea polyphenols on gut microbiota",
-        url: "https://pubmed.ncbi.nlm.nih.gov/25911267/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=black+tea",
       },
     },
     {
@@ -391,7 +391,7 @@ export const menuData = {
       learnMore: {
         title: "Matcha & Cognition",
         source: "L-theanine and caffeine synergy",
-        url: "https://pubmed.ncbi.nlm.nih.gov/18681988/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=cow+milk",
       },
     },
   ],
@@ -427,7 +427,7 @@ export const menuData = {
       learnMore: {
         title: "Coffee & Metabolism",
         source: "Review on coffee health benefits",
-        url: "https://pubmed.ncbi.nlm.nih.gov/29105961/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=pharmacology+roasted+coffee",
       },
     },
     {
@@ -460,7 +460,7 @@ export const menuData = {
       learnMore: {
         title: "Cold Brew Studies",
         source: "Comparison of hot vs cold coffee chemistry",
-        url: "https://pubmed.ncbi.nlm.nih.gov/31124712/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=pharmacology+roasted+coffee",
       },
     },
     {
@@ -493,7 +493,7 @@ export const menuData = {
       learnMore: {
         title: "Arabica vs Robusta",
         source: "Coffee bean composition and health",
-        url: "https://pubmed.ncbi.nlm.nih.gov/28930274/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=pharmacology+roasted+coffee",
       },
     },
   ],
@@ -529,7 +529,7 @@ export const menuData = {
       learnMore: {
         title: "Sugar & Satiety",
         source: "Effects of sugar-fat combinations",
-        url: "https://pubmed.ncbi.nlm.nih.gov/19943985/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=natural+sweeteners",
       },
     },
     {
@@ -562,7 +562,7 @@ export const menuData = {
       learnMore: {
         title: "Strawberries & Health",
         source: "Nutritional profile of strawberries",
-        url: "https://pubmed.ncbi.nlm.nih.gov/22846056/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=effect+of+white+sugar",
       },
     },
     {
@@ -628,7 +628,7 @@ export const menuData = {
       learnMore: {
         title: "Berry Research",
         source: "Health benefits of berry polyphenols",
-        url: "https://pubmed.ncbi.nlm.nih.gov/26024516/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=effect+of+white+sugar",
       },
     },
     {
@@ -661,7 +661,7 @@ export const menuData = {
       learnMore: {
         title: "Carbs & Satiety",
         source: "Carbohydrate-fat metabolism",
-        url: "https://pubmed.ncbi.nlm.nih.gov/10946859/",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=natural+sweeteners",
       },
     },
   ],
