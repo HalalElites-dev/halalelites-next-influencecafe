@@ -11,7 +11,7 @@ import Image from "next/image"
 interface MenuItem {
   name: string
   description: string
-  price: string
+  price: string | { [key: string]: string } //  can handle both string or object
   image?: string
 }
 
@@ -45,7 +45,14 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
           </div>
 
           {/* Price */}
-          <div className="text-lg font-bold text-gray-800 ml-4">{item.price}</div>
+          <div className="text-sm font-bold text-gray-800 ml-4">
+            {typeof item.price === "string"
+              ? item.price
+              : Object.entries(item.price)
+                .map(([size, value]) => `${size.charAt(0).toUpperCase() + size.slice(1)}: ${value}`)
+                .join(" | ")}
+          </div>
+
         </div>
       ))}
     </div>
@@ -71,7 +78,7 @@ const Page = () => {
       {/* Hero Section */}
       <section className="relative h-80 bg-cover bg-center" style={{ backgroundImage: "url(/bannerz.webp)" }}>
         <div className="absolute inset-0 bg-black/30"></div>
-         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
+        <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
           <h1 className="text-5xl font-bold mb-4 font-body">
             Menu
           </h1>

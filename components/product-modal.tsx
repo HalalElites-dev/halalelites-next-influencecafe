@@ -17,7 +17,7 @@ interface NutritionFacts {
 interface MenuItem {
   name: string
   description: string
-  price: string
+  price: string | { [key: string]: string } // ✅ new
   image?: string
   nutritionFacts?: NutritionFacts
   scienceHighlight?: string
@@ -35,6 +35,7 @@ interface MenuItem {
     url: string
   }
 }
+
 
 interface ProductModalProps {
   item: MenuItem | null
@@ -99,7 +100,13 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
             {/* Right side - Product Details */}
             <div className="space-y-4 h-full flex flex-col">
               <div>
-                <div className="text-2xl font-bold text-brand-primary mb-2">{item.price}</div>
+                <div className="text-xl font-bold text-brand-primary mb-2">
+                  {typeof item.price === "string"
+                    ? item.price
+                    : Object.entries(item.price)
+                      .map(([size, value]) => `${size.charAt(0).toUpperCase() + size.slice(1)}: ${value}`)
+                      .join(" | ")}
+                </div>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </div>
 
