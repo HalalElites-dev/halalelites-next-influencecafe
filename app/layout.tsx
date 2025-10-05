@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
+import { CartProvider } from "@/components/cart/CartProvider";
 
 
 const roboto = Roboto({
@@ -36,7 +37,8 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} ${inter.variable} antialiased`}
       >
-        <ThemeProvider
+        <CartProvider>
+          <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
@@ -47,6 +49,8 @@ export default function RootLayout({
           <Footer />
 
         </ThemeProvider>
+        </CartProvider>
+        
       </body>
     </html>
   );

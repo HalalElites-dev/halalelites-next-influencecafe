@@ -10,6 +10,8 @@ export const NAV_LINKS = [
   { label: 'Menu', href: '/menu' },
   { label: 'Contact', href: '/contact' },
   { label: 'Pharmacology', href: '/pharmacology' },
+  { label: 'Cart', href: '/cart' },
+
 ];
 
 // Hero Section
