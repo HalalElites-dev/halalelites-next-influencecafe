@@ -94,7 +94,7 @@ const Hero = () => {
                 variants={iconItemVariants}
               >
                 <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/flavors.svg" alt="Natural Flavors" width={34} height={34} />
+                  <Image src="/flavors.svg" alt="Natural Flavors" width={60} height={34} />
                 </div>
                 <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
                   RICH FLAVOR
@@ -107,7 +107,7 @@ const Hero = () => {
                 variants={iconItemVariants}
               >
                 <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg1.webp" alt="100% Premium" width={30} height={34} />
+                  <Image src="/premium.svg" alt="100% Premium" width={60} height={34} />
                 </div>
                 <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
                   100% PREMIUM
@@ -120,7 +120,7 @@ const Hero = () => {
                 variants={iconItemVariants}
               >
                 <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg3.webp" alt="Sugar Free" width={34} height={34} />
+                  <Image src="/sugarfree.svg" alt="Sugar Free" width={60} height={34} />
                 </div>
                 <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
                   SUGAR FREE
@@ -139,14 +139,14 @@ const Hero = () => {
 
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg1.svg" alt="100% Premium" width={38} height={30} />
+                  <Image src="/premium.svg" alt="100% Premium" width={38} height={30} />
                 </div>
                 <span className="text-base font-medium text-gray-800">100% PREMIUM</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg3.svg" alt="Sugar Free" width={36} height={28} />
+                  <Image src="/sugarfree.svg" alt="Sugar Free" width={36} height={28} />
                 </div>
                 <span className="text-base font-medium text-gray-800">SUGAR FREE</span>
               </div>
