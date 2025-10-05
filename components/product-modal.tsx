@@ -100,12 +100,23 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
             {/* Right side - Product Details */}
             <div className="space-y-4 h-full flex flex-col">
               <div>
-                <div className="text-xl font-bold text-brand-primary mb-2">
-                  {typeof item.price === "string"
-                    ? item.price
-                    : Object.entries(item.price)
-                      .map(([size, value]) => `${size.charAt(0).toUpperCase() + size.slice(1)}: ${value}`)
-                      .join(" | ")}
+                <div className="text-md font-bold text-gray-800">
+                  {typeof item.price === "string" ? (
+                    item.price
+                  ) : (
+                    // Use a list structure instead of a single joined string
+                    <div className="flex flex-col text-sm font-medium">
+                      {Object.entries(item.price).map(([size, value]) => (
+                        <div key={size} className="mt-1">
+                          {/* Use a separate span/element for size and price for better control */}
+                          <span className="font-bold text-gray-900 mr-2">
+                            {size.charAt(0).toUpperCase() + size.slice(1)}:
+                          </span>
+                          <span className="text-gray-700">{value}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </div>
