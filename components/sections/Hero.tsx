@@ -139,14 +139,14 @@ const Hero = () => {
 
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg1.webp" alt="100% Premium" width={28} height={30} />
+                  <Image src="/svg1.svg" alt="100% Premium" width={38} height={30} />
                 </div>
                 <span className="text-base font-medium text-gray-800">100% PREMIUM</span>
               </div>
 
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/svg3.webp" alt="Sugar Free" width={36} height={28} />
+                  <Image src="/svg3.svg" alt="Sugar Free" width={36} height={28} />
                 </div>
                 <span className="text-base font-medium text-gray-800">SUGAR FREE</span>
               </div>

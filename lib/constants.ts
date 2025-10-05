@@ -67,10 +67,10 @@ export const menuData = {
       price: "$4.50",
       image: "",
       nutritionFacts: {
-        calories: "160–200",
-        sugar: "15–18g",
-        protein: "5–6g",
-        fat: "8–10g",
+        calories: "160-200",
+        sugar: "15-18g",
+        protein: "5-6g",
+        fat: "8-10g",
       },
       scienceHighlight:
         "Caffeine blocks adenosine receptors, cardamom aids digestion, honey provides glucose energy, and cream slows absorption.",
