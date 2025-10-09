@@ -87,9 +87,9 @@ const AboutPage = () => {
         <div className="flex flex-col md:flex-row md:items-stretch gap-6 mb-16">
 
           {/* Left: Mission (The Foundation) */}
-          <div className="md:w-1/3 p-8 bg-white border-l-4 border-amber-600 shadow-md flex flex-col justify-between">
+          <div className="md:w-1/3 p-8 bg-white border-l-4 border-brand-secondary shadow-md flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-amber-600 mb-3">01. Mission</h3>
+              <h3 className="text-3xl font-bold text-brand-secondary mb-3">01. Mission</h3>
               <h4 className="text-xl font-semibold mb-3">Redefining Coffee</h4>
             </div>
             <p className="text-gray-700 leading-relaxed mt-4">
@@ -99,7 +99,7 @@ const AboutPage = () => {
           </div>
 
           {/* Center: Vision (The Overlapping Goal) - The Focal Point */}
-          <div className="md:w-1/3 p-8 bg-amber-50 text-gray-900 shadow-xl z-10 scale-105 transform -translate-y-2 md:translate-y-0">
+          <div className="md:w-1/3 p-8 bg-[#f8f5ef]  text-gray-900 shadow-xl z-10 scale-105 transform -translate-y-2 md:translate-y-0">
             <div className="text-center">
               <h3 className="text-3xl font-bold mb-3">02. Vision</h3>
               <h4 className="text-2xl font-semibold mb-4">Toledo&apos;s Wellness Hub</h4>
@@ -111,9 +111,9 @@ const AboutPage = () => {
           </div>
 
           {/* Right: Why Science (The Catalyst) */}
-          <div className="md:w-1/3 p-8 bg-white border-r-4 border-amber-600 shadow-md flex flex-col justify-between">
+          <div className="md:w-1/3 p-8 bg-white border-r-4 border-brand-secondary shadow-md flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-amber-600 mb-3 text-right">03. Science</h3>
+              <h3 className="text-3xl font-bold text-brand-secondary mb-3 text-right">03. Science</h3>
               <h4 className="text-xl font-semibold mb-3 text-right">Simplify Wellness</h4>
             </div>
             <p className="text-gray-700 leading-relaxed mt-4">

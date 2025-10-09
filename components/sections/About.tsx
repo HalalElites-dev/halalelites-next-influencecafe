@@ -8,55 +8,55 @@ import Link from "next/link"
 const About = () => {
   return (
     <section className="relative py-20 px-6 bg-background">
-     
+
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         {/* Left: Custom Image Group */}
         <div className="relative w-full max-w-[650px] aspect-square mx-auto">
-  {/* Picture 1 */}
-  <div className="absolute top-0 left-0 w-[70%] h-[70%] sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
-    <Image
-      src="/coffeee.webp"
-      alt="Breakfast"
-      fill
-      sizes="(max-width: 768px) 70vw, 360px"
-      className="object-cover"
-      priority={false}
-    />
-  </div>
+          {/* Picture 1 */}
+          <div className="absolute top-0 left-0 w-[55%] h-[55%] sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/coffeee.webp"
+              alt="Breakfast"
+              fill
+              sizes="(max-width: 768px) 70vw, 360px"
+              className="object-cover"
+              priority={false}
+            />
+          </div>
 
-  {/* Picture 2 */}
-  <div className="absolute bottom-0 right-0 w-[70%] h-[70%] sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
-    <Image
-      src="/about2.webp"
-      alt="About"
-      fill
-      sizes="(max-width: 768px) 70vw, 388px"
-      className="object-cover"
-    />
-  </div>
+          {/* Picture 2 */}
+          <div className="absolute bottom-0 right-0 w-[55%] h-[55%] sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/about2.webp"
+              alt="About"
+              fill
+              sizes="(max-width: 768px) 70vw, 388px"
+              className="object-cover"
+            />
+          </div>
 
-  {/* Croissant graphic */}
-  <div className="absolute top-5 md:top-15 right-5 xl:top-5 xl:-right-3 w-24 h-24 md:h-50 md:w-70  z-40 ">
-    <Image
-      src="/croissant.webp"
-      alt="food item"
-      fill
-      className="object-contain"
-      aria-hidden="true"
-    />
-  </div>
+          {/* Croissant graphic */}
+          <div className="absolute top-5 md:top-15 right-5 xl:top-5 xl:-right-3 w-34 h-34 md:h-50 md:w-70  z-40 ">
+            <Image
+              src="/croissant.webp"
+              alt="food item"
+              fill
+              className="object-contain"
+              aria-hidden="true"
+            />
+          </div>
 
-  {/* Seal graphic */}
-  <div className="absolute bottom-4 left-4  md:left-1 xl:-left-10 w-24 h-24 md:h-50 md:w-70  z-40">
-    <Image
-      src="/logo.webp"
-      alt="logo"
-      fill
-      className="object-contain"
-      aria-hidden="true"
-    />
-  </div>
-</div>
+          {/* Seal graphic */}
+          <div className="absolute bottom-4 left-4  md:left-1 xl:-left-10 w-34 h-34 md:h-50 md:w-70  z-40">
+            <Image
+              src="/logo.webp"
+              alt="logo"
+              fill
+              className="object-contain"
+              aria-hidden="true"
+            />
+          </div>
+        </div>
 
 
         {/* Right: Info */}
@@ -114,13 +114,13 @@ const About = () => {
 
           <div className="mt-6">
             <Button
-                            size="lg"
-                            className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
-                        >
-                            <Link href="/contact" className="flex items-center gap-2">
-                                View Our Location
-                            </Link>
-                        </Button>
+              size="lg"
+              className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
+            >
+              <Link href="/contact" className="flex items-center gap-2">
+                View Our Location
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
