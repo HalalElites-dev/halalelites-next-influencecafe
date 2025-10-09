@@ -1,4 +1,5 @@
-import { Heart, BookOpen, Lightbulb, ChevronRight } from "lucide-react"
+// import { Heart, BookOpen, Lightbulb } from "lucide-react"
+import {ChevronRight} from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 
@@ -53,7 +54,7 @@ const AboutPage = () => {
           {/* Content */}
           <div className="space-y-8">
             <div>
-              <p className="text-brand-secondary font-semibold text-sm uppercase tracking-wide mb-2">ABOUT US</p>
+              <p className="text-brand-secondary font-bold text-sm uppercase tracking-wide mb-2">ABOUT US</p>
               <h2 className="text-4xl font-bold mb-6 text-brand-primary font-body" >
                 Influence Café
               </h2>
@@ -83,8 +84,45 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-col md:flex-row md:items-stretch gap-6 mb-16">
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Left: Mission (The Foundation) */}
+          <div className="md:w-1/3 p-8 bg-white border-l-4 border-amber-600 shadow-md flex flex-col justify-between">
+            <div>
+              <h3 className="text-3xl font-bold text-amber-600 mb-3">01. Mission</h3>
+              <h4 className="text-xl font-semibold mb-3">Redefining Coffee</h4>
+            </div>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              To redefine the coffee experience by blending cultural flavor with scientific knowledge, empowering our
+              community to make healthier choices while enjoying every moment.
+            </p>
+          </div>
+
+          {/* Center: Vision (The Overlapping Goal) - The Focal Point */}
+          <div className="md:w-1/3 p-8 bg-amber-50 text-gray-900 shadow-xl z-10 scale-105 transform -translate-y-2 md:translate-y-0">
+            <div className="text-center">
+              <h3 className="text-3xl font-bold mb-3">02. Vision</h3>
+              <h4 className="text-2xl font-semibold mb-4">Toledo&apos;s Wellness Hub</h4>
+              <p className="leading-relaxed font-medium">
+                To become Toledo&apos;s hub for wellness-inspired coffee culture, and eventually a scalable concept that brings
+                the joy of coffee and science to communities nationwide.
+              </p>
+            </div>
+          </div>
+
+          {/* Right: Why Science (The Catalyst) */}
+          <div className="md:w-1/3 p-8 bg-white border-r-4 border-amber-600 shadow-md flex flex-col justify-between">
+            <div>
+              <h3 className="text-3xl font-bold text-amber-600 mb-3 text-right">03. Science</h3>
+              <h4 className="text-xl font-semibold mb-3 text-right">Simplify Wellness</h4>
+            </div>
+            <p className="text-gray-700 leading-relaxed mt-4">
+              We believe wellness shouldn&apos;t be complicated. We simplify this by giving you easy,
+              **science-backed facts** about caffeine, nutrition, and wellness.
+            </p>
+          </div>
+        </div>
+        {/* <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="text-center">
             <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Heart className="w-8 h-8 text-amber-600" />
@@ -117,7 +155,7 @@ const AboutPage = () => {
               science-backed facts about caffeine, nutrition, and wellness.
             </p>
           </div>
-        </div>
+        </div> */}
 
 
       </div>
