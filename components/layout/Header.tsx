@@ -76,7 +76,7 @@ export function Header() {
             <div className="flex items-center 2k:-ml-50">
               <Link href={"/#home"}>
                 <div className="flex items-center">
-                  <Image src="/logo.webp" alt="Flipperzz Logo" width={220} height={100} />
+                  <Image src="/logo.webp" alt="Influence Cafe" width={220} height={100} />
                 </div>
               </Link>
             </div>
@@ -108,9 +108,9 @@ export function Header() {
                   variant="default"
                   size="sm"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className="rounded-full bg-brand-primary md:h-12 md:w-12"
+                  className="rounded-full bg-brand-primary h-12 w-12 md:h-12 md:w-12"
                 >
-                  {isMobileMenuOpen ? <X className="h-6 w-6 md:h-24 md:w-24 text-white" /> : <Menu className="h-6 w-6 md:h-12 md:w-12 text-white" />}
+                  {isMobileMenuOpen ? <X className="h-12 w-12 md:h-24 md:w-24 text-white" /> : <Menu className="h-12 w-12 md:h-12 md:w-12 text-white" />}
                 </Button>
               </div>
             </div>
