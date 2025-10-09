@@ -124,7 +124,7 @@ export const Specials = () => {
 
         {/* CTA */}
         <div className="text-center mt-8 md:mt-12">
-          <Button className="bg-primary text-white px-6 md:px-8 py-3 md:py-4 rounded-xl shadow-md hover:bg-primary/90 transition text-base md:text-lg w-full sm:w-auto">
+          <Button asChild className="bg-primary text-white px-6 md:px-8 py-3 md:py-6 rounded-xl shadow-md hover:bg-primary/90 transition text-base md:text-lg w-full sm:w-auto font-semibold">
             <Link href="/menu">Explore Our Menu</Link>
           </Button>
         </div>
