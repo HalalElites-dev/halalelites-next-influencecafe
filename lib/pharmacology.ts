@@ -74,7 +74,7 @@ export const pharmacologyData: PharmacologyCategory[] = [
         reference: "(Hooper et al., 2012)",
       },
       {
-        id: "catechins-egcg",
+        id: "catechins",
         term: "Catechins (EGCG)",
         subtitle: "Green Tea Antioxidants",
         definition: "Green-tea antioxidants that slightly increase fat burning and improve metabolism.",
