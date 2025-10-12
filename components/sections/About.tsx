@@ -92,7 +92,8 @@ const About = () => {
               <div>
                 <h3 className="text-xl font-semibold text-foreground font-body">Modern Desserts</h3>
                 <p className="text-muted-foreground">
-                  A selection of sweet treats and healthy snacks designed to pair perfectly with your coffee. || To be Updated
+                  Desserts inspired by the science of taste and balance — crafted with natural sweeteners, thoughtful ingredients, and a touch of discovery.
+
                 </p>
               </div>
             </li>

@@ -2,10 +2,9 @@
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
-// import { ExternalLink, ChevronDown, ChevronUp } from "lucide-react"
-// import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { normalizeTermToId } from "@/lib/utils"
 
 interface NutritionFacts {
   calories: number
@@ -35,7 +34,6 @@ interface MenuItem {
     url: string
   }
 }
-
 
 interface ProductModalProps {
   item: MenuItem | null
@@ -120,14 +118,12 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                 </div>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </div>
-
               {item.scienceHighlight && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3">
                   <h4 className="font-semibold text-brand-primary mb-1 text-sm">Science-Backed</h4>
                   <p className="text-gray-600 text-xs">{item.scienceHighlight}</p>
                 </div>
               )}
-
               {item.mechanismOfAction && (
                 <div className="bg-gray-50 border border-gray-200 rounded-lg p-3">
                   <h4 className="font-semibold text-gray-800 mb-2 text-sm">{item.mechanismOfAction.title}</h4>
@@ -137,7 +133,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                     <h5 className="font-medium text-gray-800 text-xs">Key Terms:</h5>
                     <div className="flex flex-wrap gap-1">
                       {item.mechanismOfAction.glossaryTerms.map((term, index) => (
-                        <a href={`/pharmacology#${term.term}`} key={index}>
+                        <a href={`/pharmacology#${normalizeTermToId(term.term)}`} key={index}>
                           <Badge
                             key={index}
                             variant="secondary"
@@ -152,15 +148,22 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                   </div>
                 </div>
               )}
-
               <div className="flex-1" /> {/* Spacer to push button to bottom */}
-
               {item.learnMore?.url && (
-                <Button asChild className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-2 mt-2">
-                  <Link href={item.learnMore.url} target="_blank" rel="noopener noreferrer">
-                    Read Studies
-                  </Link>
-                </Button>
+                <div className="space-y-2">
+                  {item.learnMore.title && (
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                      <h4 className="font-semibold text-blue-900 text-sm mb-1">Research</h4>
+                      <p className="text-gray-800 text-xs font-medium mb-1">{item.learnMore.title}</p>
+                      {item.learnMore.source && <p className="text-gray-600 text-xs italic">{item.learnMore.source}</p>}
+                    </div>
+                  )}
+                  <Button asChild className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white py-2">
+                    <Link href={item.learnMore.url} target="_blank" rel="noopener noreferrer">
+                      Read Studies
+                    </Link>
+                  </Button>
+                </div>
               )}
             </div>
           </div>

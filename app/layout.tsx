@@ -5,7 +5,6 @@ import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
-
 const roboto = Roboto({
   variable: "--font-heading", 
   subsets: ["latin"], 
@@ -16,6 +15,7 @@ const inter = Inter({
   variable: "--font-body",
   subsets: ["latin"],
 });
+
 
 
 export const metadata: Metadata = {
