@@ -60,7 +60,7 @@ const About = () => {
 
 
         {/* Right: Info */}
-        <div>
+        <div className="">
           <span className="uppercase tracking-wide text-sm text-brand-primary font-medium">
             About Us
           </span>
@@ -69,31 +69,37 @@ const About = () => {
           </h2>
           <p className="text-lg mb-6 text-muted-foreground">
             At Influence Café, we’re more than just a coffee shop—we’re a community space
-            where science, flavor, and wellness meet. From carefully roasted beans to
+            where science, flavor, culture, and wellness meet. From carefully roasted beans to
             modern desserts, every detail is crafted to inspire connection and creativity.
           </p>
 
           <ul className="space-y-5">
             <li className="flex items-start gap-4">
-              <Truck className="text-primary" size={62} />
+              <div className="w-[62px] flex-shrink-0">
+                <Truck className="text-primary" size={62} />
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground font-body">Ethically Sourced Coffee</h3>
                 <p className="text-muted-foreground">
-                  Our beans and leaves are roasted locally and sourced with care for quality and sustainability.
+                  Our beans are roasted locally and sourced with care for quality and sustainability.
                 </p>
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <Dessert className="text-primary" size={62} />
+              <div className="w-[62px] flex-shrink-0">
+                <Dessert className="text-primary" size={62} />
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground font-body">Modern Desserts</h3>
                 <p className="text-muted-foreground">
-                  A selection of sweet treats and healthy snacks designed to pair perfectly with your coffee.
+                  A selection of sweet treats and healthy snacks designed to pair perfectly with your coffee. || To be Updated
                 </p>
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <Coffee className="text-primary" size={62} />
+              <div className="w-[62px] flex-shrink-0">
+                <Coffee className="text-primary" size={62} />
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground font-body">Workshops & Events</h3>
                 <p className="text-muted-foreground">
@@ -102,7 +108,9 @@ const About = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <CupSoda className="text-primary" size={62} />
+              <div className="w-[62px] flex-shrink-0">
+                <CupSoda className="text-primary" size={62} />
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-foreground font-body">A Place for Community</h3>
                 <p className="text-muted-foreground">

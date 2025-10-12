@@ -57,7 +57,7 @@ const BestSelling = () => {
                                         01
                                     </span>
                                     <p className='text-muted-foreground text-lg leading-relaxed pt-1'>
-                                        Every drink and dessert is available in <strong className='text-black'>zero-sugar options</strong>, making us inclusive for health-conscious and diabetic customers who don&apos;t have to compromise on taste or experience.
+                                        Every drink and dessert is available in <strong className='text-black'>plant-based sugar options</strong>, making us inclusive for health-conscious and diabetic customers who don&apos;t have to compromise on taste or experience.
                                     </p>
                                 </li>
                                 <li className='flex gap-4 items-start'>
@@ -73,7 +73,7 @@ const BestSelling = () => {
                                         03
                                     </span>
                                     <p className='text-muted-foreground text-lg leading-relaxed pt-1'>
-                                        <strong className='text-black'>Community engagement:</strong> Fun weekly challenges, educational talks, and collaborations with local schools, universities, and healthcare groups bring our community together around wellness.
+                                        <strong className='text-black'>Community engagement:</strong> Fun challenges, educational talks, and collaborations with local schools, universities, and healthcare groups bring our community together around wellness.
                                     </p>
                                 </li>
                             </ul>
@@ -109,7 +109,7 @@ const BestSelling = () => {
                                     </svg>
                                 </div>
                                 <p className='text-muted-foreground text-lg leading-relaxed mb-4'>
-                                    Finally, a place where I can enjoy delicious drinks without worrying about my blood sugar. The educational aspect makes it even better—I love learning about what I&apos;m consuming!
+                                    Finally, a place where I can enjoy delicious drinks without worrying about sudden spikes in my blood sugar. The educational aspect makes it even better—I love learning about what I&apos;m consuming!
                                 </p>
 
                             </div>

@@ -21,7 +21,7 @@ export const Specials = () => {
             <span className="md:hidden"> </span>Brew at a Time 
           </h2>
           <p className="text-base md:text-lg max-w-2xl mx-auto text-muted-foreground px-4 md:px-0">
-            Most drinks and desserts are available with either low or zero-sugar alternatives, making Influence Cafe
+            Most drinks and desserts are available with plant-based and organic sugar alternatives, making Influence Cafe
             inclusive and health-friendly.
           </p>
         </div>

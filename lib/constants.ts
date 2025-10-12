@@ -519,13 +519,13 @@ export const specialItems = [
     {
       id: "tea",
       title: "Specialty Teas",
-      description: "Carefully curated loose-leaf teas from around the world, brewed to perfection.",
+      description: "Carefully curated loose-leaf teas from Yemen, brewed to perfection.",
       image: "/beautiful-specialty-tea-in-elegant-glass-teacup-wi.jpg",
     },
     {
       id: "coffee",
       title: "Brewed Coffee",
-      description: "Freshly roasted single-origin beans brewed using various methods for unique flavor profiles.",
+      description: "Freshly roasted multi-origin beans brewed using various methods for unique flavor profiles.",
       image: "/pour-over-coffee-in-glass-dripper-with-coffee-bean.jpg",
     },
     {

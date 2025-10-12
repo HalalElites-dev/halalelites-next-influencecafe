@@ -61,12 +61,12 @@ const AboutPage = () => {
               <p className="text-muted-foreground leading-relaxed mb-4">
                 At Influence Café, coffee isn&apos;t just a drink—it&apos;s an opportunity. Located at the busy Central & Secor
                 intersection in Toledo, OH, we wanted to create more than another café. Our founders envisioned a space
-                where flavor and wellness meet, where every sip tells a story, and where learning feels as natural as
+                where flavor, culture and wellness meet, where every sip tells a story, and where learning feels as natural as
                 enjoying your favorite brew.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                From our signature espresso creations to our zero-sugar desserts, we&apos;ve designed Influence Café for
-                people who care about taste, health, and community. We believe that great food and drinks can be both
+                From our signature espresso creations to our natural and organically sweetened desserts, we&apos;ve designed Influence Café for
+                people who care about taste, health, and community. We believe that great dessert and drinks can be both
                 indulgent and mindful.
               </p>
             </div>

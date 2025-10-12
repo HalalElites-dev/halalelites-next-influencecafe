@@ -56,7 +56,7 @@ const Hero = () => {
             >
               <a href="/contact" className="flex items-center gap-2 py-6 px-8">
                 Visit Us
-              
+
               </a>
             </Button>
             <Button size="lg" variant={"link"} className="text-black px-8 py-4 text-lg font-semibold">
@@ -88,67 +88,82 @@ const Hero = () => {
               animate="visible"
               variants={iconContainerVariants}
             >
-              {/* Top Right */}
-              <motion.div
-                className="absolute top-[15%] right-[10%] lg:-right-[5%] md:top-[20%] md:right-[15%] xl:right-[10%] flex items-center gap-4"
-                variants={iconItemVariants}
-              >
-                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/flavors.svg" alt="Natural Flavors" width={60} height={34} />
-                </div>
-                <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
-                  RICH FLAVOR
-                </span>
-              </motion.div>
+              <div className="absolute top-[20%] right-[5%] flex flex-col items-start space-y-8">
 
-              {/* Left Middle */}
-              <motion.div
-                className="absolute top-[35%] lg:top-[40%] left-[5%] md:top-[45%] md:left-[10%] xl:left-[65%] xl:top-[32%] flex items-center gap-4"
-                variants={iconItemVariants}
-              >
-                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/premium.svg" alt="100% Premium" width={60} height={34} />
-                </div>
-                <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
-                  100% PREMIUM
-                </span>
-              </motion.div>
+                {/* Item 1: Rich Flavors */}
+                <motion.div
+                  className="flex items-center gap-4"
+                  variants={iconItemVariants}
+                >
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300">
+                    <Image src="/flavors.svg" alt="Rich Flavors" width={60} height={34} />
+                  </div>
+                  <span className="text-lg font-medium text-gray-800 tracking-wide whitespace-nowrap">
+                    RICH FLAVORS
+                  </span>
+                </motion.div>
 
-              {/* Bottom Right */}
-              <motion.div
-                className="absolute bottom-[25%] right-[0%] lg:bottom-[20%] lg:right-[5%] md:bottom-[10%] md:right-[20%] xl:right-[10.5%] xl:top-[19%] flex items-center gap-4"
-                variants={iconItemVariants}
-              >
-                <div className="w-14 h-14 lg:w-16 lg:h-16 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/sugarfree.svg" alt="Sugar Free" width={60} height={34} />
-                </div>
-                <span className="text-sm lg:text-lg font-medium text-gray-800 tracking-wide">
-                  SUGAR FREE
-                </span>
-              </motion.div>
+                {/* Item 2: Premium Beans */}
+                <motion.div
+                  className="flex items-center gap-4"
+                  variants={iconItemVariants}
+                >
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300">
+                    <Image src="/premium.svg" alt="100% Premium Beans" width={60} height={34} />
+                  </div>
+                  <span className="text-lg font-medium text-gray-800 tracking-wide whitespace-nowrap">
+                    PREMIUM BEANS
+                  </span>
+                </motion.div>
+
+                {/* Item 3: Plant-based Sugar */}
+                <motion.div
+                  className="flex items-center gap-4"
+                  variants={iconItemVariants}
+                >
+                  <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300">
+                    <Image src="/sugarfree.svg" alt="Sugar Free" width={60} height={34} />
+                  </div>
+                  <span className="text-lg font-medium text-gray-800 tracking-wide whitespace-nowrap">
+                    Natural Sweeteners
+                  </span>
+                </motion.div>
+              </div>
             </motion.div>
 
-            {/* --- Mobile Stacked Icons (fallback) --- */}
-            <div className="flex flex-row items-center mt-4 lg:hidden w-full absolute left-0 right-0 bottom-0 gap-2 md:gap-6 translate-y-full justify-center ml-1 m-auto">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/flavors.svg" alt="Natural Flavors" width={36} height={28} />
+            {/* mobile icons */}
+            <div className="flex flex-row lg:hidden w-full absolute left-0 right-0 bottom-0 gap-1 md:gap-10 justify-center -mb-10">
+              {/* Item 1: RICH FLAVOR */}
+              <div className="flex flex-col items-center">
+                {/* Fixed-size wrapper for the icon and its text container */}
+                <div className="flex flex-row items-center gap-0.5">
+                  <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
+                    {/* The actual icon image */}
+                    <Image src="/flavors.svg" alt="Rich Flavors" width={45} height={45} />
+                  </div>
+                  {/* Text container, using text-center for visual balance */}
+                  <span className="text-sm md:text-base font-medium text-gray-800 text-center leading-snug">RICH<br />FLAVOR</span>
                 </div>
-                <span className="text-base font-medium text-gray-800">RICH FLAVOR</span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/premium.svg" alt="100% Premium" width={38} height={30} />
+              {/* Item 2: 100% PREMIUM */}
+              <div className="flex flex-col items-center">
+                <div className="flex flex-row items-center gap-0.5">
+                  <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
+                    <Image src="/premium.svg" alt="100% Premium Coffee" width={45} height={45} />
+                  </div>
+                  <span className="text-sm md:text-base font-medium text-gray-800 text-center leading-snug">100%<br />PREMIUM</span>
                 </div>
-                <span className="text-base font-medium text-gray-800">100% PREMIUM</span>
               </div>
 
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-300">
-                  <Image src="/sugarfree.svg" alt="Sugar Free" width={36} height={28} />
+              {/* Item 3: Plant-based Sugar */}
+              <div className="flex flex-col items-center">
+                <div className="flex flex-row items-center gap-0.5">
+                  <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
+                    <Image src="/sugarfree.svg" alt="Natural Sugar" width={45} height={45} />
+                  </div>
+                  <span className="text-sm md:text-base font-medium text-gray-800 text-center leading-snug">NATURAL<br />SWEETENERS</span>
                 </div>
-                <span className="text-base font-medium text-gray-800">SUGAR FREE</span>
               </div>
             </div>
           </div>

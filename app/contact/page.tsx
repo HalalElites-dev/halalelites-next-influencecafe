@@ -40,24 +40,24 @@ const ContactPage = () => {
             <div className="flex items-center gap-4">
               <Phone className="w-7 h-7 text-brand-secondary" />
               <p className="text-gray-800 font-medium text-xl">
-                (123) 456-7890
+                (567) 315-8152
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Mail className="w-7 h-7 text-brand-secondary" />
               <p className="text-gray-800 font-medium text-xl">
-                hello@influencecafe.com
+                admin@influencecafe.com
               </p>
             </div>
             <div className="flex items-center gap-4">
               <MapPin className="w-7 h-7 text-brand-secondary" />
               <p className="text-gray-800 font-medium text-xl">
-                Toledo, OH 43606, USA
+                3324 Secor Rd, No 223, Toledo, OH 43606, USA
               </p>
             </div>
 
             <p className="text-gray-600 leading-relaxed text-lg mt-6">
-             Influence Cafe is a specialty coffee shop and educational hub located at the high-traffic intersection of Central Avenue and Secor Road in Toledo, OH, adjacent to Chick-fil-A and Home Depot. Our mission is to redefine the coffee experience by combining premium beverages and modern desserts with scientific health education, making learning about the body and wellness both engaging and accessible
+             Influence Cafe is a specialty coffee shop and educational hub located at the high-traffic intersection of Central Avenue and Secor Road in Toledo, OH, adjacent to Chick-fil-A and Home Depot.
             </p>
           </div>
 
