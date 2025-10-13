@@ -1,7 +1,7 @@
 // import { Heart, BookOpen, Lightbulb } from "lucide-react"
-import { ChevronRight } from 'lucide-react'
-import Image from "next/image"
-import Link from "next/link"
+import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const AboutPage = () => {
   return (
@@ -12,11 +12,13 @@ const AboutPage = () => {
       >
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
-          <h1 className="text-5xl font-bold mb-4 font-body">
-            About Us
-          </h1>
+          <h1 className="text-5xl font-bold mb-4 font-body">About Us</h1>
           <div className="flex items-center text-sm text-white justify-center xl:justify-start">
-            <span><Link className="hover:underline" href="/">Home</Link></span>
+            <span>
+              <Link className="hover:underline" href="/">
+                Home
+              </Link>
+            </span>
             <ChevronRight className="w-4 h-4 mx-2" />
             <span className="text-gray-200">About Us</span>
           </div>
@@ -50,54 +52,73 @@ const AboutPage = () => {
             </div>
           </div>
 
-
           {/* Content */}
           <div className="space-y-8">
             <div>
-              <p className="text-brand-secondary font-bold text-sm uppercase tracking-wide mb-2">ABOUT US</p>
-              <h2 className="text-4xl font-bold mb-6 text-brand-primary font-body" >
+              <p className="text-brand-secondary font-bold text-sm uppercase tracking-wide mb-2">
+                ABOUT US
+              </p>
+              <h2 className="text-4xl font-bold mb-6 text-brand-primary font-body">
                 Influence Café
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                At Influence Café, coffee isn&apos;t just a drink—it&apos;s an opportunity. Located at the busy Central & Secor
-                intersection in Toledo, OH, we wanted to create more than another café. Our founders envisioned a space
-                where flavor, culture and wellness meet, where every sip tells a story, and where learning feels as natural as
-                enjoying your favorite brew.
+                At Influence Café, coffee isn&apos;t just a drink—it&apos;s an
+                opportunity. Located at the busy Central & Secor intersection in
+                Toledo, OH, we wanted to create more than another café. Our
+                founders envisioned a space where flavor, culture and wellness
+                meet, where every sip tells a story, and where learning feels as
+                natural as enjoying your favorite brew.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                From our signature espresso creations to our natural and organically sweetened desserts, we&apos;ve designed Influence Café for
-                people who care about taste, health, and community. We believe that great dessert and drinks can be both
-                indulgent and mindful.
+                From our signature espresso creations to our natural and
+                organically sweetened desserts, we&apos;ve designed Influence
+                Café for people who care about taste, health, and community. We
+                believe that great dessert and drinks can be both indulgent and
+                mindful.
               </p>
             </div>
 
             <div className="bg-gray-900 text-white p-8 rounded-lg">
               <p className="text-lg leading-relaxed mb-4 italic">
-                &quot;Influence Café was founded by Dr. Mahmood Meqdad, a pharmacologist who believes that culture and science belong to everyone, not just to the classroom. Inspired by the deep heritage of Yemeni coffee and the curiosity of modern science, he set out to bring that knowledge to the community through something universal: coffee.
-
-                Every day, people enjoy coffee, tea, and desserts without realizing the fascinating chemistry happening inside the body. Influence Café was created to bridge that gap transforming everyday habits into moments of learning, awareness, and connection.
-
-
-
-                Rooted in pharmacology and Yemeni coffee culture, the café honors Yemen’s legacy as one of the world’s first coffee exporters where coffee was not only a drink, but a symbol of hospitality, reflection, and intellectual exchange. By blending this timeless tradition with evidence-based science and artisanal craft, Influence Café becomes a space where flavor meets function, and curiosity becomes part of the experience.&quot;
+                &quot;Influence Café was founded by Dr. Mahmood Meqdad, a
+                pharmacologist who believes that science belongs to everyone,
+                not just to the classroom. Inspired by the deep heritage of
+                Yemeni coffee and the curiosity of modern science, he set out to
+                bring that knowledge to the community through something
+                universal: coffee. Every day, people enjoy coffee, tea, and
+                desserts without realizing the fascinating chemistry happening
+                inside the body. Influence Café was created to bridge that gap
+                transforming everyday habits into moments of learning,
+                awareness, and connection. Rooted in pharmacology and Yemeni
+                coffee culture, the café honors Yemen’s legacy as one of the
+                world’s first coffee exporters where coffee was not only a
+                drink, but a symbol of hospitality, reflection, and intellectual
+                exchange. By blending this timeless tradition with
+                evidence-based science and artisanal craft, Influence Café
+                becomes a space where flavor meets function, and curiosity
+                becomes part of the experience.&quot;
               </p>
               <div>
-                <p className="text-brand-secondary font-semibold">THE INFLUENCE CAFÉ FOUNDERS</p>
+                <p className="text-brand-secondary font-semibold">
+                  THE INFLUENCE CAFÉ FOUNDERS
+                </p>
                 <p className="text-gray-400 text-sm">Owners/Operators</p>
               </div>
             </div>
           </div>
         </div>
         <div className="flex flex-col md:flex-row md:items-stretch gap-6 mb-16">
-
           {/* Left: Mission (The Foundation) */}
           <div className="md:w-1/3 p-8 bg-white border-l-4 border-brand-secondary shadow-md flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-brand-secondary mb-3">01. Mission</h3>
+              <h3 className="text-3xl font-bold text-brand-secondary mb-3">
+                01. Mission
+              </h3>
               {/* <h4 className="text-xl font-semibold mb-3">Redefining Coffee</h4> */}
             </div>
             <p className="text-gray-700 leading-relaxed mt-4">
-              To make science part of everyday life, one cup, one conversation, one discovery at a time.
+              To make science part of everyday life, one cup, one conversation,
+              one discovery at a time.
             </p>
           </div>
 
@@ -107,7 +128,9 @@ const AboutPage = () => {
               <h3 className="text-3xl font-bold mb-3">02. Vision</h3>
               {/* <h4 className="text-2xl font-semibold mb-4">Toledo&apos;s Wellness Hub</h4> */}
               <p className="leading-relaxed font-medium">
-                To create a space where flavor, culture, and knowledge meet, inspiring curiosity about how what we consume shapes how we feel.
+                To create a space where flavor, culture, and knowledge meet,
+                inspiring curiosity about how what we consume shapes how we
+                feel.
               </p>
             </div>
           </div>
@@ -115,19 +138,21 @@ const AboutPage = () => {
           {/* Right: Why Science (The Catalyst) */}
           <div className="md:w-1/3 p-8 bg-white border-r-4 border-brand-secondary shadow-md flex flex-col justify-between">
             <div>
-              <h3 className="text-3xl font-bold text-brand-secondary mb-3 text-right">03. Science</h3>
+              <h3 className="text-3xl font-bold text-brand-secondary mb-3 text-right">
+                03. Science
+              </h3>
               {/* <h4 className="text-xl font-semibold mb-3 text-right">Simplify Wellness</h4> */}
             </div>
             <p className="text-gray-700 leading-relaxed mt-4">
-              Every ingredient tells a story from caffeine’s effect on alertness to hibiscus’ role in vasodilation transforming daily choices into moments of learning.
+              Every ingredient tells a story from caffeine’s effect on alertness
+              to hibiscus’ role in vasodilation transforming daily choices into
+              moments of learning.
             </p>
           </div>
         </div>
-
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
