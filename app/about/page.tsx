@@ -107,49 +107,58 @@ const AboutPage = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row md:items-stretch gap-6 mb-16">
-          {/* Left: Mission (The Foundation) */}
-          <div className="md:w-1/3 p-8 bg-white border-l-4 border-brand-secondary shadow-md flex flex-col justify-between">
-            <div>
-              <h3 className="text-3xl font-bold text-brand-secondary mb-3">
-                01. Mission
-              </h3>
-              {/* <h4 className="text-xl font-semibold mb-3">Redefining Coffee</h4> */}
-            </div>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              To make science part of everyday life, one cup, one conversation,
-              one discovery at a time.
-            </p>
-          </div>
+       <div className="flex flex-col md:flex-row md:items-stretch gap-6 mb-16">
+  {/* Left: Mission (The Foundation) */}
+  <div className="md:w-1/3 p-8 bg-white border-l-4 border-brand-secondary shadow-md">
+    {/* Inner content container added to ensure uniform stacking */}
+    <div className="flex flex-col h-full">
+      <div>
+        <h3 className="text-3xl font-bold text-brand-secondary mb-3">
+          01. Mission
+        </h3>
+        {/* <h4 className="text-xl font-semibold mb-3">Redefining Coffee</h4> */}
+      </div>
+      <p className="text-gray-700 leading-relaxed mt-4">
+        To make science part of everyday life, one cup, one conversation,
+        one discovery at a time.
+      </p>
+    </div>
+  </div>
 
-          {/* Center: Vision (The Overlapping Goal) - The Focal Point */}
-          <div className="md:w-1/3 p-8 bg-[#f8f5ef]  text-gray-900 shadow-xl z-10 scale-105 transform -translate-y-2 md:translate-y-0">
-            <div className="text-center">
-              <h3 className="text-3xl font-bold mb-3">02. Vision</h3>
-              {/* <h4 className="text-2xl font-semibold mb-4">Toledo&apos;s Wellness Hub</h4> */}
-              <p className="leading-relaxed font-medium">
-                To create a space where flavor, culture, and knowledge meet,
-                inspiring curiosity about how what we consume shapes how we
-                feel.
-              </p>
-            </div>
-          </div>
+  {/* Center: Vision (The Overlapping Goal) - The Focal Point */}
+  <div className="md:w-1/3 p-8 bg-[#f8f5ef]  text-gray-900 shadow-xl z-10 scale-105 transform -translate-y-2 md:translate-y-0">
+    {/* Inner content container added */}
+    <div className="flex flex-col h-full text-center">
+      <div>
+        <h3 className="text-3xl font-bold mb-3">02. Vision</h3>
+        {/* <h4 className="text-2xl font-semibold mb-4">Toledo&apos;s Wellness Hub</h4> */}
+      </div>
+      <p className="leading-relaxed font-medium mt-4">
+        To create a space where flavor, culture, and knowledge meet,
+        inspiring curiosity about how what we consume shapes how we
+        feel.
+      </p>
+    </div>
+  </div>
 
-          {/* Right: Why Science (The Catalyst) */}
-          <div className="md:w-1/3 p-8 bg-white border-r-4 border-brand-secondary shadow-md flex flex-col justify-between">
-            <div>
-              <h3 className="text-3xl font-bold text-brand-secondary mb-3 text-right">
-                03. Science
-              </h3>
-              {/* <h4 className="text-xl font-semibold mb-3 text-right">Simplify Wellness</h4> */}
-            </div>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              Every ingredient tells a story from caffeine’s effect on alertness
-              to hibiscus’ role in vasodilation transforming daily choices into
-              moments of learning.
-            </p>
-          </div>
-        </div>
+  {/* Right: Why Science (The Catalyst) */}
+  <div className="md:w-1/3 p-8 bg-white border-r-4 border-brand-secondary shadow-md">
+    {/* Inner content container added */}
+    <div className="flex flex-col h-full">
+      <div>
+        <h3 className="text-3xl font-bold text-brand-secondary mb-3 text-right">
+          03. Science
+        </h3>
+        {/* <h4 className="text-xl font-semibold mb-3 text-right">Simplify Wellness</h4> */}
+      </div>
+      <p className="text-gray-700 leading-relaxed mt-4">
+        Every ingredient tells a story from caffeine’s effect on alertness
+        to hibiscus’ role in vasodilation transforming daily choices into
+        moments of learning.
+      </p>
+    </div>
+  </div>
+</div>
       </div>
     </section>
   );
