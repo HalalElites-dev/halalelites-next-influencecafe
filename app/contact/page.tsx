@@ -1,6 +1,6 @@
-import { ChevronRight, Phone, Mail, MapPin } from "lucide-react"
-import Link from "next/link"
-import React from "react"
+import { ChevronRight, Phone, Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import React from "react";
 
 const ContactPage = () => {
   return (
@@ -11,12 +11,14 @@ const ContactPage = () => {
         style={{ backgroundImage: "url(/bannerz.webp)" }}
       >
         <div className="absolute inset-0 bg-black/30"></div>
-         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
-          <h1 className="text-5xl font-bold mb-4 font-body">
-            Contact Us
-          </h1>
+        <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
+          <h1 className="text-5xl font-bold mb-4 font-body">Contact Us</h1>
           <div className="flex items-center text-sm text-white justify-center xl:justify-start">
-            <span><Link className="hover:underline" href="/">Home</Link></span>
+            <span>
+              <Link className="hover:underline" href="/">
+                Home
+              </Link>
+            </span>
             <ChevronRight className="w-4 h-4 mx-2" />
             <span className="text-gray-200">Contact Us</span>
           </div>
@@ -52,12 +54,14 @@ const ContactPage = () => {
             <div className="flex items-center gap-4">
               <MapPin className="w-7 h-7 text-brand-secondary" />
               <p className="text-gray-800 font-medium text-xl">
-                3324 Secor Rd, No 223, Toledo, OH 43606, USA
+                3324 Secor Rd. Suite 2 & 3, Toledo, OH, 43606
               </p>
             </div>
 
             <p className="text-gray-600 leading-relaxed text-lg mt-6">
-             Influence Cafe is a specialty coffee shop and educational hub located at the high-traffic intersection of Central Avenue and Secor Road in Toledo, OH, adjacent to Chick-fil-A and Home Depot.
+              Influence Cafe is a specialty coffee shop and educational hub
+              located at the high-traffic intersection of Central Avenue and
+              Secor Road in Toledo, OH, adjacent to Chick-fil-A and Home Depot.
             </p>
           </div>
 
@@ -74,7 +78,7 @@ const ContactPage = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
