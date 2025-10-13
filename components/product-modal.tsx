@@ -65,7 +65,8 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                   alt={item.name}
                   fill
                   className="object-cover"
-                  quality={100}
+                  quality={80} 
+                  style={{ filter: "blur(0.35px) saturate(0.95)", imageRendering: "auto" }} // subtle softening
                 />
               </div>
 
