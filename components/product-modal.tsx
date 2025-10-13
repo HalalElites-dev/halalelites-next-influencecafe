@@ -59,14 +59,14 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Left side - Product Image */}
             <div className="space-y-3">
-              <div className="w-full h-64 md:h-80 rounded-lg overflow-hidden bg-gray-100 relative">
+              <div className="w-full h-64  md:h-96 rounded-lg overflow-hidden bg-gray-100 relative">
                 <Image
                   src={item.image || "/scene.webp"}
                   alt={item.name}
                   fill
-                  className="object-cover"
-                  quality={80} 
-                  style={{ filter: "blur(0.35px) saturate(0.95)", imageRendering: "auto" }} // subtle softening
+                  className="object-cover will-change-transform"
+                  quality={80}
+                  sizes="100vw"
                 />
               </div>
 
