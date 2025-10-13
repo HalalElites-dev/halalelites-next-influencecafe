@@ -34,8 +34,8 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
           onClick={() => onItemClick(item)}
         >
           {/* Image */}
-          <div className="w-20 h-20 rounded overflow-hidden flex-shrink-0 mr-4">
-            <Image src={item.image || "/scene.webp"} alt={item.name} className="w-full h-full object-cover" width={1000} height={800} />
+          <div className="w-30 h-30 rounded overflow-hidden flex-shrink-0 mr-4">
+            <Image src={item.image || "/scene.webp"} alt={item.name} className="w-full h-full object-cover" width={1980} height={1080} />
           </div>
 
           {/* Text */}
