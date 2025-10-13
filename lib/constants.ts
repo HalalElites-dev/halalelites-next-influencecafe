@@ -360,8 +360,8 @@ export const menuData = {
       price: "$9.00",
       image: "",
       nutritionFacts: {
-        calories: "Lower than regular cake",
-        sugar: "Reduced",
+        calories: "—",
+        sugar: "—",
         protein: "—",
         fat: "—",
       },
@@ -414,11 +414,6 @@ export const menuData = {
     },
   ],
 };
-
-// Pharmacology / Mechanism of Action Page
-export const PHARMA_HEADING = "Pharmacology Made Simple";
-export const PHARMA_SUBTEXT =
-  "Big words don’t have to be confusing. Here’s a quick guide to help you understand common science and health terms you’ll see in our menu.";
 
 
 
