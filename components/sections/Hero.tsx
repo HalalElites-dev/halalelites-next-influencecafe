@@ -132,7 +132,7 @@ const Hero = () => {
             </motion.div>
 
             {/* mobile icons */}
-            <div className="flex flex-row lg:hidden w-full absolute left-0 right-0 bottom-0 gap-1 md:gap-10 justify-center -mb-10">
+            <div className="flex flex-row lg:hidden w-full absolute left-0 right-0 bottom-0 gap-0.5 md:gap-10 justify-center -mb-10">
               {/* Item 1: RICH FLAVOR */}
               <div className="flex flex-col items-center">
                 {/* Fixed-size wrapper for the icon and its text container */}
