@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title:
     "Influence Café | Specialty Coffee, Modern Desserts & Wellness Hub in Toledo",
   description:
-    "Discover Influence Café at Central & Secor in Toledo, OH — premium coffee, sugar-free desserts, and science-backed wellness insights. Every sip and bite comes with knowledge and flavor.",
+    "Discover Influence Café at Central & Secor in Toledo, OH — premium coffee, naturally sweetened desserts, and science-backed wellness insights. Every sip and bite comes with knowledge and flavor.",
 };
 
 
