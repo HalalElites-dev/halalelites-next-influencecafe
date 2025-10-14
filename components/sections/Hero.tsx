@@ -74,7 +74,7 @@ const Hero = () => {
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
             {/* Coffee Cup */}
             <Image
-              src="/text.png"
+              src="/text2.png"
               alt="hero image"
               width={600}
               height={400}
