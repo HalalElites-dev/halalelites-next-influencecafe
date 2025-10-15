@@ -299,7 +299,7 @@ export const menuData = {
       name: "Flat Croissant",
       description: "Flaky croissant with Feta & Honey or Olive Oil & Zaatar.",
       price: "$4.70",
-      image: "",
+      image: "/croiss.webp",
       nutritionFacts: {
         calories: "220–280",
         sugar: "8–12g",
@@ -329,7 +329,7 @@ export const menuData = {
       name: "Honeycomb Bread",
       description: "Pull-apart bread filled with cream cheese and honey.",
       price: { small: "$4.50", regular: "$8.50" },
-      image: "",
+      image: "/honeycomb.webp",
       nutritionFacts: {
         calories: "200–280",
         sugar: "18–22g",
@@ -358,7 +358,7 @@ export const menuData = {
       name: "Dream Cake",
       description: "Sponge cake with fruit, cocoa, and natural sweeteners.",
       price: "$9.00",
-      image: "",
+      image: "/cake.webp",
       nutritionFacts: {
         calories: "—",
         sugar: "—",
@@ -387,7 +387,7 @@ export const menuData = {
       name: "Kunafa Chocolate Bar",
       description: "Chocolate filled with kunafa and pistachio.",
       price: "$8.00",
-      image: "",
+      image: "/kunafachoco.webp",
       nutritionFacts: {
         calories: "250–300",
         sugar: "20–25g",
