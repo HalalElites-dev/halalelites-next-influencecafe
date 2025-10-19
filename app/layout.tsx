@@ -5,6 +5,8 @@ import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
+<link rel="preload" as="image" href="/text2.webp" fetchPriority="high" />
+
 const roboto = Roboto({
   variable: "--font-heading", 
   subsets: ["latin"], 

@@ -65,7 +65,6 @@ export const Specials = () => {
                         alt={item.title}
                         width={320}
                         height={192}
-                        quality={70}
                         loading="lazy"
                         className="w-full h-full object-cover"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"

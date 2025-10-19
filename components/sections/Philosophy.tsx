@@ -8,10 +8,8 @@ const Philosophy = () => {
       <Image
         src="/philo.jpg" // Change this to your image path
         alt="A barista pouring latte art"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        className="brightness-50"
+        fill
+        className="brightness-50 object-cover"
       />
 
       {/* Text Overlay */}

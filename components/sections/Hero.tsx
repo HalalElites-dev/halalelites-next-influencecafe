@@ -3,38 +3,40 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+
 const leftVariants = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as [number, number, number, number], } },
 };
 
-const rightVariants = {
-  hidden: { opacity: 0, y: 60 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as [number, number, number, number], delay: 0.4 } },
+// Subtle fade-in for the image (no y movement to avoid layout shift)
+const imageVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] as [number, number, number, number] } },
 };
 
-// New variant for the icons container
 const iconContainerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 1.2, // Start icons animation after right section
-      staggerChildren: 0.5, // Stagger each icon's animation
+      delayChildren: 0.8,
+      staggerChildren: 0.3,
     },
   },
 };
 
-// New variant for each individual icon
 const iconItemVariants = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0 },
 };
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section id="home" className="bg-background">
-      {/* hero section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-20 mx-auto max-w-7xl xl:max-w-[1800px] py-32 md:py-30 xl:py-38">
         {/* left section */}
         <motion.div
@@ -57,44 +59,44 @@ const Hero = () => {
             >
               <Link href="/contact" className="flex items-center gap-2 py-6 px-8">
                 Visit Us
-
               </Link>
             </Button>
             <Button size="lg" variant={"link"} className="text-black px-8 py-4 text-lg font-semibold" asChild>
-
               <Link href="/menu">Explore Our Menu</Link>
             </Button>
           </div>
         </motion.div>
-        {/* Right Section */}
-        <motion.div
-          className="relative"
-          initial="hidden"
-          animate="visible"
-          variants={rightVariants}
-        >
+
+        {/* Right Section - Animated but LCP-friendly */}
+        <div className="relative">
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
-            {/* Coffee Cup */}
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]">
+            {/* Coffee Cup - Subtle animation that doesn't block LCP */}
+            <motion.div 
+              className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]"
+              initial="hidden"
+              animate={imageLoaded ? "visible" : "hidden"}
+              variants={imageVariants}
+            >
               <Image
                 src="/text2.webp"
                 alt="Influence Coffee Cup"
                 fill
                 className="object-contain xl:mr-15 mx-auto"
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                onLoad={() => setImageLoaded(true)}
               />
-            </div>
-            {/* --- Desktop / Laptop Floating Icons --- */}
+            </motion.div>
+
+            {/* Desktop / Laptop Floating Icons */}
             <motion.div
               className="hidden lg:block absolute inset-0"
               initial="hidden"
-              animate="visible"
+              animate={imageLoaded ? "visible" : "hidden"}
               variants={iconContainerVariants}
             >
               <div className="absolute top-[20%] right-[5%] flex flex-col items-start space-y-8">
-
-                {/* Item 1: Rich Flavors */}
                 <motion.div
                   className="flex items-center gap-4"
                   variants={iconItemVariants}
@@ -107,7 +109,6 @@ const Hero = () => {
                   </span>
                 </motion.div>
 
-                {/* Item 2: Premium Beans */}
                 <motion.div
                   className="flex items-center gap-4"
                   variants={iconItemVariants}
@@ -120,7 +121,6 @@ const Hero = () => {
                   </span>
                 </motion.div>
 
-                {/* Item 3: Plant-based Sugar */}
                 <motion.div
                   className="flex items-center gap-4"
                   variants={iconItemVariants}
@@ -137,20 +137,15 @@ const Hero = () => {
 
             {/* mobile icons */}
             <div className="flex flex-row lg:hidden w-full absolute left-0 right-0 bottom-0 gap-0.5 md:gap-10 justify-center -mb-10">
-              {/* Item 1: RICH FLAVOR */}
               <div className="flex flex-col items-center">
-                {/* Fixed-size wrapper for the icon and its text container */}
                 <div className="flex flex-row items-center gap-0.5">
                   <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
-                    {/* The actual icon image */}
                     <Image src="/flavors.svg" alt="Rich Flavors" width={45} height={45} />
                   </div>
-                  {/* Text container, using text-center for visual balance */}
                   <span className="text-sm md:text-base font-medium text-gray-800 text-center leading-snug">RICH<br />FLAVOR</span>
                 </div>
               </div>
 
-              {/* Item 2: 100% PREMIUM */}
               <div className="flex flex-col items-center">
                 <div className="flex flex-row items-center gap-0.5">
                   <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
@@ -160,7 +155,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Item 3: Plant-based Sugar */}
               <div className="flex flex-col items-center">
                 <div className="flex flex-row items-center gap-0.5">
                   <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
@@ -171,8 +165,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
-        </motion.div>
-
+        </div>
       </div>
     </section>
   )
