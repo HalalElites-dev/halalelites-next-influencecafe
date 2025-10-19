@@ -61,7 +61,7 @@ export function Header() {
     <>
       {isMobileMenuOpen && (
         <div
-          className="fixed top-20 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed top-20 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -119,7 +119,7 @@ export function Header() {
 
         {/* Mobile Dropdown */}
         <div
-          className={`lg:hidden  fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-500 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden  fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
         >
           <div
