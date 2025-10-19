@@ -76,7 +76,8 @@ export function Header() {
             <div className="flex items-center 2k:-ml-50">
               <Link href={"/#home"}>
                 <div className="flex items-center">
-                  <Image src="/logo.webp" alt="Influence Cafe" width={220} height={100} />
+                  <Image src="/logo.webp" alt="Influence Cafe" width={220} height={100} 
+                  sizes="(max-width: 768px) 136px, 280px"/>
                 </div>
               </Link>
             </div>
@@ -109,6 +110,7 @@ export function Header() {
                   size="sm"
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="rounded-full bg-brand-primary h-12 w-12 md:h-12 md:w-12"
+                  aria-label="Menu Button"
                 >
                   {isMobileMenuOpen ? <X className="h-12 w-12 md:h-24 md:w-24 text-white" /> : <Menu className="h-12 w-12 md:h-12 md:w-12 text-white" />}
                 </Button>

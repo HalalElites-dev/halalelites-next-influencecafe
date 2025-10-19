@@ -18,9 +18,8 @@ const About = () => {
               src="/coffeee.webp"
               alt="Breakfast"
               fill
-              sizes="(max-width: 768px) 70vw, 360px"
+              sizes="(max-width: 768px) 136px, 280px"
               className="object-cover"
-              priority={false}
             />
           </div>
 
@@ -28,9 +27,9 @@ const About = () => {
           <div className="absolute bottom-0 right-0 w-[55%] h-[55%] sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/about2.webp"
-              alt="About"
+              alt="Cream Coffee"
               fill
-              sizes="(max-width: 768px) 70vw, 388px"
+              sizes="(max-width: 768px) 136px, 280px"
               className="object-cover"
             />
           </div>
@@ -43,6 +42,7 @@ const About = () => {
               fill
               className="object-contain"
               aria-hidden="true"
+              sizes="(max-width: 768px) 136px, 280px"
             />
           </div>
 
@@ -54,6 +54,7 @@ const About = () => {
               fill
               className="object-contain"
               aria-hidden="true"
+              sizes="(max-width: 768px) 136px, 280px"
             />
           </div>
         </div>
@@ -125,8 +126,10 @@ const About = () => {
             <Button
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
+              asChild
             >
-              <Link href="/contact" className="flex items-center gap-2">
+              {/* 💡 The fix is adding "w-full h-full justify-center" to the className */}
+              <Link href="/contact" className="flex items-center gap-2  h-full justify-center">
                 View Our Location
               </Link>
             </Button>

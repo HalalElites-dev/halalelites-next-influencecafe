@@ -76,7 +76,7 @@
   --secondary-foreground: #000000; /* Black text on green */
 
   --muted: #f5f5f5; /* Light muted gray */
-  --muted-foreground: #6b7280; /* Muted medium gray text */
+  --muted-foreground: #4b5563; /* Muted darker gray text for better contrast */
 
   --accent: #c5a46d; /* Gold accent (stars, highlights) */
   --accent-foreground: #000000; /* Black text on gold */

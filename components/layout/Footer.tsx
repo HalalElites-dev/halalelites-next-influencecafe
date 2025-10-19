@@ -57,13 +57,13 @@ const Footer = () => {
 
           {/* Social Media Icons (new section) */}
           <div className="flex space-x-4">
-            <a href="mailto:admin@influencecafe.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors">
+            <a href="mailto:admin@influencecafe.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors" aria-label="Mail">
               <Mail className="w-4 h-4 " width={16} height={16}  />
             </a>
-            <a href="https://www.google.com/maps?ll=41.68151,-83.621831&z=16&t=m&hl=en&gl=AE&mapclient=embed&q=3324+Secor+Rd+Toledo,+OH+43606+USA" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors">
+            <a href="https://www.google.com/maps?ll=41.68151,-83.621831&z=16&t=m&hl=en&gl=AE&mapclient=embed&q=3324+Secor+Rd+Toledo,+OH+43606+USA" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors" aria-label="Location">
               <MapPin className="w-4 h-4  " width={16} height={16} />
             </a>
-            <a href="tel:(567) 315-8152" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors">
+            <a href="tel:(567) 315-8152" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors" aria-label="Phone">
               <Phone className="w-4 h-4  " width={16} height={16}  />
             </a>
           </div>
