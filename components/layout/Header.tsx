@@ -70,8 +70,12 @@ export function Header() {
     <>
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          style={{ top: '5rem' }}
+          className="fixed left-0 right-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+          style={{ 
+            top: '5rem',
+            height: 'calc(100vh - 5rem)',
+            minHeight: 'calc(100dvh - 5rem)'
+          }}
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -125,7 +129,7 @@ export function Header() {
         </div>
 
         <div
-          className={`lg:hidden fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-400 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
         >
           <div
