@@ -67,6 +67,7 @@ export const Specials = () => {
                         width={320}
                         height={192}
                         className="w-full h-full object-cover"
+                        sizes="100vw"
                       />
                     </div>
                   </div>
