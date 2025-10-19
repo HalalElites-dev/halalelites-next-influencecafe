@@ -70,11 +70,9 @@ export function Header() {
     <>
       {isMobileMenuOpen && (
         <div
-          className="fixed left-0 right-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+          className="fixed left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
           style={{ 
-            top: '5rem',
-            height: 'calc(100vh - 5rem)',
-            minHeight: 'calc(100dvh - 5rem)'
+            top: '5rem'
           }}
           onClick={() => setIsMobileMenuOpen(false)}
         />
