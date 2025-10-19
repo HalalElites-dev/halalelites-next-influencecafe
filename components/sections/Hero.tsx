@@ -1,19 +1,13 @@
 'use client';
 import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion";
+import { motion, useMotionValue, animate } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const leftVariants = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as [number, number, number, number], } },
-};
-
-// Subtle fade-in for the image (no y movement to avoid layout shift)
-const imageVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] as [number, number, number, number] } },
 };
 
 const iconContainerVariants = {
@@ -34,6 +28,18 @@ const iconItemVariants = {
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const scale = useMotionValue(1);
+  const opacity = useMotionValue(1);
+
+  useEffect(() => {
+    if (imageLoaded) {
+      // Subtle scale animation AFTER image loads
+      animate(scale, [1, 1.02, 1], {
+        duration: 1.5,
+        ease: [0.42, 0, 0.58, 1],
+      });
+    }
+  }, [imageLoaded, scale]);
 
   return (
     <section id="home" className="bg-background">
@@ -67,15 +73,13 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Section - Animated but LCP-friendly */}
+        {/* Right Section - LCP-optimized with post-load animation */}
         <div className="relative">
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
-            {/* Coffee Cup - Subtle animation that doesn't block LCP */}
+            {/* Coffee Cup - Renders immediately, animates after load */}
             <motion.div 
               className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]"
-              initial="hidden"
-              animate={imageLoaded ? "visible" : "hidden"}
-              variants={imageVariants}
+              style={{ scale, opacity }}
             >
               <Image
                 src="/text2.webp"
