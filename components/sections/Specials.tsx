@@ -67,7 +67,8 @@ export const Specials = () => {
                         height={192}
                         loading="lazy"
                         className="w-full h-full object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
+                        sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 320px"
+                        quality={80}
                       />
                     </div>
                   </div>
@@ -113,7 +114,9 @@ export const Specials = () => {
                         width={160}
                         height={192}
                         className="w-full h-full object-cover"
-                        sizes="(max-width: 768px) 136px, 280px"
+                        sizes="(max-width: 1024px) 136px, 160px"
+                        quality={80}
+                         loading="lazy"
                       />
                     </div>
                   </div>

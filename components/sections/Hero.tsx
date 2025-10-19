@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import heroImage from "@/public/text2.webp"; // ✅ Static import = blur + pre-decode
+import heroImage from "@/public/text2.webp";
 
 import { Variants } from "framer-motion";
 
@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <section id="home" className="bg-background lg:h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-20 mx-auto max-w-7xl xl:max-w-[1800px] py-32 md:py-30 xl:py-38">
-        
+
         {/* Left section */}
         <motion.div
           className="text-center lg:text-left"
@@ -73,14 +73,7 @@ const Hero = () => {
         {/* Right section */}
         <div className="relative">
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
-            
-            {/* ✅ Static blurred background for instant paint */}
-            <div
-              className="absolute inset-0 bg-[url('/text2-small.webp')] bg-contain bg-center bg-no-repeat blur-sm opacity-60"
-              aria-hidden="true"
-            />
 
-            {/* ✅ Optimized Image — no delay gating */}
             <motion.div
               initial={{ opacity: 0.8 }}
               animate={{ opacity: 1 }}
@@ -95,11 +88,11 @@ const Hero = () => {
                 priority
                 fetchPriority="high"
                 className="object-contain xl:mr-15 mx-auto"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 45vw"
+                quality={85}
               />
             </motion.div>
 
-            {/* ✅ Lazy-load desktop icons */}
             <motion.div
               className="hidden lg:block absolute inset-0"
               initial="hidden"
@@ -115,7 +108,13 @@ const Hero = () => {
                 ].map((icon, idx) => (
                   <motion.div key={idx} className="flex items-center gap-4" variants={iconItemVariants}>
                     <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border border-gray-300">
-                      <Image src={icon.src} alt={icon.text} width={60} height={34} />
+                      <Image 
+                        src={icon.src} 
+                        alt={icon.text} 
+                        width={60} 
+                        height={34}
+                        loading="lazy"
+                      />
                     </div>
                     <span className="text-lg font-medium text-gray-800 tracking-wide whitespace-nowrap">
                       {icon.text}
@@ -135,7 +134,14 @@ const Hero = () => {
                 <div key={idx} className="flex flex-col items-center">
                   <div className="flex flex-row items-center gap-0.5">
                     <div className="w-[45px] h-[45px] flex-shrink-0 flex items-center justify-center">
-                      <Image src={icon.src} alt={icon.label} width={45} height={45} />
+                      <Image 
+                        src={icon.src} 
+                        alt={icon.label} 
+                        width={45} 
+                        height={45}
+                        loading="lazy"
+                        
+                      />
                     </div>
                     <span className="text-sm md:text-base font-medium text-gray-800 text-center leading-snug whitespace-pre-line">
                       {icon.label}
