@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 const leftVariants = {
   hidden: { opacity: 0, y: 60 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as [number, number, number, number], } },
@@ -54,13 +55,14 @@ const Hero = () => {
               size="lg"
               className="px-8 py-4 text-lg font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform"
             >
-              <a href="/contact" className="flex items-center gap-2 py-6 px-8">
+              <Link href="/contact" className="flex items-center gap-2 py-6 px-8">
                 Visit Us
 
-              </a>
+              </Link>
             </Button>
-            <Button size="lg" variant={"link"} className="text-black px-8 py-4 text-lg font-semibold">
-              <a href="/menu">Explore Our Menu</a>
+            <Button size="lg" variant={"link"} className="text-black px-8 py-4 text-lg font-semibold" asChild>
+            
+              <Link href="/menu">Explore Our Menu</Link>
             </Button>
           </div>
         </motion.div>
