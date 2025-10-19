@@ -1,9 +1,9 @@
 'use client';
 import { Button } from "@/components/ui/button"
-import { motion, useMotionValue, animate } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const leftVariants = {
   hidden: { opacity: 0, y: 60 },
@@ -15,7 +15,7 @@ const iconContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.8,
+      delayChildren: 0.6,
       staggerChildren: 0.3,
     },
   },
@@ -28,21 +28,9 @@ const iconItemVariants = {
 
 const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const scale = useMotionValue(1);
-  const opacity = useMotionValue(1);
-
-  useEffect(() => {
-    if (imageLoaded) {
-      // Subtle scale animation AFTER image loads
-      animate(scale, [1, 1.02, 1], {
-        duration: 1.5,
-        ease: [0.42, 0, 0.58, 1],
-      });
-    }
-  }, [imageLoaded, scale]);
 
   return (
-    <section id="home" className="bg-background">
+    <section id="home" className="bg-background lg:h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-20 mx-auto max-w-7xl xl:max-w-[1800px] py-32 md:py-30 xl:py-38">
         {/* left section */}
         <motion.div
@@ -73,14 +61,11 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Section - LCP-optimized with post-load animation */}
+        {/* Right Section - NO animation on LCP image */}
         <div className="relative">
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
-            {/* Coffee Cup - Renders immediately, animates after load */}
-            <motion.div 
-              className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]"
-              style={{ scale, opacity }}
-            >
+            {/* Coffee Cup - Completely static for optimal LCP */}
+            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]">
               <Image
                 src="/text2.webp"
                 alt="Influence Coffee Cup"
@@ -91,9 +76,9 @@ const Hero = () => {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 onLoad={() => setImageLoaded(true)}
               />
-            </motion.div>
+            </div>
 
-            {/* Desktop / Laptop Floating Icons */}
+            {/* Desktop / Laptop Floating Icons - Animated beautifully */}
             <motion.div
               className="hidden lg:block absolute inset-0"
               initial="hidden"
