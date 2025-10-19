@@ -18,7 +18,7 @@ export const Specials = () => {
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mt-2 mb-4 text-foreground font-body leading-tight">
             Satisfying Cravings, One Friendly
             <br className="hidden md:block" />
-            <span className="md:hidden"> </span>Brew at a Time 
+            <span className="md:hidden"> </span>Brew at a Time
           </h2>
           <p className="text-base md:text-lg max-w-2xl mx-auto text-muted-foreground px-4 md:px-0">
             Most drinks and desserts are available with plant-based and organic sugar alternatives, making Influence Cafe
@@ -32,9 +32,8 @@ export const Specials = () => {
             {specialItems.map((item, index) => (
               <div
                 key={item.id}
-                className={`relative transition-all duration-300 cursor-pointer group ${
-                  index !== specialItems.length - 1 ? "border-b border-border" : ""
-                } ${hoveredItem === item.id ? "bg-muted/30" : "hover:bg-muted/20"}`}
+                className={`relative transition-all duration-300 cursor-pointer group ${index !== specialItems.length - 1 ? "border-b border-border" : ""
+                  } ${hoveredItem === item.id ? "bg-muted/30" : "hover:bg-muted/20"}`}
                 onMouseEnter={() => setHoveredItem(item.id)}
                 onMouseLeave={() => setHoveredItem(null)}
               >
@@ -57,7 +56,7 @@ export const Specials = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Mobile Image */}
                   <div className="mb-4">
                     <div className="w-full h-48 rounded-xl overflow-hidden shadow-lg bg-white border border-border">
@@ -66,12 +65,14 @@ export const Specials = () => {
                         alt={item.title}
                         width={320}
                         height={192}
+                        quality={70}
+                        loading="lazy"
                         className="w-full h-full object-cover"
-                        sizes="100vw"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
                       />
                     </div>
                   </div>
-                  
+
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </div>
 
@@ -101,11 +102,10 @@ export const Specials = () => {
 
                   {/* Desktop Hover Image */}
                   <div
-                    className={`absolute right-6 lg:right-8 top-1/2 -translate-y-1/2 transition-all duration-500 ${
-                      hoveredItem === item.id
+                    className={`absolute right-6 lg:right-8 top-1/2 -translate-y-1/2 transition-all duration-500 ${hoveredItem === item.id
                         ? "opacity-100 translate-x-0 scale-100"
                         : "opacity-0 translate-x-8 scale-95 pointer-events-none"
-                    }`}
+                      }`}
                   >
                     <div className="w-32 lg:w-40 h-40 lg:h-48 rounded-xl lg:rounded-2xl overflow-hidden shadow-2xl bg-white border border-border">
                       <Image

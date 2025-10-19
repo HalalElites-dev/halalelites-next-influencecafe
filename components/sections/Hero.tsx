@@ -61,7 +61,7 @@ const Hero = () => {
               </Link>
             </Button>
             <Button size="lg" variant={"link"} className="text-black px-8 py-4 text-lg font-semibold" asChild>
-            
+
               <Link href="/menu">Explore Our Menu</Link>
             </Button>
           </div>
@@ -75,15 +75,16 @@ const Hero = () => {
         >
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
             {/* Coffee Cup */}
-            <Image
-              src="/text2.webp"
-              alt="hero image"
-              width={600}
-              height={400}
-              className="xl:ml-20 mx-auto"
-              priority
-            />
-
+            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]">
+              <Image
+                src="/text2.webp"
+                alt="Influence Coffee Cup"
+                fill
+                className="object-contain xl:mr-15 mx-auto"
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
             {/* --- Desktop / Laptop Floating Icons --- */}
             <motion.div
               className="hidden lg:block absolute inset-0"
