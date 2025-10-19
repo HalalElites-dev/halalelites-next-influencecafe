@@ -5,6 +5,7 @@ import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
 
+<link rel="preload" as="image" href="/text2.webp" fetchPriority="high" />
 
 
 const roboto = Roboto({
@@ -35,10 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preload" as="image" href="/text2.webp" fetchPriority="high" />
-
-      </head>
+      
       <body
         className={`${roboto.variable} ${inter.variable} antialiased`}
       >
