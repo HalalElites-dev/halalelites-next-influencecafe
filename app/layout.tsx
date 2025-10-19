@@ -35,7 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      
+      <head>
+        <link rel="preload" as="image" href="/text2.webp" fetchPriority="high" />
+
+      </head>
       <body
         className={`${roboto.variable} ${inter.variable} antialiased`}
       >
