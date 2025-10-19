@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation" // Add this import
+import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,12 +8,11 @@ import { Menu, X } from "lucide-react"
 import { NAV_LINKS } from "@/lib/constants"
 
 const Navigation = ({ scrollY, onNavigate }: { scrollY: number; onNavigate?: () => void }) => {
-  const pathname = usePathname() // Get current pathname
+  const pathname = usePathname()
 
   return (
     <nav className="flex flex-col lg:flex-row items-start md:items-center space-y-3 lg:space-y-0 lg:space-x-20">
       {NAV_LINKS.map((item, index) => {
-        // Check if current path matches the link
         const isActive = pathname === item.href || 
                         (item.href !== '/' && pathname.startsWith(item.href))
         
@@ -25,7 +24,7 @@ const Navigation = ({ scrollY, onNavigate }: { scrollY: number; onNavigate?: () 
             className={`relative transition-colors duration-200 w-full py-2 md:py-0 uppercase font-bold md:text-3xl lg:text-lg
           text-brand-primary group
           ${isActive 
-          ? 'lg:!text-black' // Active link - always black
+          ? 'lg:!text-black'
           : scrollY > 50 
             ? 'lg:!text-gray-600 hover:!text-brand-primary' 
             : 'lg:!text-gray-600 hover:!text-brand-primary'
@@ -34,7 +33,6 @@ const Navigation = ({ scrollY, onNavigate }: { scrollY: number; onNavigate?: () 
             >
             <span className="relative inline-block">
               {item.label}
-              {/* Underline only as wide as the text */}
               {isActive && (
               <span className="lg:hidden absolute left-0 -bottom-1 w-full h-0.5 bg-black"></span>
               )}
@@ -52,16 +50,28 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
-    handleScroll(); // initialize scroll position
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMobileMenuOpen])
 
   return (
     <>
       {isMobileMenuOpen && (
         <div
-          className="fixed top-20 left-0 right-0 bottom-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+          style={{ top: '5rem' }}
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
@@ -72,7 +82,6 @@ export function Header() {
       >
         <div suppressHydrationWarning className={'max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10 transition-all duration-300'}>
           <nav className="flex items-center  justify-between lg:justify-evenly h-20">
-            {/* Logo Section */}
             <div className="flex items-center 2k:-ml-50">
               <Link href={"/#home"}>
                 <div className="flex items-center">
@@ -82,7 +91,6 @@ export function Header() {
               </Link>
             </div>
 
-            {/* Desktop Navigation - Center */}
             <div className="hidden lg:flex justify-end flex-1 space-x-16">
               <Navigation scrollY={scrollY} />
               <Button
@@ -95,15 +103,12 @@ export function Header() {
                 </Button>
             </div>
 
-            {/* Right Section - Phone/Order + Mobile Menu */}
             <div className="flex  space-x-4 ">
-              {/* Desktop Phone and Order Button */}
               <div className="hidden lg:flex items-center space-x-3">
                 
                 
               </div>
 
-              {/* Mobile Menu Button */}
               <div className="lg:hidden">
                 <Button
                   variant="default"
@@ -119,9 +124,8 @@ export function Header() {
           </nav>
         </div>
 
-        {/* Mobile Dropdown */}
         <div
-          className={`lg:hidden  fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          className={`lg:hidden fixed left-0 right-0 top-20 z-50 overflow-hidden transition-all duration-400 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
             }`}
         >
           <div

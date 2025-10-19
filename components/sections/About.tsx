@@ -35,7 +35,7 @@ const About = () => {
           </div>
 
           {/* Croissant graphic */}
-          <div className="absolute top-5 md:top-15 right-5 xl:top-5 xl:-right-3 w-34 h-34 md:h-50 md:w-70  z-40 ">
+          <div className="absolute top-5 md:top-15 right-5 xl:top-5 xl:-right-3 w-34 h-34 md:h-50 md:w-70  z-30 ">
             <Image
               src="/croissant.webp"
               alt="food item"
@@ -47,7 +47,7 @@ const About = () => {
           </div>
 
           {/* Seal graphic */}
-          <div className="absolute bottom-4 left-4  md:left-1 xl:-left-10 w-34 h-34 md:h-50 md:w-70  z-40">
+          <div className="absolute bottom-4 left-4  md:left-1 xl:-left-10 w-34 h-34 md:h-50 md:w-70  z-30">
             <Image
               src="/logo.webp"
               alt="logo"
