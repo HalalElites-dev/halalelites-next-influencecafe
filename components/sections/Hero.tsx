@@ -82,7 +82,6 @@ const Hero = () => {
               height={400}
               className="xl:ml-20 mx-auto"
               priority
-              sizes="(max-width: 1024px) 100vw, 800px"
             />
 
             {/* --- Desktop / Laptop Floating Icons --- */}
