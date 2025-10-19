@@ -35,7 +35,7 @@ const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section id="home" className="bg-background h-screen">
+    <section id="home" className="bg-background lg:h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-20 mx-auto max-w-7xl xl:max-w-[1800px] py-32 md:py-30 xl:py-38">
         {/* left section */}
         <motion.div
