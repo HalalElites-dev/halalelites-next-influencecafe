@@ -6,8 +6,13 @@ import Link from "next/link";
 import { useState } from "react";
 
 const leftVariants = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0.5, y: 60 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.42, 0, 1, 1] as [number, number, number, number], } },
+};
+
+const imageVariants = {
+  hidden: { opacity: 0.5 },
+  visible: { opacity: 1, transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] as [number, number, number, number] } },
 };
 
 const iconContainerVariants = {
@@ -15,7 +20,7 @@ const iconContainerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.6,
+      delayChildren: 0.8,
       staggerChildren: 0.3,
     },
   },
@@ -30,7 +35,7 @@ const Hero = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <section id="home" className="bg-background lg:h-screen">
+    <section id="home" className="bg-background h-screen">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center px-4 lg:px-20 mx-auto max-w-7xl xl:max-w-[1800px] py-32 md:py-30 xl:py-38">
         {/* left section */}
         <motion.div
@@ -61,11 +66,16 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Right Section - NO animation on LCP image */}
+        {/* Right Section - Animated but LCP-friendly */}
         <div className="relative">
           <div className="relative w-full md:h-[600px] flex items-center justify-center">
-            {/* Coffee Cup - Completely static for optimal LCP */}
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]">
+            {/* Coffee Cup - Subtle animation that doesn't block LCP */}
+            <motion.div 
+              className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[650px]"
+              initial="hidden"
+              animate={imageLoaded ? "visible" : "hidden"}
+              variants={imageVariants}
+            >
               <Image
                 src="/text2.webp"
                 alt="Influence Coffee Cup"
@@ -76,9 +86,9 @@ const Hero = () => {
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 onLoad={() => setImageLoaded(true)}
               />
-            </div>
+            </motion.div>
 
-            {/* Desktop / Laptop Floating Icons - Animated beautifully */}
+            {/* Desktop / Laptop Floating Icons */}
             <motion.div
               className="hidden lg:block absolute inset-0"
               initial="hidden"
