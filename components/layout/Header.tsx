@@ -78,7 +78,7 @@ export function Header() {
       <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? "bg-white shadow-lg" : "bg-white lg:bg-transparent"}`}>
         <div className="max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10">
           <nav className="flex items-center justify-between lg:justify-evenly h-20">
-            <Link href="/#home" className="flex items-center 2k:-ml-50">
+            <Link href="/home" className="flex items-center 2k:-ml-50">
               <Image 
                 src="/logo.webp" 
                 alt="Influence Cafe" 
