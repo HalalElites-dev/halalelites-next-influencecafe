@@ -82,7 +82,7 @@ const PharmacologyPage = () => {
                           href={`#${category.id}`}
                           className="text-sm font-semibold text-brand-primary hover:text-brand-secondary uppercase tracking-wide block mb-2"
                         >
-                          {category.emoji} {category.title}
+                          {category.title}
                         </a>
                         <div className="space-y-1 ml-4">
                           {category.terms.map((term) => (
@@ -109,7 +109,7 @@ const PharmacologyPage = () => {
             {pharmacologyData.map((category) => (
               <section key={category.id} id={category.id} className="scroll-mt-4">
                 <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                  {category.emoji} {category.title}
+                  {category.title}
                 </h2>
 
                 <div className="space-y-6">

@@ -23,7 +23,9 @@ interface MenuSectionProps {
 
 const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
   <div className="mb-16">
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 text-brand-primary font-body">{title}</h2>
+    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 text-brand-primary font-body">
+      {title}
+    </h2>
 
     {/* 1 column mobile, 2 columns desktop */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
@@ -33,42 +35,29 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
           className="flex items-center border-b border-gray-200 pb-6 cursor-pointer hover:bg-gray-50 rounded-lg p-4 transition-colors duration-200"
           onClick={() => onItemClick(item)}
         >
-          {/* Image */}
-          <div className="w-30 h-30 rounded overflow-hidden flex-shrink-0 mr-4">
-            <Image src={item.image || "/scene.webp"} alt={item.name} className="w-full h-full object-cover" width={1980} height={1080} />
-          </div>
+          {/* ✅ Only show image if NOT in the "Modern Desserts" section */}
+          {title !== "Modern Desserts" && (
+            <div className="w-30 h-30 rounded overflow-hidden flex-shrink-0 mr-4">
+              <Image
+                src={item.image || "/scene.webp"}
+                alt={item.name}
+                className="w-full h-full object-cover"
+                width={1980}
+                height={1080}
+              />
+            </div>
+          )}
 
           {/* Text */}
           <div className="flex-grow">
             <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
             <p className="text-sm text-gray-600">{item.description}</p>
           </div>
-
-          {/* Price */}
-          {/* <div className="text-sm font-bold text-gray-800 ml-4">
-            {typeof item.price === "string" ? (
-              item.price
-            ) : ( */}
-              {/* // Use a list structure instead of a single joined string */}
-              {/* // <div className="flex flex-col text-sm font-medium"> */}
-              {/* //   {Object.entries(item.price).map(([size, value]) => ( */}
-              {/* //     <div key={size} className="mt-1"> */}
-                    {/* Use a separate span/element for size and price for better control */}
-                    {/* <span className="font-bold text-gray-900 mr-2">
-                      {size.charAt(0).toUpperCase() + size.slice(1)}:
-                    </span>
-                    <span className="text-gray-700">{value}</span>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div> */}
-
         </div>
       ))}
     </div>
   </div>
-)
+);
 
 const Page = () => {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)

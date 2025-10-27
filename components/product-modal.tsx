@@ -45,6 +45,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
   // const [isLearnMoreExpanded, setIsLearnMoreExpanded] = useState(false)
 
   if (!item) return null
+  const isDessert = ["Flat Croissant", "Honeycomb Bread", "Dream Cake", "Kunafa Chocolate Bar"].includes(item!.name);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -59,16 +60,20 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Left side - Product Image */}
             <div className="space-y-3">
-              <div className="w-full h-64  md:h-96 rounded-lg overflow-hidden bg-gray-100 relative">
-                <Image
-                  src={item.image || "/scene.webp"}
-                  alt={item.name}
-                  fill
-                  className="object-cover will-change-transform"
-                  quality={80}
-                  sizes="100vw"
-                />
-              </div>
+              {/* hide image for desserts until we get them */}
+              {!isDessert && (
+                <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden bg-gray-100 relative">
+                  <Image
+                    src={item.image || "/scene.webp"}
+                    alt={item.name}
+                    fill
+                    className="object-cover will-change-transform"
+                    quality={80}
+                    sizes="100vw"
+                  />
+                </div>
+              )}
+
 
               {item.nutritionFacts && (
                 <div className="bg-gray-50 rounded-lg p-3">
@@ -116,6 +121,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                     </div>
                   )}
                 </div> */}
+                
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
               </div>
               {item.scienceHighlight && (
