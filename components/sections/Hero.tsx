@@ -50,9 +50,9 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold font-body mb-6 leading-tight">
             Coffee. Wellness. Influence.
           </h1>
-          <p className="text-lg lg:text-xl text-muted-foreground mb-8 lg:max-w-2xl leading-relaxed">
+          <h2 className="text-lg lg:text-xl text-muted-foreground mb-8 lg:max-w-2xl leading-relaxed">
             A specialty café in Toledo where every sip and bite comes with knowledge, health, and flavor.
-          </p>
+          </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 lg:mb-0 justify-center lg:justify-start">
             <Button

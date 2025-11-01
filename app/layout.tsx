@@ -22,7 +22,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title:
-    "Influence Café | Specialty Coffee, Modern Desserts & Wellness Hub in Toledo",
+    "Influence Café",
   description:
     "Discover Influence Café at Central & Secor in Toledo, OH — premium coffee, naturally sweetened desserts, and science-backed wellness insights. Every sip and bite comes with knowledge and flavor.",
 };
