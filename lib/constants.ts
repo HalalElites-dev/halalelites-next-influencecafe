@@ -41,15 +41,21 @@ export const CONTACT_ADDRESS = 'Central & Secor, Toledo, OH';
 export const TESTIMONIALS = [
   {
     quote:
-      "I am a big fan of combining my love for coffee with learning about its health benefits. Influence Café nails both!",
-    author: 'Ibrahim A.',
+      "I had the regular black coffee. It was quite good. A welcome improvement from the coffee at the hotel I was staying at. If I lived here I'd certainly go back but Im just a visitor in town.",
+    author: 'Joel Villatoro.',
     role: 'Customer',
   },
   {
     quote:
-      'Love how the menu actually teaches you about the health benefits of what you’re drinking. Super unique idea!',
-    author: 'Habeeb S.',
+      'I visited this new Yemeni coffee shop today and had a wonderful experience! I ordered the Honeycomb bread with honey and a Turkish coffee, and my friend got a Cortado. Everything tasted delicious and the service was great.',
+    author: 'S. A.',
     role: 'Developer',
+  },
+  {
+    quote:
+      " If you want great Yemeni coffee, with all natural ingredients, this is the place to go. It's authentic and delicious with a lot of choices. I had the Spanish Latte, it was great.",
+    author: 'A. A',
+    role: '',
   },
 ];
 
