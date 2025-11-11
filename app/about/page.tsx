@@ -15,7 +15,7 @@ const AboutPage = () => {
           <h1 className="text-5xl font-bold mb-4 font-body">About Us</h1>
           <div className="flex items-center text-sm text-white justify-center xl:justify-start">
             <span>
-              <Link className="hover:underline" href="/#">
+              <Link className="hover:underline" href="/">
                 Home
               </Link>
             </span>

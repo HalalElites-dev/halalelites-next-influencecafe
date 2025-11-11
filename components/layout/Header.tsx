@@ -14,19 +14,18 @@ const Navigation = ({ scrollY, onNavigate }: { scrollY: number; onNavigate?: () 
     <nav className="flex flex-col lg:flex-row items-start md:items-center space-y-3 lg:space-y-0 lg:space-x-20">
       {NAV_LINKS.map((item, index) => {
         const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href))
-        
+
         return (
           <Link
             key={index}
             href={item.href}
             onClick={onNavigate}
-            className={`relative transition-colors duration-200 w-full py-2 md:py-0 uppercase font-bold md:text-3xl lg:text-lg text-brand-primary group ${
-              isActive 
+            className={`relative transition-colors duration-200 w-full py-2 md:py-0 uppercase font-bold md:text-3xl lg:text-lg text-brand-primary group ${isActive
                 ? 'lg:!text-black'
-                : scrollY > 50 
-                  ? 'lg:!text-gray-600 hover:!text-brand-primary' 
+                : scrollY > 50
+                  ? 'lg:!text-gray-600 hover:!text-brand-primary'
                   : 'lg:!text-gray-600 hover:!text-brand-primary'
-            }`}
+              }`}
           >
             <span className="relative inline-block">
               {item.label}
@@ -56,7 +55,7 @@ export function Header() {
       document.body.style.position = 'fixed'
       document.body.style.top = `-${scrollY}px`
       document.body.style.width = '100%'
-      
+
       return () => {
         document.body.style.position = ''
         document.body.style.top = ''
@@ -79,11 +78,11 @@ export function Header() {
         <div className="max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10">
           <nav className="flex items-center justify-between lg:justify-evenly h-20">
             <Link href="/" className="flex items-center 2k:-ml-50">
-              <Image 
-                src="/logo.webp" 
-                alt="Influence Cafe" 
-                width={220} 
-                height={100} 
+              <Image
+                src="/logo.webp"
+                alt="Influence Cafe"
+                width={220}
+                height={100}
                 sizes="(max-width: 768px) 136px, 280px"
                 priority
               />
@@ -108,7 +107,12 @@ export function Header() {
           </nav>
         </div>
 
-        <div className={`lg:hidden fixed left-0 right-0 top-20 z-50 transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
+        <div className={`lg:hidden fixed left-0 right-0 top-20 z-50 transition-all duration-300 ease-in-out 
+    ${isMobileMenuOpen
+            ? "max-h-96 opacity-100 visible pointer-events-auto"
+            : "max-h-0 opacity-0 invisible pointer-events-none"
+          }`}
+        >
           <div className="w-full bg-white backdrop-blur-lg rounded-b-lg border-t border-brand-primary">
             <div className="px-6 py-6">
               <div className="space-y-3 text-center">
