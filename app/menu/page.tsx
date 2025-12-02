@@ -5,7 +5,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { menuData } from "@/lib/constants"
 import { ProductModal } from "@/components/product-modal"
-import Image from "next/image"
+// import Image from "next/image"
 
 // Define proper types for menu items
 interface MenuItem {
@@ -36,7 +36,7 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
           onClick={() => onItemClick(item)}
         >
           {/* ✅ Only show image if NOT in the "Modern Desserts" section */}
-          {title !== "Modern Desserts" && (
+          {/* {title !== "Modern Desserts" && (
             <div className="w-30 h-30 rounded overflow-hidden flex-shrink-0 mr-4">
               <Image
                 src={item.image || "/scene.webp"}
@@ -46,7 +46,7 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
                 height={1080}
               />
             </div>
-          )}
+          )} */}
 
           {/* Text */}
           <div className="flex-grow">

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import Image from "next/image"
+// import Image from "next/image"
 import { normalizeTermToId } from "@/lib/utils"
 
 interface NutritionFacts {
@@ -45,7 +45,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
   // const [isLearnMoreExpanded, setIsLearnMoreExpanded] = useState(false)
 
   if (!item) return null
-  const isDessert = ["Flat Croissant", "Honeycomb Bread", "Dream Cake", "Kunafa Chocolate Bar"].includes(item!.name);
+  // const isDessert = ["Flat Croissant", "Honeycomb Bread", "Dream Cake", "Kunafa Chocolate Bar"].includes(item!.name);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -61,7 +61,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
             {/* Left side - Product Image */}
             <div className="space-y-3">
               {/* hide image for desserts until we get them */}
-              {!isDessert && (
+              {/* {!isDessert && (
                 <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden bg-gray-100 relative">
                   <Image
                     src={item.image || "/scene.webp"}
@@ -72,7 +72,7 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                     sizes="100vw"
                   />
                 </div>
-              )}
+              )} */}
 
 
               {item.nutritionFacts && (
