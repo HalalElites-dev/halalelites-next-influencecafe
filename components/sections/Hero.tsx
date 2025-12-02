@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import heroImage from "@/public/text2.webp";
-import TallyModalButton from "@/components/TallyForm";
 import { Variants } from "framer-motion";
 
 const leftVariants: Variants = {
