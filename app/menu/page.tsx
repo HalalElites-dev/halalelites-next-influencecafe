@@ -32,7 +32,7 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
       {items.map((item, index) => (
         <div
           key={index}
-          className="flex items-center border-b border-gray-200 pb-6 cursor-pointer hover:bg-gray-50 rounded-lg p-4 transition-colors duration-200"
+          className="flex items-center border-b border-gray-200 pb-6 cursor-pointer hover:bg-gray-50 rounded-lg p-4 transition-colors duration-200 w-full"
           onClick={() => onItemClick(item)}
         >
           {/* ✅ Only show image if NOT in the "Modern Desserts" section */}
@@ -52,7 +52,17 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
           <div className="flex-grow">
             <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
             <p className="text-sm text-gray-600">{item.description}</p>
+
           </div>
+          <p className="mt-2 text-md font-medium text-brand-primary text-right flex flex-col items-end">
+            {typeof item.price === "string"
+              ? item.price
+              : Object.entries(item.price).map(([size, price]) => (
+                <span key={size} className="whitespace-nowrap">
+                  {size}: {price}
+                </span>
+              ))}
+          </p>
         </div>
       ))}
     </div>
