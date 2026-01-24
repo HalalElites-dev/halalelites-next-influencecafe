@@ -105,11 +105,11 @@ export const menuData = {
         fat: "4–6g",
       },
       scienceHighlight:
-        "Caffeine enhances dopamine release; milk proteins promote satiety; sugar-free condensed milk reduces insulin spikes.",
+        "Caffeine enhances dopamine release; milk proteins promote satiety; organic condensed milk reduces insulin spikes.",
       mechanismOfAction: {
         title: "What's Happening in Your Body?",
         description:
-          "Caffeine activates neural pathways via adenosine antagonism. Milk provides protein and fat for satiety; sugar-free sweetener maintains glycemic balance.",
+          "Caffeine activates neural pathways via adenosine antagonism. Milk provides protein and fat for satiety; organic condensed milk maintains glycemic balance.",
         glossaryTerms: [
           { term: "Adenosine Receptor Antagonist", definition: "Caffeine blocks adenosine receptors to enhance alertness." },
           { term: "Satiety", definition: "The feeling of fullness that reduces further food intake." },
@@ -775,7 +775,7 @@ export const menuData = {
     },
     {
       name: "Honeycomb",
-      description: "Pull-apart bread filled with cream cheese and honey.",
+      description: "Pull-apart bread filled with cream cheese and honey. Made and baked in-house daily.",
       price: "$8.00",
       image: "",
       nutritionFacts: {
@@ -858,34 +858,6 @@ export const menuData = {
         title: "Chocolate & Heart Health",
         source: "Nogueira L et al. (2017)",
         url: "https://pubmed.ncbi.nlm.nih.gov/?term=cocoa+polyphenols+cardiovascular",
-      },
-    },
-    {
-      name: "Honey Cookie",
-      description: "Sweet honey-flavored cookie.",
-      price: "$3.00",
-      image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Honey provides natural sweetness with trace minerals and antioxidant polyphenols.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Natural sugars provide energy; honey's polyphenols offer mild antioxidant benefits.",
-        glossaryTerms: [
-          { term: "Polyphenols", definition: "Plant antioxidants found in honey that protect cells." },
-          { term: "Glucose", definition: "Primary energy source from honey sugars." },
-        ],
-      },
-      learnMore: {
-        title: "Honey Health Properties",
-        source: "Bogdanov S et al. (2008)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=honey+nutrition",
       },
     },
   ],
