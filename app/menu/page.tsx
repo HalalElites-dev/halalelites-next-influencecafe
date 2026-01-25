@@ -54,15 +54,6 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
             <p className="text-sm text-gray-600">{item.description}</p>
 
           </div>
-          <p className="mt-2 text-md font-medium text-brand-primary text-right flex flex-col items-end">
-            {typeof item.price === "string"
-              ? item.price
-              : Object.entries(item.price).map(([size, price]) => (
-                <span key={size} className="whitespace-nowrap">
-                  {size}: {price}
-                </span>
-              ))}
-          </p>
         </div>
       ))}
     </div>
