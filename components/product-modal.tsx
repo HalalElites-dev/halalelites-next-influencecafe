@@ -16,6 +16,8 @@ interface NutritionFacts {
 interface MenuItem {
   name: string
   description: string
+  callout?: string
+  sweetener?: string
   price: string | { [key: string]: string } // ✅ new
   image?: string
   nutritionFacts?: NutritionFacts
@@ -52,7 +54,14 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
       <DialogContent className="max-w-4xl w-[95%] max-h-[85vh] overflow-y-auto p-0">
         <div className="sticky top-0 bg-white/95 backdrop-blur-sm border-b px-4 py-3 z-10">
           <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-gray-800">{item.name}</DialogTitle>
+            <DialogTitle className="text-xl font-bold text-gray-800">
+              <span className="inline-flex flex-wrap items-center gap-2">
+                <span>{item.name}</span>
+                {item.callout && (
+                  <Badge variant="secondary">{item.callout}</Badge>
+                )}
+              </span>
+            </DialogTitle>
           </DialogHeader>
         </div>
 
@@ -123,6 +132,14 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                 </div> */}
                 
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+                {item.callout && (
+                  <Badge variant="secondary" className="mt-2">
+                    {item.callout}
+                  </Badge>
+                )}
+                {item.sweetener && (
+                  <p className="text-gray-500 text-xs mt-1 font-medium">{item.sweetener}</p>
+                )}
               </div>
               {item.scienceHighlight && (
                 <div className="bg-green-50 border border-green-200 rounded-lg p-3">

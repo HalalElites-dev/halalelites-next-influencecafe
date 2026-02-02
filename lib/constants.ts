@@ -59,8 +59,11 @@ export const TESTIMONIALS = [
   },
 ];
 
-export const menuData = {
-  "Espresso": [
+export const menuData = [
+  {
+    title: "Espresso",
+    note: "All flavored lattes are sweetened with monk fruit",
+    items: [
     {
       name: "Influence Latte",
       description: "Espresso, cardamom, honey, milk.",
@@ -156,6 +159,7 @@ export const menuData = {
     {
       name: "Salted Caramel Latte",
       description: "Espresso, milk, salted caramel syrup and drizzle",
+      sweetener: "Sweetened with monk fruit",
       price: "$5.00",
       size: "12 oz",
       image: "",
@@ -331,11 +335,14 @@ export const menuData = {
       },
     },
   ],
-
-  "Coffee": [
+  },
+  {
+    title: "Coffee",
+    items: [
     {
       name: "Original Yemeni",
       description: "Yemeni style spiced coffee slow-boiled with milk.",
+      sweetener: "Optional: pure organic cane sugar",
       price: "$4.00",
       image: "",
       nutritionFacts: {
@@ -478,11 +485,14 @@ export const menuData = {
       },
     },
   ],
-
-  "Tea": [
+  },
+  {
+    title: "Tea",
+    items: [
     {
       name: "Adeni Golden Chi",
       description: "12oz Slowly-boiled spiced tea with milk from Aden to Toledo",
+      sweetener: "Optional: pure organic cane sugar",
       price: { small: "$3.50", " 42oz": "$8.90" },
       image: "",
       nutritionFacts: {
@@ -566,8 +576,10 @@ export const menuData = {
       },
     },
   ],
-
-  "Fresh Juices": [
+  },
+  {
+    title: "Fresh Juices",
+    items: [
     {
       name: "Lemon mint",
       description: "Fresh lemon, mint, sweetned with organic cane sugar.",
@@ -625,8 +637,10 @@ export const menuData = {
       },
     },
   ],
-
-  "Snacks": [
+  },
+  {
+    title: "Snacks",
+    items: [
     {
       name: "Avocad-us Toast",
       description: "Hummus, avocado, olive oil, pomegrante drizzle.",
@@ -714,8 +728,10 @@ export const menuData = {
       },
     },
   ],
-
-  "Pastries & Desserts": [
+  },
+  {
+    title: "Pastries & Desserts",
+    items: [
     {
       name: "Butter Croissant",
       description: "Classic flaky butter croissant.",
@@ -775,7 +791,8 @@ export const menuData = {
     },
     {
       name: "Honeycomb",
-      description: "Pull-apart bread filled with cream cheese and honey. Made and baked in-house daily.",
+      description: "Pull-apart bread filled with cream cheese and honey.",
+      callout: "House-baked daily",
       price: "$8.00",
       image: "",
       nutritionFacts: {
@@ -861,8 +878,8 @@ export const menuData = {
       },
     },
   ],
-
-};
+  },
+];
 
 // Separate flavor options export
 export const flavorOptions = {

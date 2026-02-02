@@ -5,27 +5,38 @@ import Link from "next/link"
 import { useState } from "react"
 import { menuData } from "@/lib/constants"
 import { ProductModal } from "@/components/product-modal"
+import { Badge } from "@/components/ui/badge"
 // import Image from "next/image"
 
 // Define proper types for menu items
 interface MenuItem {
   name: string
   description: string
+  callout?: string
+  sweetener?: string
   price: string | { [key: string]: string } //  can handle both string or object
   image?: string
 }
 
 interface MenuSectionProps {
   title: string
+  note?: string
   items: MenuItem[]
   onItemClick: (item: MenuItem) => void
 }
 
-const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
+const MenuSection = ({ title, note, items, onItemClick }: MenuSectionProps) => (
   <div className="mb-16">
-    <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 text-brand-primary font-body">
-      {title}
-    </h2>
+    <div className="text-center mb-8">
+      <h2 className="text-3xl md:text-5xl font-bold text-brand-primary font-body inline-block relative">
+        {title}
+      </h2>
+      {note && (
+        <p className="text-sm text-gray-500 mt-2 font-medium italic">
+          {note}
+        </p>
+      )}
+    </div>
 
     {/* 1 column mobile, 2 columns desktop */}
     <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
@@ -50,8 +61,18 @@ const MenuSection = ({ title, items, onItemClick }: MenuSectionProps) => (
 
           {/* Text */}
           <div className="flex-grow">
-            <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
+            <div className="flex flex-wrap items-center gap-2">
+              <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
+              {item.callout && (
+                <Badge variant="secondary">
+                  {item.callout}
+                </Badge>
+              )}
+            </div>
             <p className="text-sm text-gray-600">{item.description}</p>
+            {item.sweetener && (
+              <p className="text-xs text-gray-500 mt-1 font-medium">{item.sweetener}</p>
+            )}
 
           </div>
         </div>
@@ -93,11 +114,12 @@ const Page = () => {
 
       {/* Menu Content */}
       <div className="max-w-6xl mx-auto px-4 py-16">
-        {Object.entries(menuData).map(([sectionTitle, items]) => (
+        {menuData.map((section) => (
           <MenuSection
-            key={sectionTitle}
-            title={sectionTitle}
-            items={items as MenuItem[]}
+            key={section.title}
+            title={section.title}
+            note={section.note}
+            items={section.items as MenuItem[]}
             onItemClick={handleItemClick}
           />
         ))}
