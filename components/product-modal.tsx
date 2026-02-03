@@ -58,7 +58,12 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
               <span className="inline-flex flex-wrap items-center gap-2">
                 <span>{item.name}</span>
                 {item.callout && (
-                  <Badge variant="secondary">{item.callout}</Badge>
+                  <Badge
+                    variant="secondary"
+                    className="border border-brand-primary/20 bg-brand-primary/10 text-brand-primary"
+                  >
+                    {item.callout}
+                  </Badge>
                 )}
               </span>
             </DialogTitle>
@@ -132,11 +137,6 @@ export function ProductModal({ item, isOpen, onClose }: ProductModalProps) {
                 </div> */}
                 
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-                {item.callout && (
-                  <Badge variant="secondary" className="mt-2">
-                    {item.callout}
-                  </Badge>
-                )}
                 {item.sweetener && (
                   <p className="text-gray-500 text-xs mt-1 font-medium">{item.sweetener}</p>
                 )}

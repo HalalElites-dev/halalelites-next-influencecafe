@@ -62,7 +62,7 @@ export const TESTIMONIALS = [
 export const menuData = [
   {
     title: "Espresso",
-    note: "All flavored lattes are sweetened with monk fruit",
+    note: "Most flavored lattes are sweetened with monk fruit",
     items: [
     {
       name: "Influence Latte",
@@ -97,7 +97,7 @@ export const menuData = [
     },
     {
       name: "Spanish Latte",
-      description: "Espresso, condensed milk, milk.",
+      description: "Espresso, organic condensed milk, milk.",
       price: "$5.00",
       size: "12 oz",
       image: "",
@@ -159,7 +159,6 @@ export const menuData = [
     {
       name: "Salted Caramel Latte",
       description: "Espresso, milk, salted caramel syrup and drizzle",
-      sweetener: "Sweetened with monk fruit",
       price: "$5.00",
       size: "12 oz",
       image: "",

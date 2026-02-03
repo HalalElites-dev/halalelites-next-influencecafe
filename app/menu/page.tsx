@@ -64,7 +64,10 @@ const MenuSection = ({ title, note, items, onItemClick }: MenuSectionProps) => (
             <div className="flex flex-wrap items-center gap-2">
               <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
               {item.callout && (
-                <Badge variant="secondary">
+                <Badge
+                  variant="secondary"
+                  className="border border-brand-primary/20 bg-brand-primary/10 text-brand-primary"
+                >
                   {item.callout}
                 </Badge>
               )}
