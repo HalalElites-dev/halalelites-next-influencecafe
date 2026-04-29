@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Button } from "../ui/button"
 import Link from "next/link"
-import Image from "next/image"
 import { specialItems } from "@/lib/constants";
 export const Specials = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null)
@@ -57,22 +56,6 @@ export const Specials = () => {
                     </div>
                   </div>
 
-                  {/* Mobile Image */}
-                  <div className="mb-4">
-                    <div className="w-full h-48 rounded-xl overflow-hidden shadow-lg bg-white border border-border">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={320}
-                        height={192}
-                        loading="lazy"
-                        className="w-full h-full object-cover"
-                        sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, 320px"
-                        quality={80}
-                      />
-                    </div>
-                  </div>
-
                   <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
                 </div>
 
@@ -87,7 +70,7 @@ export const Specials = () => {
                   </div>
 
                   {/* Arrow Icon */}
-                  <div className="flex-shrink-0 mr-6 lg:mr-8">
+                  <div className="flex-shrink-0">
                     <div className="w-10 lg:w-12 h-10 lg:h-12 rounded-full border-2 border-muted-foreground/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                       <svg
                         className="w-4 lg:w-5 h-4 lg:h-5 transform group-hover:translate-x-1 transition-transform"
@@ -97,27 +80,6 @@ export const Specials = () => {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </div>
-                  </div>
-
-                  {/* Desktop Hover Image */}
-                  <div
-                    className={`absolute right-6 lg:right-8 top-1/2 -translate-y-1/2 transition-all duration-500 ${hoveredItem === item.id
-                        ? "opacity-100 translate-x-0 scale-100"
-                        : "opacity-0 translate-x-8 scale-95 pointer-events-none"
-                      }`}
-                  >
-                    <div className="w-32 lg:w-40 h-40 lg:h-48 rounded-xl lg:rounded-2xl overflow-hidden shadow-2xl bg-white border border-border">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        width={160}
-                        height={192}
-                        className="w-full h-full object-cover"
-                        sizes="(max-width: 1024px) 136px, 160px"
-                        quality={80}
-                         loading="lazy"
-                      />
                     </div>
                   </div>
                 </div>

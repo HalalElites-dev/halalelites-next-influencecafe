@@ -73,7 +73,7 @@ const Footer = () => {
         <div className=" text-sm mt-8 pt-4 border-t border-gray-700">
           {/* Copyright/Credits */}
           <div className="mb-4 lg:mb-0 text-center ">
-            Developed By <a href="https://halalelites.dev/" className="hover:text-brand-secondary">Halal-Elites</a> | © {new Date().getFullYear()} {SITE_TITLE}
+            Developed By <a href="https://www.serviro.co" className="hover:text-brand-secondary">Serviro</a> | © {new Date().getFullYear()} {SITE_TITLE}
           </div>
 
           {/* Additional Links (from original example) */}
