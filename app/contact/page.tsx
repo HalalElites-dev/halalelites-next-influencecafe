@@ -1,6 +1,12 @@
 import { ChevronRight, Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description: "Get in touch with Influence Café. We're located at 3324 Secor Rd, Toledo, OH. Call us at (567) 315-8152 or email admin@influencecafe.co.",
+};
 
 const ContactPage = () => {
   return (

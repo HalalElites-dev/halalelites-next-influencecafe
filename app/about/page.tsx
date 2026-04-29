@@ -2,6 +2,12 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about the story behind Influence Café, founded by Dr. Mahmood Meqdad, where flavor meets science in Toledo, OH.",
+};
 
 const AboutPage = () => {
   return (
