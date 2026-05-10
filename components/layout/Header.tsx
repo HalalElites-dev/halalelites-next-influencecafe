@@ -76,7 +76,7 @@ export function Header() {
     >
       <div className="max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10">
         <nav className="flex items-center justify-between lg:justify-evenly h-20">
-          <Link href="/" className="flex items-center 2k:-ml-50">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo.webp"
               alt="Influence Cafe"
