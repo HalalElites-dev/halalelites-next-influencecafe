@@ -4,9 +4,6 @@ import type { Metadata } from "next";
 import { Roboto, Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
-import AnnouncementBar from "@/components/layout/AnnoucementBar";
-
-
 
 const roboto = Roboto({
   variable: "--font-heading", 
@@ -84,7 +81,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AnnouncementBar />
           <Header />
           {children}
           <Footer />

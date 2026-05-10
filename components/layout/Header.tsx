@@ -71,11 +71,11 @@ export function Header() {
       className={`fixed w-full z-50 h-20 transition-all duration-300 ${
         scrollY > 50
           ? "top-0 bg-white shadow-lg"
-          : "top-12 bg-white lg:bg-transparent"
+          : "top-0 bg-white lg:bg-transparent"
       }`}
     >
       <div className="max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10">
-        <nav className="flex items-center justify-between lg:justify-evenly h-20">
+        <nav className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
             <Image
               src="/logo.webp"
@@ -116,7 +116,7 @@ export function Header() {
       className={`
         lg:hidden fixed left-0 right-0 z-50 
         transition-all duration-300 ease-in-out
-        ${scrollY > 50 ? "top-20" : "top-32"}
+        ${scrollY > 50 ? "top-20" : "top-20"}
         ${
           isMobileMenuOpen
             ? "max-h-96 opacity-100 visible pointer-events-auto"

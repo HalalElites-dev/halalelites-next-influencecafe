@@ -71,9 +71,6 @@ const Hero = () => {
             >
               <Link href="/menu">Explore Our Menu</Link>
             </Button>
-            {/* <TallyModalButton id="lbal8W">
-  Take the Quiz
-</TallyModalButton> */}
           </div>
           
         </motion.div>
