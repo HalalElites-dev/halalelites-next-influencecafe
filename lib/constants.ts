@@ -913,23 +913,27 @@ export const specialItems = [
       title: "Signature Espresso Drinks",
       description: "Rich, bold espresso crafted with premium beans and artisanal techniques for the perfect shot.",
       image: "/elegant-espresso-drink-with-latte-art-in-glass-cup.webp",
+      href: "/menu#espresso",
     },
     {
       id: "tea",
       title: "Specialty Teas",
       description: "Carefully curated loose-leaf teas from Yemen, brewed to perfection.",
       image: "/beautiful-specialty-tea-in-elegant-glass-teacup-wi.webp",
+      href: "/menu#tea",
     },
     {
       id: "coffee",
       title: "Brewed Coffee",
       description: "Freshly roasted multi-origin beans brewed using various methods for unique flavor profiles.",
       image: "/pour-over-coffee-in-glass-dripper-with-coffee-bean.webp",
+      href: "/menu#coffee",
     },
     {
       id: "desserts",
       title: "Modern Desserts",
       description: "Contemporary pastries and desserts crafted with innovative techniques and premium ingredients.",
       image: "/modern-layered-dessert-in-glass-with-artistic-pres.webp",
+      href: "/menu#pastries-desserts",
     },
   ]

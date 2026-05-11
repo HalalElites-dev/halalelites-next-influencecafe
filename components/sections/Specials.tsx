@@ -29,9 +29,10 @@ export const Specials = () => {
         <div className="max-w-7xl mx-auto">
           <div className="border border-border rounded-2xl md:rounded-3xl overflow-hidden bg-card">
             {specialItems.map((item, index) => (
-              <div
+              <Link
                 key={item.id}
-                className={`relative transition-all duration-300 cursor-pointer group ${index !== specialItems.length - 1 ? "border-b border-border" : ""
+                href={item.href}
+                className={`relative transition-all duration-300 cursor-pointer group block ${index !== specialItems.length - 1 ? "border-b border-border" : ""
                   } ${hoveredItem === item.id ? "bg-muted/30" : "hover:bg-muted/20"}`}
                 onMouseEnter={() => setHoveredItem(item.id)}
                 onMouseLeave={() => setHoveredItem(null)}
@@ -83,7 +84,7 @@ export const Specials = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

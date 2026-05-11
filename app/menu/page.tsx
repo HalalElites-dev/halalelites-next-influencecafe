@@ -19,14 +19,15 @@ interface MenuItem {
 }
 
 interface MenuSectionProps {
+  id: string
   title: string
   note?: string
   items: MenuItem[]
   onItemClick: (item: MenuItem) => void
 }
 
-const MenuSection = ({ title, note, items, onItemClick }: MenuSectionProps) => (
-  <div className="mb-16">
+const MenuSection = ({ id, title, note, items, onItemClick }: MenuSectionProps) => (
+  <div id={id} className="mb-16 scroll-mt-28">
     <div className="text-center mb-8">
       <h2 className="text-3xl md:text-5xl font-bold text-brand-primary font-body inline-block relative">
         {title}
@@ -120,6 +121,7 @@ const Page = () => {
         {menuData.map((section) => (
           <MenuSection
             key={section.title}
+            id={section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')}
             title={section.title}
             note={section.note}
             items={section.items as MenuItem[]}
