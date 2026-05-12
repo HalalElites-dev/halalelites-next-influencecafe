@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
-import Image from "next/image"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { NAV_LINKS } from "@/lib/constants"
@@ -71,22 +70,22 @@ export function Header() {
       className={`fixed w-full z-50 h-20 transition-all duration-300 ${
         scrollY > 50
           ? "top-0 bg-white shadow-lg"
-          : "top-0 bg-white lg:bg-transparent"
+          : "top-0 bg-white"
       }`}
     >
       <div className="max-w-7xl xl:max-w-[1800px] mx-auto px-4 lg:px-10">
         <nav className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center">
-            <Image
+          <Link href="/" className="flex items-center flex-shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/logo.webp"
               alt="Influence Cafe"
               width={220}
               height={100}
-              sizes="(max-width: 768px) 136px, 280px"
             />
           </Link>
 
-          <div className="hidden lg:flex justify-end flex-1 space-x-16">
+          <div className="hidden lg:flex items-center justify-end ml-auto space-x-16">
             <Navigation scrollY={scrollY} />
             <Button
               asChild
