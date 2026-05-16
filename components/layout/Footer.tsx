@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { SITE_TITLE, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, Instagram, Facebook } from "lucide-react";
 import { cn, scrollToSection } from "@/lib/utils";
 import { Button } from "../ui/button";
 
@@ -57,14 +57,20 @@ const Footer = () => {
 
           {/* Social Media Icons (new section) */}
           <div className="flex space-x-4">
+            <a href="https://www.instagram.com/influencecafe_toledo/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors" aria-label="Instagram">
+              <Instagram className="w-4 h-4" width={16} height={16} />
+            </a>
+            <a href="https://www.facebook.com/influencecafetoledo" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors" aria-label="Facebook">
+              <Facebook className="w-4 h-4" width={16} height={16} />
+            </a>
             <a href="mailto:admin@influencecafe.com" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors" aria-label="Mail">
-              <Mail className="w-4 h-4 " width={16} height={16}  />
+              <Mail className="w-4 h-4" width={16} height={16} />
             </a>
             <a href="https://www.google.com/maps?ll=41.68151,-83.621831&z=16&t=m&hl=en&gl=AE&mapclient=embed&q=3324+Secor+Rd+Toledo,+OH+43606+USA" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors" aria-label="Location">
-              <MapPin className="w-4 h-4  " width={16} height={16} />
+              <MapPin className="w-4 h-4" width={16} height={16} />
             </a>
             <a href="tel:(567) 315-8152" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border border-white hover:bg-white hover:text-black transition-colors" aria-label="Phone">
-              <Phone className="w-4 h-4  " width={16} height={16}  />
+              <Phone className="w-4 h-4" width={16} height={16} />
             </a>
           </div>
         </div>

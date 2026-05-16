@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { TESTIMONIALS } from '@/lib/constants'
-// import { Star } from 'lucide-react'
+import { Star } from 'lucide-react'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -33,7 +33,7 @@ const Testimonials = () => {
           {/* Left image */}
           <div className="w-full">
             <Image
-              src="/scene.webp" // replace with your image
+              src="/three-cups.png"
               alt="Coffee"
               width={600}
               height={400}
@@ -74,14 +74,14 @@ const Testimonials = () => {
                   <span className="font-semibold text-foreground">
                     {TESTIMONIALS[current].author}
                   </span>
-                  {/* <div className="flex items-center space-x-1">
+                  <div className="flex items-center space-x-1">
                     {[...Array(TESTIMONIALS[current].rating)].map((_, i) => (
                       <Star
                         key={i}
                         className="w-5 h-5 fill-yellow-400 text-yellow-400"
                       />
                     ))}
-                  </div> */}
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>

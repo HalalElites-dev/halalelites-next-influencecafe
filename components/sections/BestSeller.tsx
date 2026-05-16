@@ -91,7 +91,7 @@ const BestSelling = () => {
                         <div className='-mt-10 lg:-mt-50'>
                             <div className='relative rounded-2xl overflow-hidden '>
                                 <Image
-                                    src="/cafe.webp"
+                                    src="/sandwich.png"
                                     alt="Barista preparing healthy beverage"
                                     className='w-full h-[350px] lg:h-[400px] object-cover shadow-md'
                                     width={600}

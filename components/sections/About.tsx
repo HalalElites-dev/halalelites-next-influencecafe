@@ -13,10 +13,10 @@ const About = () => {
         {/* Left: Custom Image Group */}
         <div className="relative w-full max-w-[650px] aspect-square mx-auto">
           {/* Picture 1 */}
-          <div className="absolute top-0 left-0 w-[55%] h-[55%] sm:w-[360px] sm:h-[375px] rounded-lg overflow-hidden shadow-lg">
+          <div className="absolute top-0 left-0 w-[55%] h-[55%] sm:w-[310px] sm:h-[320px] rounded-lg overflow-hidden shadow-lg">
             <Image
-              src="/coffeee.webp"
-              alt="Breakfast"
+              src="/honeycomb-tea.png"
+              alt="Honeycomb tea"
               fill
               sizes="(max-width: 768px) 136px, 280px"
               className="object-cover"
@@ -24,25 +24,13 @@ const About = () => {
           </div>
 
           {/* Picture 2 */}
-          <div className="absolute bottom-0 right-0 w-[55%] h-[55%] sm:w-[388px] sm:h-[388px] rounded-lg overflow-hidden shadow-lg">
+          <div className="absolute bottom-0 right-0 w-[55%] h-[55%] sm:w-[340px] sm:h-[340px] rounded-lg overflow-hidden shadow-lg">
             <Image
               src="/about2.webp"
               alt="Cream Coffee"
               fill
               sizes="(max-width: 768px) 136px, 280px"
               className="object-cover"
-            />
-          </div>
-
-          {/* Croissant graphic */}
-          <div className="absolute top-5 md:top-15 right-5 xl:top-5 xl:-right-3 w-34 h-34 md:h-50 md:w-70  z-30 ">
-            <Image
-              src="/croissant.webp"
-              alt="food item"
-              fill
-              className="object-contain"
-              aria-hidden="true"
-              sizes="(max-width: 768px) 136px, 280px"
             />
           </div>
 

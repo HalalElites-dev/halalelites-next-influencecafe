@@ -13,10 +13,10 @@ const AboutPage = () => {
   return (
     <section className="min-h-screen bg-gray-50">
       <div
-        className="relative h-80 bg-cover bg-center "
-        style={{ backgroundImage: "url(/bannerz.webp)" }}
+        className="relative h-96 bg-cover bg-[center_40%] md:bg-[center_60%] "
+        style={{ backgroundImage: "url(/coffee-machine.png)" }}
       >
-        <div className="absolute inset-0 bg-black/30"></div>
+        <div className="absolute inset-0 bg-black/55"></div>
         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
           <h1 className="text-5xl font-bold mb-4 font-body">About Us</h1>
           <div className="flex items-center text-sm text-white justify-center xl:justify-start">
@@ -48,7 +48,7 @@ const AboutPage = () => {
             </div>
 
             {/* Smaller Overlay Image (bottom-right) */}
-            <div className="absolute -bottom-15 md:-bottom-20 -right-20 md:-right-1 w-[calc(90%-1rem)] md:w-[calc(70%-4rem)] h-[75%] md:h-1/2 rounded-lg overflow-hidden shadow-lg border-4 border-white">
+            <div className="absolute -bottom-10 -right-8 md:-bottom-20 md:-right-1 w-[65%] md:w-[calc(70%-4rem)] h-[58%] md:h-1/2 rounded-lg overflow-hidden shadow-lg border-4 border-white">
               <Image
                 src="/cafe.webp"
                 alt="Overlay café counter"

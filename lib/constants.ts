@@ -42,20 +42,58 @@ export const TESTIMONIALS = [
   {
     quote:
       "I had the regular black coffee. It was quite good. A welcome improvement from the coffee at the hotel I was staying at. If I lived here I'd certainly go back but Im just a visitor in town.",
-    author: 'Joel Villatoro.',
+    author: 'Joel Villatoro',
     role: 'Customer',
+    rating: 5,
   },
   {
     quote:
       'I visited this new Yemeni coffee shop today and had a wonderful experience! I ordered the Honeycomb bread with honey and a Turkish coffee, and my friend got a Cortado. Everything tasted delicious and the service was great.',
     author: 'S. A.',
-    role: 'Developer',
+    role: 'Customer',
+    rating: 5,
   },
   {
     quote:
-      " If you want great Yemeni coffee, with all natural ingredients, this is the place to go. It's authentic and delicious with a lot of choices. I had the Spanish Latte, it was great.",
+      "If you want great Yemeni coffee, with all natural ingredients, this is the place to go. It's authentic and delicious with a lot of choices. I had the Spanish Latte, it was great.",
     author: 'A. A',
-    role: '',
+    role: 'Customer',
+    rating: 5,
+  },
+  {
+    quote:
+      "Visited for the first time yesterday! Ordered a cappuccino and the honeycomb bread. Cappuccino was made well, and the honeycomb was really good! There's plenty of different seating arrangements, and they have pleasant music. Also free wifi of course. Good place to study or have a chat with a friend. I also like that they're open later.",
+    author: 'Jennifer El Asri',
+    role: 'Local Guide',
+    rating: 5,
+  },
+  {
+    quote:
+      "I got the namesake influence latte. It's a cafe miel with cardamom, delicious. Matt got the Spanish latte, also delicious. But then we got the honeycomb. It was fluffier than other versions we've had. Nice and crispy on the outside too. The guy helping us out was also kind and friendly. 5 stars all around. Just like post game Mario party.",
+    author: 'Alex Eickhoff',
+    role: 'Customer',
+    rating: 5,
+  },
+  {
+    quote:
+      "Yemeni coffee finally crossed the state line! No need to drive all the way to Dearborn anymore to get your favorite cardamom-scented beverages or honeycomb. Cozy atmosphere and music, fairly-priced menu, and relaxing environment for socializing, work, or study.",
+    author: 'Eli Tanenbaum',
+    role: 'Local Guide',
+    rating: 5,
+  },
+  {
+    quote:
+      "Such a cute spot with great coffee! Drinks were smooth, perfectly made, and not overly sweet. The atmosphere is calm and inviting, and the staff was friendly and welcoming. Definitely a place I'll come back to.",
+    author: 'Mirvet Mero Tawil',
+    role: 'Local Guide',
+    rating: 5,
+  },
+  {
+    quote:
+      "A wonderful new spot, I tried the Yemen coffee and the food as well and both were delicious. Nice warm and inviting atmosphere, with a kind and friendly barista 10/10. Give it a try!",
+    author: 'Alec Malone',
+    role: 'Local Guide',
+    rating: 5,
   },
 ];
 
@@ -63,13 +101,12 @@ export const menuData = [
   {
     title: "Espresso",
     note: "Most flavored lattes are sweetened with monk fruit",
+    sizeNote: "12oz · 16oz +$0.80 · Iced +$0.50",
     items: [
     {
       name: "Influence Latte",
       description: "Espresso, cardamom, honey, milk.",
-      price: "$5.00",
-      size: "12 oz",
-      image: "",
+      price: "$5.00",      image: "",
       nutritionFacts: {
         calories: "160-200",
         sugar: "15-18g",
@@ -98,9 +135,7 @@ export const menuData = [
     {
       name: "Spanish Latte",
       description: "Espresso, organic condensed milk, milk.",
-      price: "$5.00",
-      size: "12 oz",
-      image: "",
+      price: "$5.50",      image: "",
       nutritionFacts: {
         calories: "90–120",
         sugar: "Low (0–3g)",
@@ -129,9 +164,7 @@ export const menuData = [
     {
       name: "Mocha",
       description: "Espresso, chocolate milk, chocolate syrup",
-      price: "$5.00",
-      size: "12 oz",
-      image: "",
+      price: "$5.80",      image: "",
       nutritionFacts: {
         calories: "",
         sugar: "",
@@ -157,11 +190,32 @@ export const menuData = [
       },
     },
     {
-      name: "Salted Caramel Latte",
+      name: "White Chocolate Mocha",
+      description: "Espresso, white chocolate sauce, milk.",
+      price: "$6.00",      image: "",
+      disabled: true,
+      nutritionFacts: {
+        calories: "",
+        sugar: "",
+        protein: "",
+        fat: "",
+      },
+      scienceHighlight: "",
+      mechanismOfAction: {
+        title: "",
+        description: "",
+        glossaryTerms: [],
+      },
+      learnMore: {
+        title: "",
+        source: "",
+        url: "",
+      },
+    },
+    {
+      name: "Salted Caramel Macchiato",
       description: "Espresso, milk, salted caramel syrup and drizzle",
-      price: "$5.00",
-      size: "12 oz",
-      image: "",
+      price: "$5.50",      image: "",
       nutritionFacts: {
         calories: "",
         sugar: "",
@@ -187,11 +241,32 @@ export const menuData = [
       },
     },
     {
+      name: "Pistachio Latte",
+      description: "Espresso, pistachio sauce, milk.",
+      price: "$6.00",      image: "",
+      disabled: true,
+      nutritionFacts: {
+        calories: "",
+        sugar: "",
+        protein: "",
+        fat: "",
+      },
+      scienceHighlight: "",
+      mechanismOfAction: {
+        title: "",
+        description: "",
+        glossaryTerms: [],
+      },
+      learnMore: {
+        title: "",
+        source: "",
+        url: "",
+      },
+    },
+    {
       name: "Raspberry Latte",
       description: "Espresso, milk, Organic raspberry sauce",
-      price: "$5.50",
-      size: "12 oz",
-      image: "",
+      price: "$5.50",      image: "",
       nutritionFacts: {
         calories: "",
         sugar: "",
@@ -214,65 +289,6 @@ export const menuData = [
         title: "Caffeine & Berry Antioxidants",
         source: "Fredholm BB et al. (1999), Kay CD (2012)",
         url: "https://pubmed.ncbi.nlm.nih.gov/?term=berry+polyphenols",
-      },
-    },
-    {
-      name: "Cortado",
-      description: "Equal espresso and steamed milk.",
-      price: "$3.90",
-      size: "4oz",
-      image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Concentrated caffeine provides quick alertness while milk softens acidity.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Caffeine rapidly blocks adenosine receptors; milk proteins buffer gastric acid for comfort.",
-        glossaryTerms: [
-          { term: "Adenosine Antagonism", definition: "Caffeine blocks adenosine receptors, increasing alertness." },
-          { term: "Gastric Buffering", definition: "Milk proteins neutralize stomach acid." },
-        ],
-      },
-      learnMore: {
-        title: "Adenosine Receptor Studies",
-        source: "Fredholm BB. (2007)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=adenosine+caffeine",
-      },
-    },
-    {
-      name: "Americano",
-      description: "Espresso, 10 oz filtered water.",
-      price: "$3.50",
-      size: "12 oz",
-      image: "",
-      nutritionFacts: {
-        calories: "5",
-        sugar: "0g",
-        protein: "0g",
-        fat: "0g",
-      },
-      scienceHighlight:
-        "Caffeine blocks adenosine receptors, increasing alertness and reducing fatigue.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Caffeine competes with adenosine at brain receptors, improving focus and wakefulness.",
-        glossaryTerms: [
-          { term: "Caffeine", definition: "A stimulant that enhances alertness and energy." },
-          { term: "Adenosine Antagonism", definition: "Blocking adenosine to prevent drowsiness." },
-          { term: "CNS Stimulation", definition: "Activation of the central nervous system for alertness." },
-        ],
-      },
-      learnMore: {
-        title: "Adenosine Receptor Studies",
-        source: "Fredholm BB. (2007)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=adenosine+caffeine",
       },
     },
     {
@@ -305,10 +321,10 @@ export const menuData = [
       },
     },
     {
-      name: "Latte",
-      description: "Espresso, 10 oz of your preferred milk.",
+      name: "Cortado",
+      description: "Equal espresso and steamed milk.",
       price: "$4.00",
-      size: "12 oz",
+      size: "4oz",
       image: "",
       nutritionFacts: {
         calories: "",
@@ -317,32 +333,33 @@ export const menuData = [
         fat: "",
       },
       scienceHighlight:
-        "Caffeine provides alertness while milk proteins promote satiety and slow absorption.",
+        "Concentrated caffeine provides quick alertness while milk softens acidity.",
       mechanismOfAction: {
         title: "What's Happening in Your Body?",
         description:
-          "Caffeine blocks adenosine receptors; milk proteins and fats trigger satiety hormones.",
+          "Caffeine rapidly blocks adenosine receptors; milk proteins buffer gastric acid for comfort.",
         glossaryTerms: [
           { term: "Adenosine Antagonism", definition: "Caffeine blocks adenosine receptors, increasing alertness." },
-          { term: "Satiety Hormones", definition: "Hormones like CCK and GLP-1 that signal fullness." },
+          { term: "Gastric Buffering", definition: "Milk proteins neutralize stomach acid." },
         ],
       },
       learnMore: {
-        title: "Caffeine & Satiety Studies",
-        source: "Fredholm BB et al. (1999), Nilsson M et al. (2004)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=milk+protein+satiety",
+        title: "Adenosine Receptor Studies",
+        source: "Fredholm BB. (2007)",
+        url: "https://pubmed.ncbi.nlm.nih.gov/?term=adenosine+caffeine",
       },
     },
   ],
   },
   {
     title: "Coffee",
+    sizeNote: "12oz · 16oz · Iced +$0.50",
     items: [
     {
       name: "Original Yemeni",
       description: "Yemeni style spiced coffee slow-boiled with milk.",
       sweetener: "Optional: pure organic cane sugar",
-      price: "$4.00",
+      price: "$4.00 / $5.50",
       image: "",
       nutritionFacts: {
         calories: "",
@@ -371,7 +388,7 @@ export const menuData = [
     {
       name: "Turkish Coffee",
       description: "Carefully heated with cardamom, 3oz water.",
-      price: "$3.00",
+      price: "$3.50",
       size: "3oz",
       image: "",
       nutritionFacts: {
@@ -398,9 +415,34 @@ export const menuData = [
       },
     },
     {
+      name: "Desert Coffee",
+      description: "8oz traditional desert-style coffee.",
+      price: "$4.00",
+      size: "8oz",
+      image: "",
+      disabled: true,
+      nutritionFacts: {
+        calories: "",
+        sugar: "",
+        protein: "",
+        fat: "",
+      },
+      scienceHighlight: "",
+      mechanismOfAction: {
+        title: "",
+        description: "",
+        glossaryTerms: [],
+      },
+      learnMore: {
+        title: "",
+        source: "",
+        url: "",
+      },
+    },
+    {
       name: "Ethiopian Brew",
       description: "Light roast ethiopean coffee.",
-      price: "$3.00",
+      price: "$3.50 / $4.00",
       image: "",
       nutritionFacts: {
         calories: "5",
@@ -429,7 +471,7 @@ export const menuData = [
     {
       name: "Influence Brew",
       description: "Medium roast brewed coffee.",
-      price: "$2.80",
+      price: "$3.00 / $3.50",
       image: "",
       nutritionFacts: {
         calories: "5",
@@ -457,7 +499,7 @@ export const menuData = [
     {
       name: "Cold Brew",
       description: "Coffee steeped for 18–24 hrs in cold water.",
-      price: "$4.00",
+      price: "$4.00 / $5.50",
       image: "",
       nutritionFacts: {
         calories: "5",
@@ -487,12 +529,13 @@ export const menuData = [
   },
   {
     title: "Tea",
+    sizeNote: "12oz · 16oz · Iced +$0.50",
     items: [
     {
       name: "Adeni Golden Chi",
       description: "12oz Slowly-boiled spiced tea with milk from Aden to Toledo",
       sweetener: "Optional: pure organic cane sugar",
-      price: { small: "$3.50", " 42oz": "$8.90" },
+      price: { "": "$3.65 / $4.60", "Small pot": "$7.00", "Large pot": "$13.00" },
       image: "",
       nutritionFacts: {
         calories: "80–120",
@@ -518,9 +561,9 @@ export const menuData = [
       },
     },
     {
-      name: "Black",
+      name: "Yemeni Black Tea",
       description: "12oz Yemeni style Black spiced tea.",
-      price: "$3.00",
+      price: "$3.20 / $4.00",
       image: "",
       nutritionFacts: {
         calories: "5",
@@ -548,7 +591,7 @@ export const menuData = [
     {
       name: "Hibiscus",
       description: "12oz Organic hibiscus extracted naturally",
-      price: "$3.00",
+      price: "$3.20 / $4.00",
       image: "",
       nutritionFacts: {
         calories: "5",
@@ -577,63 +620,123 @@ export const menuData = [
   ],
   },
   {
-    title: "Fresh Juices",
+    title: "Fresh & Refresh",
     items: [
     {
-      name: "Lemon mint",
-      description: "Fresh lemon, mint, sweetned with organic cane sugar.",
-      price: "$5.00",
+      name: "Original Yemeni",
+      description: "Yemeni style spiced coffee served fresh.",
+      price: "$5.00 / $6.00",
       image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Vitamin C supports immune function while mint aids digestion and provides refreshing aromatics.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Vitamin C acts as an antioxidant; mint compounds stimulate digestive enzymes and soothe the stomach.",
-        glossaryTerms: [
-          { term: "Vitamin C", definition: "Essential nutrient supporting immune health and collagen synthesis." },
-          { term: "Menthol", definition: "Mint compound that aids digestion and provides cooling sensation." },
-        ],
-      },
-      learnMore: {
-        title: "Citrus & Mint Benefits",
-        source: "Carr AC et al. (2017), McKay DL et al. (2006)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+c+mint+digestion",
-      },
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
     },
     {
-      name: "Yemeni Lemonade",
-      description: "A bold, creamy lemon with milk, sweetened with organic cane sugar.",
-      price: "$5.00",
+      name: "Ethiopian Brew",
+      description: "Light roast Ethiopian coffee served fresh.",
+      price: "$5.00 / $6.00",
       image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Vitamin C from lemon combined with milk proteins provides nutrients while creating unique flavor profile.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Citric acid and vitamin C support cellular health; milk proteins provide satiety and calcium.",
-        glossaryTerms: [
-          { term: "Vitamin C", definition: "Antioxidant vitamin supporting immune function." },
-          { term: "Calcium", definition: "Essential mineral for bone health from milk." },
-        ],
-      },
-      learnMore: {
-        title: "Vitamin C Research",
-        source: "Carr AC et al. (2017)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+c+benefits",
-      },
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Influence Brew",
+      description: "Medium roast brewed coffee served fresh.",
+      price: "$4.50 / $5.25",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Cold Brew",
+      description: "Coffee steeped for 18–24 hrs in cold water, served fresh.",
+      price: "$4.50 / $5.25",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+  ],
+  },
+  {
+    title: "Matcha",
+    sizeNote: "12oz · 16oz",
+    items: [
+    {
+      name: "Matcha Latte",
+      description: "Matcha, milk.",
+      price: "$5.50 / $7.00",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Strawb Matcha Latte",
+      description: "Matcha, strawberry, milk.",
+      price: "$6.50 / $8.00",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Mango Matcha",
+      description: "Matcha, mango, milk.",
+      price: "$6.50 / $8.00",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Spanish Matcha Cloud",
+      description: "Matcha, organic condensed milk, cloud foam.",
+      price: "$6.75 / $8.25",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Strawb Matcha Cloud",
+      description: "Matcha, strawberry, cloud foam.",
+      price: "$6.75 / $8.25",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Mango Matcha Cloud",
+      description: "Matcha, mango, cloud foam.",
+      price: "$6.75 / $8.25",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
     },
   ],
   },
@@ -641,7 +744,7 @@ export const menuData = [
     title: "Snacks",
     items: [
     {
-      name: "Avocad-us Toast",
+      name: "Avocado Toast",
       description: "Hummus, avocado, olive oil, pomegrante drizzle.",
       price: "$5.00",
       image: "",
@@ -671,8 +774,8 @@ export const menuData = [
     },
     {
       name: "Veggie & Feta",
-      description: "Feta cheese, spinach, arugula, tomato, basil, pomegrante drizzle",
-      price: "$5.00",
+      description: "Feta cheese, spinach, arugula, tomato, basil, pomegrante drizzle and sauce",
+      price: "$6.00",
       image: "",
       nutritionFacts: {
         calories: "",
@@ -699,32 +802,26 @@ export const menuData = [
       },
     },
     {
-      name: "Simply Tuna",
-      description: "Tuna, tomato, lettuce, cucumber, basil, pomegrantae drizzle",
-      price: "$5.00",
+      name: "Butter Croissant",
+      description: "Classic flaky butter croissant.",
+      price: "$3.50",
       image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Tuna provides omega-3 fatty acids and protein for heart and muscle health.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Omega-3s reduce inflammation and support cardiovascular health; protein aids muscle maintenance.",
-        glossaryTerms: [
-          { term: "Omega-3 Fatty Acids", definition: "Essential fats that reduce inflammation and support heart health." },
-          { term: "Protein", definition: "Essential for muscle repair and satiety." },
-        ],
-      },
-      learnMore: {
-        title: "Omega-3 Research",
-        source: "Calder PC (2017)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=omega+3+cardiovascular",
-      },
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Chocolate Croissant",
+      description: "Buttery croissant filled with chocolate.",
+      price: "$3.50",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
     },
   ],
   },
@@ -732,67 +829,10 @@ export const menuData = [
     title: "Pastries & Desserts",
     items: [
     {
-      name: "Butter Croissant",
-      description: "Classic flaky butter croissant.",
-      price: "$3.90",
-      image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Simple carbohydrates provide quick energy while butter adds richness and satiety.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Carbohydrates convert to glucose for energy; fats slow digestion for sustained satisfaction.",
-        glossaryTerms: [
-          { term: "Glucose", definition: "Primary energy source for cells." },
-          { term: "Satiety", definition: "Feeling of fullness after eating." },
-        ],
-      },
-      learnMore: {
-        title: "Carbohydrate Metabolism",
-        source: "Wurtman RJ (1986)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=carbohydrate+metabolism",
-      },
-    },
-    {
-      name: "Chocolate Croissant",
-      description: "Buttery croissant filled with chocolate.",
-      price: "$4.00",
-      image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Cocoa flavonoids support mood while carbohydrates provide energy.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Cocoa compounds boost dopamine for pleasure; carbs increase serotonin for mood enhancement.",
-        glossaryTerms: [
-          { term: "Dopamine", definition: "Neurotransmitter involved in pleasure and reward." },
-          { term: "Serotonin", definition: "Neurotransmitter that improves mood and calmness." },
-          { term: "Flavonoids", definition: "Cocoa compounds supporting vascular function." },
-        ],
-      },
-      learnMore: {
-        title: "Chocolate & Mood",
-        source: "Nogueira L et al. (2017), Wurtman RJ (1986)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=cocoa+polyphenols",
-      },
-    },
-    {
-      name: "Honeycomb",
+      name: "Traditional Honeycomb",
       description: "Pull-apart bread filled with cream cheese and honey.",
       callout: "House-baked daily",
-      price: "$8.00",
+      price: "$8.80",
       image: "",
       nutritionFacts: {
         calories: "200–280",
@@ -819,62 +859,70 @@ export const menuData = [
       },
     },
     {
-      name: "Original Cake",
-      description: "Classic cake slice.",
-      price: "$2.65",
-      perSlice: true,
+      name: "Chocolate Chip Scoop Cookie",
+      description: "Freshly baked chocolate chip cookie.",
+      price: "$5.50",
       image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Carbohydrates provide quick energy and can boost mood through serotonin pathways.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Simple carbs convert to glucose for energy; sugar can trigger dopamine release for pleasure.",
-        glossaryTerms: [
-          { term: "Glucose", definition: "Primary energy source for cells." },
-          { term: "Serotonin", definition: "Neurotransmitter that improves mood." },
-        ],
-      },
-      learnMore: {
-        title: "Carbohydrate & Mood",
-        source: "Wurtman RJ (1986)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=carbohydrates+mood",
-      },
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
     },
     {
-      name: "Chocolate Cake",
-      description: "Rich chocolate cake slice.",
-      price: "$2.65",
-      perSlice: true,
+      name: "Influence Banana Pudding",
+      description: "House-made banana pudding.",
+      price: "$5.00",
       image: "",
-      nutritionFacts: {
-        calories: "",
-        sugar: "",
-        protein: "",
-        fat: "",
-      },
-      scienceHighlight:
-        "Cocoa flavonoids support mood and cardiovascular health while providing antioxidants.",
-      mechanismOfAction: {
-        title: "What's Happening in Your Body?",
-        description:
-          "Cocoa compounds boost dopamine for pleasure; flavonoids improve blood flow and vascular health.",
-        glossaryTerms: [
-          { term: "Dopamine", definition: "Neurotransmitter involved in pleasure and reward." },
-          { term: "Flavonoids", definition: "Plant antioxidants that improve heart function." },
-        ],
-      },
-      learnMore: {
-        title: "Chocolate & Heart Health",
-        source: "Nogueira L et al. (2017)",
-        url: "https://pubmed.ncbi.nlm.nih.gov/?term=cocoa+polyphenols+cardiovascular",
-      },
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Influence Tiramisu Affogato",
+      description: "Classic tiramisu with an affogato twist.",
+      price: "$6.00",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Pure Chocolate Balance",
+      description: "Rich chocolate dessert crafted for balance.",
+      price: "$5.75",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Pistachio Milk Cake",
+      description: "Moist milk cake layered with pistachio cream.",
+      price: "$6.75",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
+    },
+    {
+      name: "Biscoff Lotus Milk Cake",
+      description: "Moist milk cake layered with Biscoff Lotus cream.",
+      price: "$6.75",
+      image: "",
+      disabled: true,
+      nutritionFacts: { calories: "", sugar: "", protein: "", fat: "" },
+      scienceHighlight: "",
+      mechanismOfAction: { title: "", description: "", glossaryTerms: [] },
+      learnMore: { title: "", source: "", url: "" },
     },
   ],
   },
@@ -901,7 +949,8 @@ export const flavorOptions = {
     "Caramel",
     "Lavender",
     "Gingerbread",
-    "French vanilla",
+    "F.Vanilla",
+    "Rose",
   ],
 };
 

@@ -3,7 +3,7 @@ import React from "react"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import { menuData } from "@/lib/constants"
+import { menuData, flavorOptions } from "@/lib/constants"
 import { ProductModal } from "@/components/product-modal"
 import { Badge } from "@/components/ui/badge"
 // import Image from "next/image"
@@ -14,26 +14,34 @@ interface MenuItem {
   description: string
   callout?: string
   sweetener?: string
-  price: string | { [key: string]: string } //  can handle both string or object
+  price: string | { [key: string]: string }
+  size?: string
   image?: string
+  disabled?: boolean
 }
 
 interface MenuSectionProps {
   id: string
   title: string
   note?: string
+  sizeNote?: string
   items: MenuItem[]
   onItemClick: (item: MenuItem) => void
 }
 
-const MenuSection = ({ id, title, note, items, onItemClick }: MenuSectionProps) => (
+const MenuSection = ({ id, title, note, sizeNote, items, onItemClick }: MenuSectionProps) => (
   <div id={id} className="mb-16 scroll-mt-28">
     <div className="text-center mb-8">
       <h2 className="text-3xl md:text-5xl font-bold text-brand-primary font-body inline-block relative">
         {title}
       </h2>
+      {sizeNote && (
+        <p className="text-sm text-gray-500 mt-2 font-medium tracking-wide">
+          {sizeNote}
+        </p>
+      )}
       {note && (
-        <p className="text-sm text-gray-500 mt-2 font-medium italic">
+        <p className="text-sm text-gray-500 mt-1 font-medium italic">
           {note}
         </p>
       )}
@@ -44,8 +52,8 @@ const MenuSection = ({ id, title, note, items, onItemClick }: MenuSectionProps) 
       {items.map((item, index) => (
         <div
           key={index}
-          className="flex items-center border-b border-gray-200 pb-6 cursor-pointer hover:bg-gray-50 rounded-lg p-4 transition-colors duration-200 w-full"
-          onClick={() => onItemClick(item)}
+          className={`flex items-center border-b border-gray-200 pb-6 rounded-lg p-4 transition-colors duration-200 w-full ${item.disabled ? "cursor-default" : "cursor-pointer hover:bg-gray-50"}`}
+          onClick={() => !item.disabled && onItemClick(item)}
         >
           {/* ✅ Only show image if NOT in the "Modern Desserts" section */}
           {/* {title !== "Modern Desserts" && (
@@ -64,6 +72,9 @@ const MenuSection = ({ id, title, note, items, onItemClick }: MenuSectionProps) 
           <div className="flex-grow">
             <div className="flex flex-wrap items-center gap-2">
               <h3 className="text-lg font-semibold text-gray-800">{item.name}</h3>
+              {item.size && (
+                <span className="text-sm font-medium text-brand-primary">{item.size}</span>
+              )}
               {item.callout && (
                 <Badge
                   variant="secondary"
@@ -79,11 +90,51 @@ const MenuSection = ({ id, title, note, items, onItemClick }: MenuSectionProps) 
             )}
 
           </div>
+          {item.price && (
+            <div className="ml-4 flex-shrink-0 text-right font-semibold text-gray-800">
+              {typeof item.price === "string"
+                ? item.price
+                : Object.entries(item.price).map(([label, p]) => (
+                    <div key={label || p} className="text-sm">{label ? `${label}: ${p}` : p}</div>
+                  ))}
+            </div>
+          )}
         </div>
       ))}
     </div>
   </div>
 );
+
+const FlavorsSection = () => {
+  const allFlavors = [
+    ...flavorOptions.naturallySweetened.map((f) => ({ name: f, zeroSugar: false, key: `nat-${f}` })),
+    ...flavorOptions.zeroSugar.map((f) => ({ name: f, zeroSugar: true, key: `zero-${f}` })),
+  ]
+
+  return (
+    <div className="mb-16">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl md:text-5xl font-bold text-brand-primary font-body">
+          Flavors
+        </h2>
+        <p className="text-sm mt-2 font-medium tracking-wide text-gray-500">
+          Naturally Sweetened&nbsp;&nbsp;|&nbsp;&nbsp;
+          <span className="text-brand-primary">Zero-Sugar</span>
+        </p>
+      </div>
+      <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 max-w-2xl mx-auto">
+        {allFlavors.map((flavor) => (
+          <span
+            key={flavor.key}
+            className={`text-sm font-semibold tracking-wide ${flavor.zeroSugar ? "text-brand-primary" : "text-gray-800"}`}
+          >
+            {flavor.name}
+          </span>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 const Page = () => {
   const [selectedItem, setSelectedItem] = useState<MenuItem | null>(null)
@@ -102,8 +153,8 @@ const Page = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative h-80 bg-cover bg-center" style={{ backgroundImage: "url(/bannerz.webp)" }}>
-        <div className="absolute inset-0 bg-black/30"></div>
+      <section className="relative h-96 bg-cover bg-[center_40%] md:bg-[center_60%]" style={{ backgroundImage: "url(/coffee-machine.png)" }}>
+        <div className="absolute inset-0 bg-black/55"></div>
         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
           <h1 className="text-5xl font-bold mb-4 font-body">
             Menu
@@ -124,10 +175,12 @@ const Page = () => {
             id={section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '')}
             title={section.title}
             note={section.note}
+            sizeNote={(section as { sizeNote?: string }).sizeNote}
             items={section.items as MenuItem[]}
             onItemClick={handleItemClick}
           />
         ))}
+        <FlavorsSection />
       </div>
 
       <ProductModal item={selectedItem} isOpen={isModalOpen} onClose={handleCloseModal} />

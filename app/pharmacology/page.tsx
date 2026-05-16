@@ -36,8 +36,8 @@ const PharmacologyPage = () => {
   return (
     <section className="min-h-screen bg-gray-50">
       {/* Hero Banner */}
-      <div className="relative h-80 bg-cover bg-center" style={{ backgroundImage: "url(/bannerz.webp)" }}>
-        <div className="absolute inset-0 bg-black/30"></div>
+      <div className="relative h-96 bg-cover bg-[center_40%] md:bg-[center_60%]" style={{ backgroundImage: "url(/coffee-machine.png)" }}>
+        <div className="absolute inset-0 bg-black/55"></div>
         <div className="relative z-10 flex flex-col items-center xl:items-start justify-center h-full text-white px-5 xl:px-26 text-center xl:text-left pt-30 lg:pt-20">
           <h1 className="text-5xl font-bold mb-4 font-body">Pharmacology</h1>
           <div className="flex items-center text-sm text-white justify-center xl:justify-start">
